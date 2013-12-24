@@ -1,0 +1,464 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="63babe15-b9f4-4b28-a7be-a77e4566e409" name="Activity1" linkedPackageId="42dc07d8-fdb0-4214-90d3-de7eca473ddb" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <ownedCommentsInternal>
+    <comment Id="f9e29d05-7507-46db-bd90-26795edbe2c1">
+      <elementDefinition Id="e15b9514-9035-4127-968a-f6beba671753" />
+      <body>Windows服务定时监控数据库数据是否发生变化。</body>
+      <annotatedElements>
+        <opaqueActionMoniker Id="e6b4f403-8411-4fa0-a261-16352f9720ef" LastKnownName="Windows 服务" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <appliedStereotypesInternal>
+    <stereotypeInstance Id="12686821-0b8d-4bd3-b180-f44c29de2d45" name="namespace" profile="CSharpProfile">
+      <elementDefinition Id="fee99419-37c7-4492-a33d-4337488ab899" />
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="796487d1-1d13-4eff-8f3c-331b4adb2552">
+          <propertyInstance Id="6b1a89c6-8a6f-4a54-8265-f7d4831bed66" name="BaseName">
+            <elementDefinition Id="f5ef5e8b-7224-4cc9-944e-d588d5abea0b" />
+          </propertyInstance>
+          <elementDefinition Id="91928667-5ba7-4de0-8153-94eefc417b7c" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="5b4e3b22-e98b-4cdf-adf6-c3ef50701103">
+          <propertyInstance Id="973583f5-a641-4aa0-aa06-7533f0714f04" name="ClrAttributes">
+            <elementDefinition Id="836b0ceb-ad47-419e-a6b2-8ab00cf808d9" />
+          </propertyInstance>
+          <elementDefinition Id="b6d4784f-8fe7-4a9a-85df-97d9836ab123" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="8425300c-ef4e-47c4-89a7-7a5ccc56b047">
+          <propertyInstance Id="41d3f087-54f0-4c61-a932-ae2be708484c" name="Usings">
+            <elementDefinition Id="a7ea15bd-1fb1-4809-a656-cf472be52f67" />
+          </propertyInstance>
+          <elementDefinition Id="a79ac1e5-1566-4019-bc7c-88c4394a13c9" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+    <stereotypeInstance Id="cbe2f283-5fdd-43c9-8371-7364dbd289d5" name="TextTemplateBindings" profile="TextTemplateBindings">
+      <elementDefinition Id="4a82aa2d-6e49-4e2c-8c91-e261cee29c0a" />
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="fa8bf8dc-5a1b-4cf8-b4e4-dcd911751c9a">
+          <propertyInstance Id="b1a615f0-cc06-4192-acca-3804ad8dc325" name="Alias" value="ClassTemplate|EnumTemplate|InterfaceTemplate|StructTemplate">
+            <elementDefinition Id="46e58ae0-a242-4714-ae3e-e2206d762585" />
+          </propertyInstance>
+          <elementDefinition Id="0b5cf2dc-c94a-4d01-b6d2-ce8b6c88eb7f" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="0ab9ac48-53bd-4720-829f-743f9415b0c7">
+          <propertyInstance Id="0cc3f59d-4a10-4b09-a7de-e546216ca096" name="TemplateFilePath" value="ClassTemplate=C:\Program Files\Microsoft Visual Studio 10.0\Common7\IDE\Extensions\Microsoft\Visualization and Modeling Feature Pack\2.0\Templates\Text\ClassTemplate.t4|EnumTemplate=C:\Program Files\Microsoft Visual Studio 10.0\Common7\IDE\Extensions\Microsoft\Visualization and Modeling Feature Pack\2.0\Templates\Text\EnumTemplate.t4|InterfaceTemplate=C:\Program Files\Microsoft Visual Studio 10.0\Common7\IDE\Extensions\Microsoft\Visualization and Modeling Feature Pack\2.0\Templates\Text\InterfaceTemplate.t4|StructTemplate=C:\Program Files\Microsoft Visual Studio 10.0\Common7\IDE\Extensions\Microsoft\Visualization and Modeling Feature Pack\2.0\Templates\Text\StructTemplate.t4">
+            <elementDefinition Id="df136b86-f025-4be2-8c77-3700db3c41f6" />
+          </propertyInstance>
+          <elementDefinition Id="83f41b50-4b79-4acd-ba1d-d6a06b4318c3" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="96781371-8a0c-4381-8026-d808ddd1cf79">
+          <propertyInstance Id="cce54c10-69e4-4ca6-b4c6-5a2ac19429c5" name="ProjectPath" value="ClassTemplate=..\UniCloud.Modeling.AFRPLib\UniCloud.Modeling.AFRPLib.csproj|EnumTemplate=..\UniCloud.Modeling.AFRPLib\UniCloud.Modeling.AFRPLib.csproj|InterfaceTemplate=..\UniCloud.Modeling.AFRPLib\UniCloud.Modeling.AFRPLib.csproj|StructTemplate=..\UniCloud.Modeling.AFRPLib\UniCloud.Modeling.AFRPLib.csproj">
+            <elementDefinition Id="b9147c9f-b358-453c-8bbd-84b65f58d606" />
+          </propertyInstance>
+          <elementDefinition Id="c48fadbb-8144-47f8-a9b5-94d8f20a4e67" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="ed1c8acb-1443-4619-943d-3cc1951bb50f">
+          <propertyInstance Id="e738e32a-1e6c-4db4-9cf3-edf7f298c88a" name="TargetDirectory" value="ClassTemplate=GeneratedCode\{PackageStructure}|EnumTemplate=GeneratedCode\{PackageStructure}|InterfaceTemplate=GeneratedCode\{PackageStructure}|StructTemplate=GeneratedCode\{PackageStructure}">
+            <elementDefinition Id="8fc7f675-eb40-450f-910d-40ffe6c82df8" />
+          </propertyInstance>
+          <elementDefinition Id="4a112ad9-ddb8-468d-90e9-699230def26e" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="ef29172e-0adc-48f3-af62-f716cd98c749">
+          <propertyInstance Id="c8450b86-3365-4579-8821-400e76c23528" name="TargetName" value="ClassTemplate={Name}|EnumTemplate={Name}|InterfaceTemplate={Name}|StructTemplate={Name}">
+            <elementDefinition Id="1f343d94-4eb7-4b90-9648-17cbe7eb3e8c" />
+          </propertyInstance>
+          <elementDefinition Id="6338dec8-dd9c-4226-adca-f9443fc4d6c3" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="7e0332b8-a45b-47fe-b12d-a1d679c735d6">
+          <propertyInstance Id="17a25c2d-d11c-4217-90cd-63ddea73e128" name="Overwrite" value="ClassTemplate=True|EnumTemplate=True|InterfaceTemplate=True|StructTemplate=True">
+            <elementDefinition Id="9ca1028a-2335-4ca7-94dc-b37b85a6c852" />
+          </propertyInstance>
+          <elementDefinition Id="93782927-be25-4d12-ab39-c78b61aad122" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="d274c2d1-08f9-4b7a-b980-26d3809774ee">
+          <propertyInstance Id="033869d0-2a4c-4811-af1f-707800f65cdf" name="Parameters">
+            <elementDefinition Id="f21f305b-f066-4eb8-ba6e-90eec29098d0" />
+          </propertyInstance>
+          <elementDefinition Id="26f6e06e-b4c2-4a00-890a-4e95f473f81b" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+  </appliedStereotypesInternal>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="6ed81d53-241d-47fc-b116-17fb96b94ab4" name="Activity1" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="4ec97324-d6d4-4836-9d5c-75e37a55f443" />
+        <nodes>
+          <initialNode Id="f5f39f20-a28b-4424-a680-d97b27a1e0f7" name="Initial1" isLeaf="false">
+            <elementDefinition Id="39f9e654-4ac4-467b-86ce-c2fd30548aaf" />
+            <flowNodeTargets>
+              <controlFlow Id="3f91c5cb-a065-4877-a36b-4e9cd7336186" isLeaf="false">
+                <opaqueActionMoniker Id="02b0b74b-d808-44c4-bbcb-797c87c59750" LastKnownName="编制计划" />
+                <elementDefinition Id="82f1b20d-a997-4bce-a53a-bfc96260b0af" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction Id="02b0b74b-d808-44c4-bbcb-797c87c59750" name="编制计划" isLeaf="false">
+            <elementDefinition Id="4835bb0e-074c-4028-a68d-df2399f63e79" />
+            <flowNodeTargets>
+              <controlFlow Id="975c32c3-9e52-401a-8c74-9ee43ac9028d" isLeaf="false">
+                <decisionNodeMoniker Id="4c759e16-c755-48a9-b445-b6b59769df65" LastKnownName="Decision1" />
+                <elementDefinition Id="be44f420-1fde-4a4c-89c6-2d3ab653bd2b" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="39b9e221-93d4-4c1a-b2ee-f2c48ea50a06" name="发布计划" isLeaf="false">
+            <elementDefinition Id="65f3a39c-55d9-4444-804e-6c37ff134dc0" />
+            <flowNodeTargets>
+              <controlFlow Id="2450e2e0-8a5f-4f60-a357-d44f884da3e2" isLeaf="false">
+                <opaqueActionMoniker Id="147f68c9-1676-4aa9-b23c-70abd32652c4" LastKnownName="申请飞机" />
+                <elementDefinition Id="a0ab0419-aa99-44ba-bb32-2009dbb1dbc7" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="4c759e16-c755-48a9-b445-b6b59769df65" name="Decision1" isLeaf="false">
+            <elementDefinition Id="855cae43-6266-45bd-9cf0-46bc0aa72720" />
+            <flowNodeTargets>
+              <controlFlow Id="64bdba74-aba9-44ce-a3ce-e41be7987266" guard="民航局通过" name="发发呆" isLeaf="false">
+                <opaqueActionMoniker Id="39b9e221-93d4-4c1a-b2ee-f2c48ea50a06" LastKnownName="发布计划" />
+                <description>发</description>
+                <elementDefinition Id="1731928c-81f8-4961-995d-11c45a555e0b" />
+              </controlFlow>
+              <controlFlow Id="6c55c627-0a7e-4a21-8b73-c7c7b22db06d" guard="民航局未通过" isLeaf="false">
+                <opaqueActionMoniker Id="02b0b74b-d808-44c4-bbcb-797c87c59750" LastKnownName="编制计划" />
+                <elementDefinition Id="a7173d33-b01d-472f-ae09-4c332c91f2a2" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="147f68c9-1676-4aa9-b23c-70abd32652c4" name="申请飞机" isLeaf="false">
+            <elementDefinition Id="800b162d-a21e-41e2-b5fc-565a409da69f" />
+            <flowNodeTargets>
+              <controlFlow Id="d591e6f0-5e36-46d8-8977-791e40742c3c" isLeaf="false">
+                <decisionNodeMoniker Id="c6d7d83a-c31b-4fcd-acdd-07c7851d70cf" LastKnownName="Decision11" />
+                <elementDefinition Id="c0603c7f-9544-4b80-8af5-bccf32ba5988" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="c6d7d83a-c31b-4fcd-acdd-07c7851d70cf" name="Decision11" isLeaf="false">
+            <elementDefinition Id="3217996b-4715-45c1-b25a-608d223eef01" />
+            <flowNodeTargets>
+              <controlFlow Id="c018ab9d-e0a8-4ec4-83a3-983432b053d8" guard="民航局通过" isLeaf="false">
+                <opaqueActionMoniker Id="d8a9b9c3-2993-4244-bf12-c39ded4d3894" LastKnownName="维护批文" />
+                <elementDefinition Id="363ae231-ab22-4749-89d8-0d84e6a3dcd7" />
+              </controlFlow>
+              <controlFlow Id="902415b6-01a7-4b0f-bf83-d4c82de130d5" guard="民航局未通过" isLeaf="false">
+                <opaqueActionMoniker Id="147f68c9-1676-4aa9-b23c-70abd32652c4" LastKnownName="申请飞机" />
+                <elementDefinition Id="5857ff70-ce67-463a-ac0a-24a3887bca13" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="d8a9b9c3-2993-4244-bf12-c39ded4d3894" name="维护批文" isLeaf="false">
+            <elementDefinition Id="0aa426df-e7f3-4cdb-8949-e7f69270f70b" />
+            <flowNodeTargets>
+              <controlFlow Id="e01cba66-1ab9-430a-8d16-2a7025515f9e" isLeaf="false">
+                <opaqueActionMoniker Id="b69862f1-7c91-4343-8c2a-41d6f46b7b56" LastKnownName="维护飞机" />
+                <elementDefinition Id="134c2d4b-c373-4c3f-bbad-025136dddf38" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="b69862f1-7c91-4343-8c2a-41d6f46b7b56" name="维护飞机" isLeaf="false">
+            <elementDefinition Id="f6eab433-6ded-42f9-9101-352f75181e44" />
+            <flowNodeTargets>
+              <controlFlow Id="3ff09b31-2c61-4d4f-a6ae-d4ceddfae175" isLeaf="false">
+                <activityFinalNodeMoniker Id="c819355c-a267-47d3-a67f-207d6be2ba2e" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="c5524325-3693-4e2d-9fa4-6510ff0bdcf0" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode Id="c819355c-a267-47d3-a67f-207d6be2ba2e" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="897e2f4e-c003-4061-ba09-d383b7ea8184" />
+          </activityFinalNode>
+          <initialNode Id="d2036aa5-ae53-456f-9bc5-8fe53d0a6f0c" name="Initial2" isLeaf="false">
+            <elementDefinition Id="592b42f3-f1e3-4546-acd0-0845dab93633" />
+            <flowNodeTargets>
+              <controlFlow Id="9686cec9-d7c3-4b26-bd5f-3fa39ee823ee" isLeaf="false">
+                <opaqueActionMoniker Id="941b0c2b-4bbd-400d-8804-0c1bbbe23ba2" LastKnownName="审核计划" />
+                <elementDefinition Id="e1daea49-56f6-4b59-b07b-698595165615" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction Id="941b0c2b-4bbd-400d-8804-0c1bbbe23ba2" name="审核计划" isLeaf="false">
+            <elementDefinition Id="844242d7-0b76-4e5f-8475-e5752e98a6ed" />
+            <flowNodeTargets>
+              <controlFlow Id="9b190d51-1c8e-4e3f-8db6-7bb60bc497b3" isLeaf="false">
+                <decisionNodeMoniker Id="6ad8d28a-91ec-4980-aa38-00eb77be382d" LastKnownName="Decision2" />
+                <elementDefinition Id="47f944d8-85a0-4bc1-987c-ad9c80f71d21" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="6ad8d28a-91ec-4980-aa38-00eb77be382d" name="Decision2" isLeaf="false">
+            <elementDefinition Id="f9f7b32b-5560-42f5-a10c-6b52bfc4f3d3" />
+            <flowNodeTargets>
+              <controlFlow Id="f3e2ba35-75ce-477b-8356-1cf416774077" guard="通过审核" isLeaf="false">
+                <opaqueActionMoniker Id="e5831940-bff5-4ef6-bc88-7c9ae66a46b9" LastKnownName="评审申请" />
+                <elementDefinition Id="50435cd7-ade3-442b-81e1-fbe90b304209" />
+              </controlFlow>
+              <controlFlow Id="5f81ce30-5351-4e82-8bf1-3a11e622245c" guard="未通过审核" isLeaf="false">
+                <opaqueActionMoniker Id="b37b2c0d-12b1-402c-8893-5c5da8f9646a" LastKnownName="通知航空公司重报" />
+                <elementDefinition Id="0cd5b155-0450-4cbd-9aa9-6146dca7a251" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="e5831940-bff5-4ef6-bc88-7c9ae66a46b9" name="评审申请" isLeaf="false">
+            <elementDefinition Id="47cc9b47-910e-4d0c-b891-80a206d5a627" />
+            <flowNodeTargets>
+              <controlFlow Id="a63f41a7-3350-4cb3-8421-c100cf268542" isLeaf="false">
+                <decisionNodeMoniker Id="8588d28b-cf6c-4861-b4d3-0da45aae9bad" LastKnownName="Decision21" />
+                <elementDefinition Id="2e4d4fc7-8e65-4fbb-8cd6-4a14ac44149d" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="b37b2c0d-12b1-402c-8893-5c5da8f9646a" name="通知航空公司重报" isLeaf="false">
+            <elementDefinition Id="89c4c967-28b3-429a-a9a5-bdec0f969c04" />
+          </opaqueAction>
+          <decisionNode Id="8588d28b-cf6c-4861-b4d3-0da45aae9bad" name="Decision21" isLeaf="false">
+            <elementDefinition Id="d6dec007-ea6f-4ee8-bb73-33179e49af87" />
+            <flowNodeTargets>
+              <controlFlow Id="c569bcfc-6fee-4cc5-b912-e20c8e8da144" guard="未通过申请" isLeaf="false">
+                <opaqueActionMoniker Id="5b3a96c4-2df9-4887-b8fa-4369f0fab3fc" LastKnownName="通知航空公司修改申请" />
+                <elementDefinition Id="ee77d6d3-78ed-41c2-b181-aa1b34286b87" />
+              </controlFlow>
+              <controlFlow Id="12a99077-1cca-4c85-b8b0-398d60060735" guard="通过审核" isLeaf="false">
+                <activityFinalNodeMoniker Id="1f965f73-4df2-4cf1-8801-f819607c8c72" LastKnownName="ActivityFinal2" />
+                <elementDefinition Id="0ec34d0c-d374-4dcf-9ac7-3f781dc4fcdc" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="5b3a96c4-2df9-4887-b8fa-4369f0fab3fc" name="通知航空公司修改申请" isLeaf="false">
+            <elementDefinition Id="f92bb76b-872f-41a7-afb0-08f8d4d4de64" />
+            <flowNodeTargets>
+              <controlFlow Id="041789ce-7622-4b5b-a27a-0f9de392ab88" isLeaf="false">
+                <activityFinalNodeMoniker Id="1f965f73-4df2-4cf1-8801-f819607c8c72" LastKnownName="ActivityFinal2" />
+                <elementDefinition Id="d54edc07-5837-4373-a8c3-3d7bf72857b4" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode Id="1f965f73-4df2-4cf1-8801-f819607c8c72" name="ActivityFinal2" isLeaf="false">
+            <elementDefinition Id="cd2f54a0-9f85-491a-af7c-002104cb8683" />
+          </activityFinalNode>
+          <opaqueAction Id="e6b4f403-8411-4fa0-a261-16352f9720ef" name="Windows 服务" isLeaf="false">
+            <elementDefinition Id="54f67e8d-aacb-42cc-a38f-1910f14a230a" />
+            <flowNodeTargets>
+              <controlFlow Id="3a1be812-dab9-495f-be62-7c9efc501f8c" guard="监控飞机数据" isLeaf="false">
+                <opaqueActionMoniker Id="42348e4b-4ba2-41c3-9e06-5dfad5e658ab" LastKnownName="数据库飞机基础数据" />
+                <elementDefinition Id="5d8c2ca3-a66d-47fb-839d-1a3f12535a33" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="42348e4b-4ba2-41c3-9e06-5dfad5e658ab" name="数据库飞机基础数据" isLeaf="false">
+            <elementDefinition Id="560f2678-247d-4146-b8fb-a70733412e16" />
+            <flowNodeTargets>
+              <controlFlow Id="fb94f604-5ff2-406d-97e9-be318e795354" isLeaf="false">
+                <decisionNodeMoniker Id="6efd0ab2-fbad-4a3c-ab78-52e81d944e6d" LastKnownName="Decision3" />
+                <elementDefinition Id="b200fd1e-50c0-421b-8847-f3cc7405e810" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="6efd0ab2-fbad-4a3c-ab78-52e81d944e6d" name="Decision3" isLeaf="false">
+            <elementDefinition Id="211db324-feb3-4e6a-8c94-a3c7a769b8de" />
+            <flowNodeTargets>
+              <controlFlow Id="968a524e-ade2-4248-8ea2-a1b454b8efa7" guard="发生变化" isLeaf="false">
+                <opaqueActionMoniker Id="d70de80e-a14c-4e06-8ec1-1d708f477dda" LastKnownName="通知飞机数据统计表" />
+                <elementDefinition Id="51a61fa4-3140-4455-aa11-8472d63781be" />
+              </controlFlow>
+              <controlFlow Id="042bfb04-efaf-469d-908e-46fe97d581a1" guard="没有发生变化" isLeaf="false">
+                <opaqueActionMoniker Id="e6b4f403-8411-4fa0-a261-16352f9720ef" LastKnownName="Windows 服务" />
+                <elementDefinition Id="de07c67e-a6b2-4365-a19a-004d967ad274" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="d70de80e-a14c-4e06-8ec1-1d708f477dda" name="通知飞机数据统计表" isLeaf="false">
+            <elementDefinition Id="a110727d-ffd7-4f27-8864-ac828f90313b" />
+            <flowNodeTargets>
+              <controlFlow Id="800784a1-5874-4c7b-a94d-b1859b85129e" isLeaf="false">
+                <activityFinalNodeMoniker Id="7f94f607-fbe9-4bd8-ab54-d6463ba0dfb3" LastKnownName="ActivityFinal3" />
+                <elementDefinition Id="1718ace2-5d53-40d9-ae53-1ac441172644" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <initialNode Id="41dcaa65-c722-4531-aa4a-b3551d971324" name="Initial3" isLeaf="false">
+            <elementDefinition Id="274be205-141d-48ee-9b03-a544212d39a0" />
+            <flowNodeTargets>
+              <controlFlow Id="b8fb73f1-ca4f-4f85-949f-eba25e9a8bc6" isLeaf="false">
+                <opaqueActionMoniker Id="e6b4f403-8411-4fa0-a261-16352f9720ef" LastKnownName="Windows 服务" />
+                <elementDefinition Id="167d4644-9cc2-43d7-aa27-c8795f7b0e04" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <activityFinalNode Id="7f94f607-fbe9-4bd8-ab54-d6463ba0dfb3" name="ActivityFinal3" isLeaf="false">
+            <elementDefinition Id="a9260d48-eed9-4849-9704-4bc9494f2264" />
+          </activityFinalNode>
+          <initialNode Id="7c802f43-8869-4ed8-8cc0-7f4b68c9c696" name="Initial4" isLeaf="false">
+            <elementDefinition Id="99d01d0d-73a6-493a-9215-4f4329299ccb" />
+            <flowNodeTargets>
+              <controlFlow Id="3488bc78-1759-4b55-9dbe-fd38edeebba9" isLeaf="false">
+                <opaqueActionMoniker Id="f3cd9b18-3f0d-468f-84f2-4be8aa2772a8" LastKnownName="民航邮件解析服务" />
+                <elementDefinition Id="f417e5a8-b39a-45a0-804e-78428a2f90b6" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction Id="f3cd9b18-3f0d-468f-84f2-4be8aa2772a8" name="民航邮件解析服务" isLeaf="false">
+            <elementDefinition Id="ad5e7a55-cbeb-43f7-8668-4cf18cbfcb85" />
+            <flowNodeTargets>
+              <controlFlow Id="715a8bb1-ead4-4d8c-a6bd-4d7a172039dd" guard="监控邮件服务" isLeaf="false">
+                <opaqueActionMoniker Id="66bc3a7c-7390-4fe0-8128-a8c75448ac4b" LastKnownName="邮件服务" />
+                <elementDefinition Id="5f7c93d9-973d-458d-8003-96884772461f" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="66bc3a7c-7390-4fe0-8128-a8c75448ac4b" name="邮件服务" isLeaf="false">
+            <elementDefinition Id="36a21ea0-be1c-4344-88b1-f8a89155cd90" />
+            <flowNodeTargets>
+              <controlFlow Id="abc9132e-1eec-4d63-9257-69716d087159" isLeaf="false">
+                <decisionNodeMoniker Id="42b0094b-5fde-4308-8d18-cd4f893591c0" LastKnownName="Decision4" />
+                <elementDefinition Id="cb2cbdd8-14d2-41c2-98a2-1b0107d2e1d7" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="42b0094b-5fde-4308-8d18-cd4f893591c0" name="Decision4" isLeaf="false">
+            <elementDefinition Id="80ac454e-2f34-4e3e-9ef8-f5aeae8c8ef4" />
+            <flowNodeTargets>
+              <controlFlow Id="0fd67e73-c32a-45db-b9db-28de48675d09" guard="没有需要解析的邮件" isLeaf="false">
+                <opaqueActionMoniker Id="f3cd9b18-3f0d-468f-84f2-4be8aa2772a8" LastKnownName="民航邮件解析服务" />
+                <elementDefinition Id="56af033a-c5a5-4b27-9212-55fd88a96710" />
+              </controlFlow>
+              <controlFlow Id="89db0384-b0cf-4dbb-aef7-bb8ee5023fab" guard="有新邮件需要解析" isLeaf="false">
+                <opaqueActionMoniker Id="4b8dc43b-f2a7-447e-bd7e-cbb37535d8b5" LastKnownName="解析邮件" />
+                <elementDefinition Id="c28f791d-4aa6-497d-9f69-6ef2fdcce3f9" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="4b8dc43b-f2a7-447e-bd7e-cbb37535d8b5" name="解析邮件" isLeaf="false">
+            <elementDefinition Id="a6f00693-5f99-454a-83b5-ce2e0ad40372" />
+            <flowNodeTargets>
+              <controlFlow Id="e148232c-103c-41cb-8a29-8e2963bf1165" guard="当前解析数据的版本大于数据库存储版本" isLeaf="false">
+                <decisionNodeMoniker Id="c41c7099-bbbc-4cff-8796-aa66b5ec9be7" LastKnownName="Decision5" />
+                <elementDefinition Id="1265f2db-313e-4a32-b566-a243f4254c69" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="c41c7099-bbbc-4cff-8796-aa66b5ec9be7" name="Decision5" isLeaf="false">
+            <elementDefinition Id="8aad6ef1-26b6-4a6e-9d92-37b3bc035c22" />
+            <flowNodeTargets>
+              <controlFlow Id="cba0a294-ab9f-4f54-8c52-3ef386c112d2" guard="当前上报的数据，数据库存在" isLeaf="false">
+                <opaqueActionMoniker Id="bf61ebc9-b78c-4637-8e5c-bc6166445eef" LastKnownName="检测是否更新进数据库" />
+                <elementDefinition Id="318ec8d9-3b8c-4911-b0cb-226014a64675" />
+              </controlFlow>
+              <controlFlow Id="94a72dbc-bfc9-4508-b592-0a953e761c48" guard="当前上报的数据，数据库没有" isLeaf="false">
+                <opaqueActionMoniker Id="d67b0869-47e7-496d-9583-faec8b07a77c" LastKnownName="解析到数据库" />
+                <elementDefinition Id="af97aa31-8144-442b-9d52-5d621b76cc29" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="bf61ebc9-b78c-4637-8e5c-bc6166445eef" name="检测是否更新进数据库" isLeaf="false">
+            <elementDefinition Id="9dc5d355-3ffd-456e-a705-98a358d03fb2" />
+            <flowNodeTargets>
+              <controlFlow Id="6a716f40-a6c6-456c-b3c7-6029c8813ec8" isLeaf="false">
+                <decisionNodeMoniker Id="7139f9a2-b75c-48f3-99d3-8c4a70d78bfe" LastKnownName="Decision51" />
+                <elementDefinition Id="d2ac3e20-d080-404d-b546-0d1076fe47c2" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="d67b0869-47e7-496d-9583-faec8b07a77c" name="解析到数据库" isLeaf="false">
+            <elementDefinition Id="c4be7c6f-0112-44f2-b708-2ffa6a23b65b" />
+            <flowNodeTargets>
+              <controlFlow Id="a656fb22-330c-4199-8b30-2e225ba1ce36" isLeaf="false">
+                <activityFinalNodeMoniker Id="5133cd46-6c7f-4dd2-b93b-a06fef14c151" LastKnownName="ActivityFinal4" />
+                <elementDefinition Id="87cda7a0-2dd8-4166-807e-735b3c83788f" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="7139f9a2-b75c-48f3-99d3-8c4a70d78bfe" name="Decision51" isLeaf="false">
+            <elementDefinition Id="633fd2af-769c-4ebf-a9b2-1a642e558240" />
+            <flowNodeTargets>
+              <controlFlow Id="3259ee2c-ce4a-4c4f-9821-fe6022968d19" guard="当前上报数据的版本大于数据库存储版本" isLeaf="false">
+                <opaqueActionMoniker Id="d67b0869-47e7-496d-9583-faec8b07a77c" LastKnownName="解析到数据库" />
+                <elementDefinition Id="2828f441-59d8-479e-bdd5-55d349db9d06" />
+              </controlFlow>
+              <controlFlow Id="4fcda73d-a634-4f65-83a3-39ac6048e38c" guard="当前解析数据的版本小于数据库存储版本" isLeaf="false">
+                <opaqueActionMoniker Id="b02f85d9-8036-47c5-aa6b-25def641d8ae" LastKnownName="对当前邮件进行标记，不解析" />
+                <elementDefinition Id="94e59ee2-a5e0-4706-aa1f-2fb0c40f754a" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="b02f85d9-8036-47c5-aa6b-25def641d8ae" name="对当前邮件进行标记，不解析" isLeaf="false">
+            <elementDefinition Id="8117126f-dada-4f8b-81c0-685844edb82d" />
+            <flowNodeTargets>
+              <controlFlow Id="0c88eed0-572a-42ec-9eed-7576a5d97be1" isLeaf="false">
+                <activityFinalNodeMoniker Id="e9d2be1a-ccba-4ac2-8875-02a7cd7f2574" LastKnownName="ActivityFinal5" />
+                <elementDefinition Id="ba05367f-e87f-4fc2-8785-19bac05dadfb" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode Id="5133cd46-6c7f-4dd2-b93b-a06fef14c151" name="ActivityFinal4" isLeaf="false">
+            <elementDefinition Id="02882eed-e410-4915-8737-1833f1b7b5e0" />
+          </activityFinalNode>
+          <activityFinalNode Id="e9d2be1a-ccba-4ac2-8875-02a7cd7f2574" name="ActivityFinal5" isLeaf="false">
+            <elementDefinition Id="ebb6d131-eeaa-40fc-b248-e9412c556cba" />
+          </activityFinalNode>
+          <initialNode Id="fbdb5e55-3876-46bf-bd47-fc27618b62bd" name="Initial5" isLeaf="false">
+            <elementDefinition Id="85b48d2d-a199-4b63-b343-3db5e3b7ba2c" />
+            <flowNodeTargets>
+              <controlFlow Id="0f43a8d7-6803-4b01-8c00-f0230b19e5a5" isLeaf="false">
+                <opaqueActionMoniker Id="c4a65887-8afc-43c7-9979-b4f8657ed4e0" LastKnownName="维修版本较高计划" />
+                <elementDefinition Id="6e72f427-96f9-45c7-8ab1-7337b77fd2ba" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction Id="c4a65887-8afc-43c7-9979-b4f8657ed4e0" name="维修版本较高计划" isLeaf="false">
+            <elementDefinition Id="6281bdcd-76f7-4b15-8133-7247d907ef9a" />
+            <flowNodeTargets>
+              <controlFlow Id="f7890b40-9caa-40ce-b368-98b5d0dbfb4c" isLeaf="false">
+                <decisionNodeMoniker Id="9453fdce-e69b-417a-a9af-0f9f38a50b5e" LastKnownName="Decision6" />
+                <elementDefinition Id="76c832b4-d885-42b0-af88-e0a181726ef7" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="9453fdce-e69b-417a-a9af-0f9f38a50b5e" name="Decision6" isLeaf="false">
+            <elementDefinition Id="c8a1040b-7bd9-465b-8e28-ad615b5061b9" />
+            <flowNodeTargets>
+              <controlFlow Id="f34be4ea-4685-44b9-a066-22bd8b31353b" guard="存在低版本相同的计划" isLeaf="false">
+                <opaqueActionMoniker Id="8f629a18-ebf7-4804-af2c-99377b3af3af" LastKnownName="把相关数据更新到低版本的计划" />
+                <elementDefinition Id="05369ba8-26ac-45e7-835a-f5d4f830561b" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="8f629a18-ebf7-4804-af2c-99377b3af3af" name="把相关数据更新到低版本的计划" isLeaf="false">
+            <elementDefinition Id="9f9ce58a-bac9-47ac-a3cc-9090345286d2" />
+          </opaqueAction>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="42dc07d8-fdb0-4214-90d3-de7eca473ddb" name="UniCloud.Modeling.AFRP">
+    <elementDefinition Id="9bdd35a4-fbe8-4aca-9c17-238e86c1b9a7" />
+    <profileInstances>
+      <packageHasProfileInstances Id="51ec2715-c18e-45bd-b27b-804bdd4062f8">
+        <profileInstance Id="43d02b10-52a2-42b6-a7bc-f70a81426ec3" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="55dbab59-1ac3-4390-a30c-36a05abd5855">
+        <profileInstance Id="7af866a6-4f10-4769-82b9-9c0cde57daac" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="4aaeff14-e783-4c10-9ab0-05259ceb7755">
+        <profileInstance Id="0c46a1ac-0b75-4603-a5df-939fedd1eda6" name="CSharpProfile">
+          <elementDefinition Id="b9fca0e6-470e-480c-8c6b-d494e23c6ac5" />
+        </profileInstance>
+        <elementDefinition Id="75d83f27-fe60-4c37-b380-0b79bc7cbe32" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="e09d32c3-4113-4b06-9b07-34d65740c47a">
+        <profileInstance Id="81c7be1f-ccf0-489f-a00b-1d866f5e5104" name="TextTemplateBindings">
+          <elementDefinition Id="e053fc01-dc47-43df-9316-d2e48bb86319" />
+        </profileInstance>
+        <elementDefinition Id="d9101ad5-2059-43f6-9e84-00919da40cc2" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</activityRootModel>

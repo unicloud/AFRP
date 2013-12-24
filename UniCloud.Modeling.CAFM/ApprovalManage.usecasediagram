@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="0b17ec0c-8564-445f-9cb5-98ad886d665d" name="ApprovalManage" linkedPackageId="736e9e9b-d66a-40ee-85d0-a2c1285b6363" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <ownedCommentsInternal>
+    <comment Id="09300689-d159-4cd2-986e-2315af22c595">
+      <elementDefinition Id="d2056534-d65c-4c1a-b849-8a0e65876c52" />
+      <body>目标：
+1、查看所有批文。
+2、查看批文对应的申请及其明细。
+3、查看批准项是否执行。
+
+说明：
+
+</body>
+    </comment>
+  </ownedCommentsInternal>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="4c8f83f3-46b4-4594-b988-cdc46591d44d" name="规划人员" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f40cc508-fe71-4d54-b6f4-05e64d397d0b" />
+        <targetEnds>
+          <association Id="255a416d-8751-45bc-9320-da574ea80295" isDerived="false" sourceEndRoleName="规划人员" targetEndRoleName="批文管理" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="e8cbb3e0-1a28-457b-ada2-da53553febcf" LastKnownName="批文管理" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="33f28826-73d3-4644-8fad-d441fbedb802" name="规划人员" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c4b73fab-c4a5-426e-baf3-1d7bccfb4696" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7fe5e377-ac31-42db-866a-b5f6ca9455d9" name="批文管理" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="1f14336a-7d00-4870-936e-ebf266706fee" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="909ae479-439d-4a36-8c0e-58f3ce60fd74" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="2b647a8e-49fa-4aba-8b53-079464bfef20" name="规划管理者" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="934e6ad7-1328-4a4a-b846-c7a2266be0a9" />
+        <targetEnds>
+          <association Id="9992d386-eb18-42b4-b806-85388fb0bd55" isDerived="false" sourceEndRoleName="规划管理者" targetEndRoleName="批文管理" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="e8cbb3e0-1a28-457b-ada2-da53553febcf" LastKnownName="批文管理" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="df7885e8-a334-4b7a-ba0a-42409d94de75" name="规划管理者" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="0c40c87c-395d-45f6-ac08-fd9971b28fc0" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cde1bbc5-54ce-4474-8324-adc8f19b2c9a" name="批文管理" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="1fdff9fc-2fa8-4f7a-8172-7c8b8c60ad7f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a390846d-d545-4f30-aac9-0543ff8df474" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="e8cbb3e0-1a28-457b-ada2-da53553febcf" name="批文管理" isAbstract="false" isLeaf="false">
+        <referencesInternal>
+          <reference Id="9036ba12-f17e-4505-aa52-ca3fddc223c2" handle="%justhonor\DefaultCollection#9b56e60f-6fab-49b2-af31-4b0a4df8b7cc$18" tag="Work Item Reference">
+            <elementDefinition Id="d04045d8-fcd8-4700-884b-fa2422ea0557" />
+          </reference>
+        </referencesInternal>
+        <elementDefinition Id="67d0dd2c-adc8-485c-bb11-06ffaf2a090c" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="736e9e9b-d66a-40ee-85d0-a2c1285b6363" name="UniCloud.Modeling.CAFM">
+    <elementDefinition Id="41993ae4-c3d1-4e56-95e3-496d7d3cc915" />
+    <profileInstances>
+      <packageHasProfileInstances Id="c138f663-d23a-4918-9d12-fd6176c529d1">
+        <profileInstance Id="1334f787-b89a-4091-a338-bc277776560c" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="f887bba6-54a1-44a2-897a-4f191b579463">
+        <profileInstance Id="1b8b246a-071e-490f-bca8-2e2268676742" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Telerik.Windows.Themes.Windows8</id>
+    <version>1.0.0</version>
+    <title>Telerik.Windows.Themes.Windows8</title>
+    <authors>zhangnx</authors>
+    <owners>zhangnx</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Telerik.Windows.Themes.Windows8 Framework
+Include Packages list
+ Telerik.Windows.Themes.Windows8.dll</description>
+    <summary>Telerik.Windows.Themes.Windows8  Framework</summary>
+  </metadata>
+</package>

@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="05177019-8512-44c0-b0a9-790f93b33ba4" name="Approval" linkedPackageId="86eaacab-cf6c-457c-be8e-03c4fc40394f" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
+  <referencesInternal>
+    <reference Id="e839e302-2601-47d4-8e1a-ff98aad9f580" handle="%justhonor\DefaultCollection#9b56e60f-6fab-49b2-af31-4b0a4df8b7cc$15" tag="Work Item Reference" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <interaction Id="a2475bcb-c2fb-498e-aea7-c5ca5a0adb5e" name="Approval" collapseFragmentsFlag="false" isActiveClass="false" isAbstract="false" isLeaf="false" isReentrant="false">
+        <elementDefinition Id="4f1e5040-7818-4bd9-bbba-b36a5ded2e1a" />
+        <lifelines>
+          <lifeline Id="3f72150e-ec45-4d15-b7e8-51baa4457c69" name="规划人员 : 规划人员" isActor="true" lifelineDisplayName="‎规划人员‎ : ‎规划人员‎">
+            <elementDefinition Id="d2fe687d-9426-4fb2-9701-db0386c0c06a" />
+            <represents>
+              <propertyMoniker Id="3b4ee486-73b4-4c7a-8332-0561b0c5daed" />
+            </represents>
+          </lifeline>
+          <lifeline Id="c120cfb8-d7b9-45ef-9c7b-e60298e9ccbc" name="批文录入" isActor="false" lifelineDisplayName="‎批文录入‎">
+            <elementDefinition Id="caae2583-d2ee-4342-bbbd-4e075927f45d" />
+            <represents>
+              <propertyMoniker Id="90ff7b21-9415-4713-9ce9-51ca304600ee" />
+            </represents>
+          </lifeline>
+        </lifelines>
+        <ownedAttributesInternal>
+          <property Id="3b4ee486-73b4-4c7a-8332-0561b0c5daed" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="1f495e89-b69d-4a75-8be1-4c6aa4c3928c" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="721d5c57-a31f-4925-8959-b2941e2a50ea" LastKnownName="规划人员" />
+            </type_NamedElement>
+          </property>
+          <property Id="47b4db1d-9027-49d2-a4f1-5a6f2660eac5" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="d240605e-272d-4100-b9ba-e86526ea06c5" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="2cc61411-0798-4897-92d1-297eb6b80b55" LastKnownName="规划管理者" />
+            </type_NamedElement>
+          </property>
+          <property Id="90ff7b21-9415-4713-9ce9-51ca304600ee" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="7414fcbe-2d4c-41a2-b7ec-834fc9bc653d" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="97b8bdd7-a60f-4cd8-b346-c64f145b7b8d" LastKnownName="批文录入" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </interaction>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="721d5c57-a31f-4925-8959-b2941e2a50ea" name="规划人员" isAbstract="false" isLeaf="false" cachedFullName="UniCloud.Modeling.CAFM::规划人员">
+        <elementDefinition Id="f40cc508-fe71-4d54-b6f4-05e64d397d0b" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="2cc61411-0798-4897-92d1-297eb6b80b55" name="规划管理者" isAbstract="false" isLeaf="false" cachedFullName="UniCloud.Modeling.CAFM::规划管理者">
+        <elementDefinition Id="934e6ad7-1328-4a4a-b846-c7a2266be0a9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="97b8bdd7-a60f-4cd8-b346-c64f145b7b8d" name="批文录入" isAbstract="false" isLeaf="false" cachedFullName="UniCloud.Modeling.CAFM::批文录入">
+        <elementDefinition Id="b4eaa37e-f7e3-49d6-9e80-0a7de97ac090" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="86eaacab-cf6c-457c-be8e-03c4fc40394f" name="UniCloud.Modeling.CAFM">
+    <elementDefinition Id="41993ae4-c3d1-4e56-95e3-496d7d3cc915" />
+    <profileInstances>
+      <packageHasProfileInstances Id="09ef95dd-8764-49ea-b3d3-37b649d34b89">
+        <profileInstance Id="3ded6fb1-7a9b-4c23-a323-2cb8aee1c26d" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="489ca97d-182d-4158-9ef1-7c9d42e31b1a">
+        <profileInstance Id="edac5cbf-64e2-4f37-be23-7d0dbe6a1601" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</SequenceDesignerModel>

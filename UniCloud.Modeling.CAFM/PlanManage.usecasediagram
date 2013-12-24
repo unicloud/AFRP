@@ -1,0 +1,341 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="456aa1c3-4a8d-464e-98a0-d9caa62cb91f" name="PlanManage" linkedPackageId="4699a2f5-ec1c-46b0-bc40-5255a01f5fc6" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="1a8607af-dac7-4e11-9a0e-b03dc76d837c" name="计划管理" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <referencesInternal>
+          <reference Id="1c5731be-eeea-4138-a13d-d94faa81027d" handle="%justhonor\DefaultCollection#9b56e60f-6fab-49b2-af31-4b0a4df8b7cc$7" tag="Work Item Reference">
+            <elementDefinition Id="cde6e2e1-22ee-4552-81d9-0b297aab1326" />
+          </reference>
+        </referencesInternal>
+        <elementDefinition Id="17c25cc5-6368-4433-9392-f90d4891685a" />
+        <suppliersInternal>
+          <dependency Id="e85518db-34dd-4b7c-a665-753d0a95480c">
+            <artifactMoniker Id="bc6bb891-ddc5-48bb-ace4-d5010a03c818" LastKnownName="计划管理活动" />
+            <elementDefinition Id="a95b7a13-9cba-42a6-b272-f998350f2463" />
+          </dependency>
+          <dependency Id="b3654a98-bf4f-4ac9-bb9b-8007a45256d4">
+            <subsystemMoniker Id="1a8607af-dac7-4e11-9a0e-b03dc76d837c" LastKnownName="计划管理" />
+            <elementDefinition Id="714b3fe4-0963-4bb5-a4cc-4d9750d5f53e" />
+          </dependency>
+        </suppliersInternal>
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="834c9673-afb2-4df1-8ba0-106f4e3b4968" name="规划人员" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f40cc508-fe71-4d54-b6f4-05e64d397d0b" />
+        <targetEnds>
+          <association Id="6580b8a4-a52c-4cd9-874e-88c1515f9c5b" isDerived="false" sourceEndRoleName="规划人员" targetEndRoleName="客机计划" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="82c9a1a0-2e8a-42c3-840f-73e1f0344b93" LastKnownName="客机计划" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d43aca1e-aeef-4b02-8256-726033ec35dd" name="规划人员" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="4581b25e-f4ed-4e23-ae96-6866ae2fbc76" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="42f58d28-5542-4654-a7fa-1b14268cf413" name="客机计划" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c3b38c29-b925-4867-bd86-b2b597515363" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="7ab844cd-624b-4b07-8a7a-f47dcf766da4" />
+          </association>
+          <association Id="0855d43b-9112-48ec-a0aa-fa88d9c24d33" isDerived="false" sourceEndRoleName="规划人员" targetEndRoleName="货机计划" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="549e3ecf-c2a1-403f-9291-0a1f0c088c55" LastKnownName="货机计划" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="963e9c53-fa4b-4537-b561-791a69b383f9" name="规划人员" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="1b3beca4-0243-4e78-b347-61a42258bacc" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ef9b7e77-7d92-4d60-ab4e-d9588acddb02" name="货机计划" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ddaf3f8a-6f00-4610-9985-a8e246ba53b9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="8b1909d6-40e8-473a-8773-0e96b193c0df" />
+          </association>
+          <association Id="cb025ffd-a2c9-4c94-bdbb-2a1a6e7728ae" isDerived="false" sourceEndRoleName="规划人员" targetEndRoleName="计划执行" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="d4ae06b0-db88-4961-8d75-28dca693b2df" LastKnownName="计划执行" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ce1edf07-7ff4-405a-9f5d-a1f9cd54fb8a" name="规划人员" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="89c4f5f8-a791-468c-8243-6dfa19a3a02c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="11f0c8fc-3d28-4238-a68f-f96b149e0040" name="计划执行" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="7906238e-6103-41bd-b159-a1fe172c81f1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="235df9c8-f22e-479f-9b26-445ed502e11d" />
+          </association>
+          <association Id="82276c39-073a-48ff-836c-557a57602fe4" isDerived="false" sourceEndRoleName="规划人员" targetEndRoleName="计划查询" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="e42b3af3-ebed-4863-898b-82b068e2200d" LastKnownName="计划查询" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8ecf4bd0-bc3c-4f74-8a16-aba344d011da" name="规划人员" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="829e65e8-1d90-4bb9-b737-b49756b032f6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ce570265-a204-47be-9fa0-373c3d2d2a2e" name="计划查询" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ad1292c7-728f-4fd1-848d-70c54023fd49" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="9aba49b8-9ea1-4279-8227-d6c59dd159a7" />
+          </association>
+          <association Id="ef4a692e-54ae-4535-9e1e-317e9ef02166" isDerived="false" sourceEndRoleName="规划人员" targetEndRoleName="计划发布" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="8d462686-a1a2-4ecf-a813-f9fe2142e46e" LastKnownName="计划发布" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="763be69a-1212-4cbb-80de-bbebdd618209" name="规划人员" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="b188d470-4c9a-4418-9638-5f8f4a72cc79" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cb86039a-2092-42fb-b243-ba2ad64775ae" name="计划发布" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="117f37a1-e357-4e8e-a8a8-ea7940649630" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="20df797a-c000-4976-89de-f0476ebc425b" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="3a2809b6-2396-4f26-b5a8-a6dc2d32f6ed" name="规划管理者" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="934e6ad7-1328-4a4a-b846-c7a2266be0a9" />
+        <targetEnds>
+          <association Id="645b3630-5b17-42be-9e7f-9a7a7c27b9a8" isDerived="false" sourceEndRoleName="规划管理者" targetEndRoleName="客机计划" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="82c9a1a0-2e8a-42c3-840f-73e1f0344b93" LastKnownName="客机计划" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3d7227bf-cb41-43ba-8945-7987f49959df" name="规划管理者" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="9865df16-aada-42e6-901b-2a524acff22b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9f6db5a7-dd87-4b4d-807f-cee9310781e3" name="客机计划" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="dec7f6bf-0554-4dde-a731-959ddb2ef641" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="4a0f9e85-63e6-40ae-9d8e-b27cac3dedda" />
+          </association>
+          <association Id="7904c80e-6ea2-4ff4-9300-b8914577c350" isDerived="false" sourceEndRoleName="规划管理者" targetEndRoleName="计划执行" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="d4ae06b0-db88-4961-8d75-28dca693b2df" LastKnownName="计划执行" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="33790c9f-5860-4912-b29d-61b1e284b7ec" name="规划管理者" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d64410f4-c413-44a2-a28a-aa9efcc18905" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7df855a1-e119-45ce-839c-cc3b9bd8ab3f" name="计划执行" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b95e029c-6d33-447e-b234-838ca04c4e7d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="50f193f5-cc76-4dd9-b23a-dd01d945a44d" />
+          </association>
+          <association Id="b59a68b4-e0b1-4e95-a037-ed6c7c8ed92a" isDerived="false" sourceEndRoleName="规划管理者" targetEndRoleName="货机计划" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="549e3ecf-c2a1-403f-9291-0a1f0c088c55" LastKnownName="货机计划" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="80cdcc76-d9ca-4386-a78e-9e963c3bec07" name="规划管理者" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="fbb344cc-2f8b-4efe-ba72-19ff680588a7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a44588a0-7329-4bcc-a752-043f4714e226" name="货机计划" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="f6e0b1c6-f224-45fb-a972-d4926c5bad6a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e2eda695-b00f-4670-9c64-6461e41fe2b3" />
+          </association>
+          <association Id="74fec983-6db0-4987-8ead-887c9dafe149" isDerived="false" sourceEndRoleName="规划管理者" targetEndRoleName="计划查询" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="e42b3af3-ebed-4863-898b-82b068e2200d" LastKnownName="计划查询" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="59e9184f-ae62-4a25-a6ac-2e5ccb437ca0" name="规划管理者" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="b97139d5-f481-484f-938a-f5d995a3a6a4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9237793f-25c0-45f1-b885-e5feaf32cb46" name="计划查询" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="0e06273b-ea55-400f-a25f-4c6207db2811" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="d73530c8-1206-498e-b9bb-bebc9b256470" />
+          </association>
+          <association Id="2a41331c-5331-47f0-a27d-ce3d43bcfd98" isDerived="false" sourceEndRoleName="规划管理者" targetEndRoleName="计划发布" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="8d462686-a1a2-4ecf-a813-f9fe2142e46e" LastKnownName="计划发布" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="93232428-0b27-44ee-abce-de30c054d665" name="规划管理者" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="430fb006-5475-4d90-9aa9-76fc46d03588" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3afc5ff6-401d-466a-931d-d88e5d8f2ba3" name="计划发布" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="e1eb60f9-33dc-4212-92c3-d04b57be94a7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="d7d11d4c-4ab9-434d-8ea8-54ae40cb8684" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="82c9a1a0-2e8a-42c3-840f-73e1f0344b93" name="客机计划" isAbstract="false" isLeaf="false">
+        <referencesInternal>
+          <reference Id="572cb11d-93e7-4d4c-8ff3-ce17d84ebdcc" handle="%justhonor\DefaultCollection#9b56e60f-6fab-49b2-af31-4b0a4df8b7cc$10" tag="Work Item Reference">
+            <elementDefinition Id="9e43b190-4296-4cdc-a12c-e61acb413a6d" />
+          </reference>
+        </referencesInternal>
+        <elementDefinition Id="6473c0fd-b5d8-409f-be18-3819a79a890c" />
+        <suppliersInternal>
+          <dependency Id="1ec3d7bc-7213-40f3-b787-4c3f6d773cba">
+            <artifactMoniker Id="198a9ef4-7e15-4674-88a1-6a18b1c9dbd8" LastKnownName="客机计划用例" />
+            <elementDefinition Id="ef2a6095-8761-4b87-87d2-fad18b943872" />
+          </dependency>
+        </suppliersInternal>
+        <subjects>
+          <subsystemMoniker Id="1a8607af-dac7-4e11-9a0e-b03dc76d837c" LastKnownName="计划管理" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="549e3ecf-c2a1-403f-9291-0a1f0c088c55" name="货机计划" isAbstract="false" isLeaf="false">
+        <referencesInternal>
+          <reference Id="983bf913-deb7-4a4d-ab3c-3057981ddc93" handle="%justhonor\DefaultCollection#9b56e60f-6fab-49b2-af31-4b0a4df8b7cc$12" tag="Work Item Reference">
+            <elementDefinition Id="3178d822-32c4-4635-99cf-7a0abd2b18b3" />
+          </reference>
+        </referencesInternal>
+        <elementDefinition Id="51812f09-f872-43fa-8b03-39998b193659" />
+        <suppliersInternal>
+          <dependency Id="2bbe4518-254e-46b4-83ab-1181001cd5d8">
+            <artifactMoniker Id="3ff633df-acc0-4b68-b404-3eaa71c0dc55" LastKnownName="货机计划用例" />
+            <elementDefinition Id="5a9d9dfa-eb78-495f-a433-a9b6bf9efd35" />
+          </dependency>
+        </suppliersInternal>
+        <subjects>
+          <subsystemMoniker Id="1a8607af-dac7-4e11-9a0e-b03dc76d837c" LastKnownName="计划管理" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="d4ae06b0-db88-4961-8d75-28dca693b2df" name="计划执行" isAbstract="false" isLeaf="false">
+        <referencesInternal>
+          <reference Id="93ca7836-0433-4bc6-ad74-be7e877e421d" handle="%justhonor\DefaultCollection#9b56e60f-6fab-49b2-af31-4b0a4df8b7cc$13" tag="Work Item Reference">
+            <elementDefinition Id="aec5387d-724e-401c-8d5e-0d93113419f1" />
+          </reference>
+        </referencesInternal>
+        <elementDefinition Id="06321081-d998-4d7e-ba42-287c7f99d290" />
+        <suppliersInternal>
+          <dependency Id="a6993b11-61a2-4c3d-88e5-483017bab587">
+            <artifactMoniker Id="3155854f-374d-4d9f-9180-c2ac6135be7e" LastKnownName="计划执行用例" />
+            <elementDefinition Id="d4f302ec-3878-4c7c-b8b8-d3efd0433b53" />
+          </dependency>
+        </suppliersInternal>
+        <subjects>
+          <subsystemMoniker Id="1a8607af-dac7-4e11-9a0e-b03dc76d837c" LastKnownName="计划管理" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="e42b3af3-ebed-4863-898b-82b068e2200d" name="计划查询" isAbstract="false" isLeaf="false">
+        <referencesInternal>
+          <reference Id="8fc5b866-f039-4565-b025-0dcf08829f01" handle="%justhonor\DefaultCollection#9b56e60f-6fab-49b2-af31-4b0a4df8b7cc$14" tag="Work Item Reference">
+            <elementDefinition Id="2cf6445c-b536-4f8f-85c9-3b03e14519d2" />
+          </reference>
+        </referencesInternal>
+        <elementDefinition Id="3fba8a92-9443-4af8-81fa-e46f7121e2e6" />
+        <suppliersInternal>
+          <dependency Id="b5848c9a-0026-4040-ac98-d883a5ca63d8">
+            <artifactMoniker Id="e2ac35f9-1690-4c07-858d-17a8ee0aa2d1" LastKnownName="计划查询用例" />
+            <elementDefinition Id="55e0eb3b-ade0-4493-bbf3-afe9614fbd17" />
+          </dependency>
+        </suppliersInternal>
+        <subjects>
+          <subsystemMoniker Id="1a8607af-dac7-4e11-9a0e-b03dc76d837c" LastKnownName="计划管理" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="8d462686-a1a2-4ecf-a813-f9fe2142e46e" name="计划发布" isAbstract="false" isLeaf="false">
+        <referencesInternal>
+          <reference Id="1d0de2ba-3a64-444c-ac47-f1061a41157d" handle="%justhonor\DefaultCollection#9b56e60f-6fab-49b2-af31-4b0a4df8b7cc$11" tag="Work Item Reference">
+            <elementDefinition Id="bad67636-2c9d-440f-86bb-16bb2377d97f" />
+          </reference>
+        </referencesInternal>
+        <elementDefinition Id="a0608bf8-3cad-479a-899c-1d7d09504c0b" />
+        <suppliersInternal>
+          <dependency Id="b11fe86b-f6f9-4c00-b03c-bf44ade3bd0e">
+            <artifactMoniker Id="8817ad8a-0f21-4c19-9f54-3875aeb4546e" LastKnownName="计划发布用例" />
+            <elementDefinition Id="432e9b27-141f-48de-99f5-8d084d8bc0aa" />
+          </dependency>
+        </suppliersInternal>
+        <subjects>
+          <subsystemMoniker Id="1a8607af-dac7-4e11-9a0e-b03dc76d837c" LastKnownName="计划管理" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <useCaseModelRootHasTypes>
+      <artifact Id="bc6bb891-ddc5-48bb-ace4-d5010a03c818" name="计划管理活动" isAbstract="false" isLeaf="false" fileName="UniCloud.Modeling.CAFM\PlanManage.activitydiagram">
+        <elementDefinition Id="9d6d8908-8d2d-4a0f-bd4e-858f8af760d1" />
+      </artifact>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <artifact Id="198a9ef4-7e15-4674-88a1-6a18b1c9dbd8" name="客机计划用例" isAbstract="false" isLeaf="false" fileName="UniCloud.Modeling.CAFM\PlanPnr.usecasediagram">
+        <elementDefinition Id="2864930b-0019-475b-80f3-b3640c6ae785" />
+      </artifact>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <artifact Id="3ff633df-acc0-4b68-b404-3eaa71c0dc55" name="货机计划用例" isAbstract="false" isLeaf="false" fileName="UniCloud.Modeling.CAFM\PlanCargo.usecasediagram">
+        <elementDefinition Id="1a42d8b7-5ead-42da-8568-0561650071ad" />
+      </artifact>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <artifact Id="3155854f-374d-4d9f-9180-c2ac6135be7e" name="计划执行用例" isAbstract="false" isLeaf="false" fileName="UniCloud.Modeling.CAFM\PlanPerform.usecasediagram">
+        <elementDefinition Id="2b4ebdc7-379e-41d5-9d9f-08b1ded0dd25" />
+      </artifact>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <artifact Id="8817ad8a-0f21-4c19-9f54-3875aeb4546e" name="计划发布用例" isAbstract="false" isLeaf="false" fileName="UniCloud.Modeling.CAFM\PlanPublish.usecasediagram">
+        <elementDefinition Id="e22c0389-44b9-4750-a75b-eef278541bb6" />
+      </artifact>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <artifact Id="e2ac35f9-1690-4c07-858d-17a8ee0aa2d1" name="计划查询用例" isAbstract="false" isLeaf="false" fileName="UniCloud.Modeling.CAFM\PlanQuery.usecasediagram">
+        <elementDefinition Id="450dea79-5381-45f1-bd4e-241eef802ac4" />
+      </artifact>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="4699a2f5-ec1c-46b0-bc40-5255a01f5fc6" name="UniCloud.Modeling.CAFM">
+    <elementDefinition Id="41993ae4-c3d1-4e56-95e3-496d7d3cc915" />
+    <profileInstances>
+      <packageHasProfileInstances Id="b18cdbd6-e449-4072-aa4b-394f2f823633">
+        <profileInstance Id="70dfaa41-1a2c-438e-8151-1d2c6fd87583" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="0f62c439-3bdc-4c8d-ae73-a35875107200">
+        <profileInstance Id="4b001263-c121-4882-9a07-06287d134463" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>

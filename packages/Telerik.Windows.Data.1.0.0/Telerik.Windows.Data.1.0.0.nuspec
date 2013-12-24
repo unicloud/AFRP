@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Telerik.Windows.Data</id>
+    <version>1.0.0</version>
+    <title>Telerik.Windows.Data</title>
+    <authors>zhangnx</authors>
+    <owners>zhangnx</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Telerik.Windows.Data Framework
+Include Packages list
+ Telerik.Windows.Data.dll</description>
+    <summary>Telerik.Windows.Data  Framework</summary>
+  </metadata>
+</package>

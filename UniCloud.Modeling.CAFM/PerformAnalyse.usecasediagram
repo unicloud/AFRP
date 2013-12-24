@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="14b4b6b9-930c-4d8f-8503-cf34156a9012" name="PerformAnalyse" linkedPackageId="d2156afd-69df-4366-adb1-c0d0b96699f0" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <ownedCommentsInternal>
+    <comment Id="dbb98ed2-a48f-41cb-b384-9e48d4a11427">
+      <elementDefinition Id="e5358deb-a893-4f38-bf2d-989f0c867d6c" />
+      <body>目标：
+
+1、查看各航空公司执行水平及其变化趋势。
+2、查看某年度某航空公司的计划及执行情况。
+
+
+
+说明：
+</body>
+    </comment>
+  </ownedCommentsInternal>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <useCase Id="ec21d424-65e3-468c-ac79-d2a0e9f1c53f" name="执行分析" isAbstract="false" isLeaf="false">
+        <referencesInternal>
+          <reference Id="72789fab-7b64-4ac3-aca5-1e88192e1740" handle="%justhonor\DefaultCollection#9b56e60f-6fab-49b2-af31-4b0a4df8b7cc$26" tag="Work Item Reference">
+            <elementDefinition Id="1d9bb881-d161-4fed-9288-7f81b726a0c2" />
+          </reference>
+        </referencesInternal>
+        <elementDefinition Id="3709a35f-86a1-4850-b6de-4d00c7c5af43" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="4bbf1443-8e4f-439e-9451-c0de50824139" name="规划人员" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f40cc508-fe71-4d54-b6f4-05e64d397d0b" />
+        <targetEnds>
+          <association Id="1c578687-4ae2-4114-ba67-6874109fed17" isDerived="false" sourceEndRoleName="规划人员" targetEndRoleName="执行分析" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="ec21d424-65e3-468c-ac79-d2a0e9f1c53f" LastKnownName="执行分析" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f7cbb59c-9bed-46c7-88e7-389562894e7f" name="规划人员" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d7aadc10-19da-4c9a-8423-39c1d1525e52" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6a2859f2-ddf8-4a5d-a1a1-c625dbb0c537" name="执行分析" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="5f371c04-c014-48e3-9d8e-b6bc803ade83" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="7891291d-898f-475e-b302-47dd2ebc6004" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="3e867378-f988-45ee-ba7f-9896083d08d7" name="规划管理者" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="934e6ad7-1328-4a4a-b846-c7a2266be0a9" />
+        <targetEnds>
+          <association Id="0be8420d-407e-41d5-ae41-fb1ed55bdef7" isDerived="false" sourceEndRoleName="规划管理者" targetEndRoleName="执行分析" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="ec21d424-65e3-468c-ac79-d2a0e9f1c53f" LastKnownName="执行分析" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a0cda1c0-cc10-4e4c-bb0f-2caa62bd781f" name="规划管理者" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="3d8f2b50-9a39-48fc-87f9-bf60ca8b22d5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2c7a7b98-23f1-45eb-a113-39a60442de50" name="执行分析" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d4b7b9ff-0df8-4fec-87a9-484ae1df7048" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="57bb5704-2884-422b-b34b-648b2394b988" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="d2156afd-69df-4366-adb1-c0d0b96699f0" name="UniCloud.Modeling.CAFM">
+    <elementDefinition Id="41993ae4-c3d1-4e56-95e3-496d7d3cc915" />
+    <profileInstances>
+      <packageHasProfileInstances Id="b1f5c7c4-7c8f-4aba-8cae-35369a4bec10">
+        <profileInstance Id="c121e9bd-dcfe-445b-8917-b3b197441681" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="d93372da-2c02-4a0f-a27f-573494517b33">
+        <profileInstance Id="7129fac5-2ba0-4287-952d-9347e2d46e88" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>

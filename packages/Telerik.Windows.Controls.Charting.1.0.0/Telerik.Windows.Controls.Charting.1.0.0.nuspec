@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Telerik.Windows.Controls.Charting</id>
+    <version>1.0.0</version>
+    <title>Telerik.Windows.Controls.Charting</title>
+    <authors>zhangnx</authors>
+    <owners>zhangnx</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Telerik.Windows.Controls.Charting Framework
+Include Packages list 
+Telerik.Windows.Controls.Charting.dll</description>
+    <summary>Telerik.Windows.Controls.Charting  Framework</summary>
+  </metadata>
+</package>

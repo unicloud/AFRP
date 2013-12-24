@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="4a544776-01a6-4581-8da3-f27e625d20f6" name="PlanPnr" linkedPackageId="971c56cf-02ce-4c5f-b7ea-c98b8c558a32" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <ownedCommentsInternal>
+    <comment Id="d2227eee-bc27-4f66-999d-b407e48e1a18">
+      <elementDefinition Id="383f9db9-08c9-446e-8f6a-358698c1fcb0" />
+      <body>目标：
+1、检查航空公司是否都已申报。
+2、评审确认航空公司申报的客机计划是否可行。
+3、对于可行的航空公司计划打上“符合”标志。
+4、对于已经打上“符合”标志的计划如果有新版本的计划需要提醒。
+
+说明：
+</body>
+    </comment>
+  </ownedCommentsInternal>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <useCase Id="5cb6a381-8372-4b6a-8c76-de54ae6a9432" name="客机计划" isAbstract="false" isLeaf="false">
+        <referencesInternal>
+          <reference Id="277d34b5-a33c-46a6-b8ad-c2c8b12b4821" handle="%justhonor\DefaultCollection#9b56e60f-6fab-49b2-af31-4b0a4df8b7cc$10" tag="Work Item Reference">
+            <elementDefinition Id="9e43b190-4296-4cdc-a12c-e61acb413a6d" />
+          </reference>
+        </referencesInternal>
+        <elementDefinition Id="6473c0fd-b5d8-409f-be18-3819a79a890c" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="fd799c0b-e8d7-4b0b-bcba-1faca01c1444" name="规划人员" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f40cc508-fe71-4d54-b6f4-05e64d397d0b" />
+        <targetEnds>
+          <association Id="0a52138d-ed06-4387-9b18-b0d591ec9a80" isDerived="false" sourceEndRoleName="规划人员" targetEndRoleName="客机计划" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="5cb6a381-8372-4b6a-8c76-de54ae6a9432" LastKnownName="客机计划" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d2deb63d-babe-4be1-9895-241ceb2a1603" name="规划人员" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="4581b25e-f4ed-4e23-ae96-6866ae2fbc76" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="affb1484-ca93-404f-947a-7d678f0e9e04" name="客机计划" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c3b38c29-b925-4867-bd86-b2b597515363" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="7ab844cd-624b-4b07-8a7a-f47dcf766da4" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="b4c98099-c57b-4170-b673-a9836419f701" name="规划管理者" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="934e6ad7-1328-4a4a-b846-c7a2266be0a9" />
+        <targetEnds>
+          <association Id="a9cef805-90b4-46da-a77a-db5eb41f23c8" isDerived="false" sourceEndRoleName="规划管理者" targetEndRoleName="客机计划" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="5cb6a381-8372-4b6a-8c76-de54ae6a9432" LastKnownName="客机计划" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9af66093-876f-477b-a17d-e448c68d8484" name="规划管理者" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="9865df16-aada-42e6-901b-2a524acff22b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="bdc5e6f4-a80f-4454-8f5f-9b6b770ba776" name="客机计划" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="dec7f6bf-0554-4dde-a731-959ddb2ef641" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="4a0f9e85-63e6-40ae-9d8e-b27cac3dedda" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="971c56cf-02ce-4c5f-b7ea-c98b8c558a32" name="UniCloud.Modeling.CAFM">
+    <elementDefinition Id="41993ae4-c3d1-4e56-95e3-496d7d3cc915" />
+    <profileInstances>
+      <packageHasProfileInstances Id="b5f2901d-5d7e-4f10-97e4-8641047a1a0e">
+        <profileInstance Id="91ebd49e-03e5-47a7-a0f1-6dfb9eacdba2" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="a6a10163-ee45-426d-8e78-43794b890437">
+        <profileInstance Id="3035156d-2d7e-40b0-b7e9-3b8dfdbfd4cf" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>

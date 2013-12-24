@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="3da7c6d2-d753-4a2e-b3ba-3e023dc9b16e" name="Main" linkedPackageId="e7a49686-2017-43d7-8af1-ed36111cba00" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="9784fab1-6aa0-4d2c-8be1-31099075de93" name="民航机队管理" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="f8888a10-9781-457b-b1b1-7ffa7e3d48c0" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="f65d434f-44e8-4f6a-a32d-1e6c7cc220a3" name="计划管理" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="aaaf4345-81a9-4db3-abf0-93a8eec4e668" />
+        <additions>
+          <include Id="0c566a6b-9c33-4800-b2a1-b696d16a3317">
+            <useCaseMoniker Id="bfb9d557-a616-41f5-be46-e32d044f4397" LastKnownName="客机、货机计划评审" />
+            <elementDefinition Id="7a8e686a-4394-42a7-a49b-79a53c5455f9" />
+          </include>
+          <include Id="79122b07-647c-4d19-9a65-2fa1f6ee5456">
+            <useCaseMoniker Id="712f57eb-2637-4bd4-b616-0e0d59c77784" LastKnownName="检查计划发布" />
+            <elementDefinition Id="1b09f922-2804-41a6-b9f9-59c5de5f7fdf" />
+          </include>
+          <include Id="4e90428e-3c6e-4c15-ae69-bb79db4f09b6">
+            <useCaseMoniker Id="759fb3a3-75a2-4527-ab83-88220c3d649d" LastKnownName="计划执行" />
+            <elementDefinition Id="cb6660ec-95c4-4c02-acbd-8371f5238209" />
+          </include>
+          <include Id="5b64aee0-13c3-4aed-8d9f-271366c32d26">
+            <useCaseMoniker Id="d95eb547-7011-4b89-8a69-eb721e898118" LastKnownName="查询计划" />
+            <elementDefinition Id="4710e62a-02f6-478e-9c3f-2266e144d8bc" />
+          </include>
+          <include Id="97078dbd-257d-4512-a95a-9f3024f9f6b3">
+            <useCaseMoniker Id="1656d800-41c1-4753-aa81-a019a160db55" LastKnownName="分析计划执行" />
+            <elementDefinition Id="ea9a107f-1b65-4748-9473-d567e19ab363" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="9784fab1-6aa0-4d2c-8be1-31099075de93" LastKnownName="民航机队管理" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="f71c7b2b-4ca5-4116-895a-40e39fd08c36" name="评审申请" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e9cb657d-31f5-4c5c-94e7-9abff26ea995" />
+        <additions>
+          <include Id="358d40a5-a99b-48c6-9721-fa073939252d">
+            <useCaseMoniker Id="c7f43728-399f-4379-a9b2-51e3a138b4c2" LastKnownName="管理批文" />
+            <elementDefinition Id="cce94909-d1aa-49ce-a54f-4604904dbc56" />
+          </include>
+          <include Id="df115394-0399-4502-803c-53e48cf7e234">
+            <useCaseMoniker Id="92482ce6-36df-4554-8c0f-7f5bc61a0f49" LastKnownName="录入批文" />
+            <elementDefinition Id="3a6bde40-152f-4fee-b737-03a62fec43dc" />
+          </include>
+          <include Id="331d5c7a-4b3a-48fc-b6c5-06baa7cd9cd3">
+            <useCaseMoniker Id="dbe86893-7990-49b1-a65b-b1dd864728a9" LastKnownName="管理申请" />
+            <elementDefinition Id="f5229a08-9948-40ba-a202-17064de4e0ac" />
+          </include>
+          <include Id="f2a00d3f-c36c-4f6b-8492-073e6680ac63">
+            <useCaseMoniker Id="8e8a151f-96df-4b89-a3e7-4df3d1179359" LastKnownName="检查批文匹配" />
+            <elementDefinition Id="ada10b0a-9a47-4bd6-a9a5-b7e08331f99e" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="9784fab1-6aa0-4d2c-8be1-31099075de93" LastKnownName="民航机队管理" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="299f9b4f-4b5e-489a-86f9-ebde374bd8f6" name="统计分析" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f6ed8488-1ef9-4e5b-a974-4a75e03f7da7" />
+        <subjects>
+          <subsystemMoniker Id="9784fab1-6aa0-4d2c-8be1-31099075de93" LastKnownName="民航机队管理" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="b455728d-83e5-4119-8195-dc1a00405c64" name="接收数据" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="712355f2-ebfa-472b-ba2c-0106917cabde" />
+        <subjects>
+          <subsystemMoniker Id="9784fab1-6aa0-4d2c-8be1-31099075de93" LastKnownName="民航机队管理" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <useCaseModelRootHasTypes>
+      <actor Id="2d60a259-53a0-4e7c-8d1d-2e33e2ccd0c8" name="民航局用户" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="91688d82-7560-4dee-af02-7483286bdc44" />
+        <targetEnds>
+          <association Id="11998392-e07a-42dc-8466-10a1a9255547" isDerived="false" sourceEndRoleName="民航局用户" targetEndRoleName="申请评审" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="f71c7b2b-4ca5-4116-895a-40e39fd08c36" LastKnownName="评审申请" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="db1d2eaa-e2bb-488e-ba16-071d04c5e9c2" name="民航局用户" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="82fcb99a-e436-4388-aee6-fab1f9e2d572" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d2ad1b4e-bbe5-4678-9691-0203a3a1f97a" name="申请评审" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="a04ef376-b4d1-4390-96b8-20272e1f05c1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="d31c10fd-0c78-42a9-93de-60ed963baae3" />
+          </association>
+          <association Id="f1bd5d83-ae25-4a83-b156-89cf579f9858" isDerived="false" sourceEndRoleName="民航局用户" targetEndRoleName="计划管理" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="f65d434f-44e8-4f6a-a32d-1e6c7cc220a3" LastKnownName="计划管理" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1c335245-9486-4237-b4c2-0404558b9717" name="民航局用户" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="8c07f7b6-e180-4b23-9ef2-56ec3d53f7e2" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f9d63a3d-7759-43de-8fec-4ab3eeb746b6" name="计划管理" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="67ac4cb2-ee0f-4f0d-a75e-1c07757557e1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e589b2e9-e521-4dc0-a172-f633c6e6be38" />
+          </association>
+          <association Id="6ce45875-b414-4f33-b24f-ede59672fb4a" isDerived="false" sourceEndRoleName="民航局用户" targetEndRoleName="接收数据" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="b455728d-83e5-4119-8195-dc1a00405c64" LastKnownName="接收数据" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9e40fd39-a067-407d-8c82-f79c4dcbddfd" name="民航局用户" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="40001733-0084-4a9d-976a-9461c76211dc" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="01de4847-8913-414f-8a99-88df025c09c3" name="接收数据" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="518a97e7-bbf5-4c6d-bcda-8e95aaa1d915" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="81194fb9-f6ed-46d4-a2aa-42cc9f8a8880" />
+          </association>
+          <association Id="91d404b8-2e9e-4a65-9bff-c564d588c139" isDerived="false" sourceEndRoleName="民航局用户" targetEndRoleName="统计分析" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="299f9b4f-4b5e-489a-86f9-ebde374bd8f6" LastKnownName="统计分析" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5b898ce0-d9a5-4e55-b4f2-0ee623e8fb70" name="民航局用户" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="5d1614f6-9ba5-45fe-94c8-1a328ed783be" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ef21de1e-d8a3-4d68-90a6-4a8339576e7d" name="统计分析" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="abbc0772-9b05-4021-9458-0d10491164bf" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="64234274-f92a-424e-824d-16693f37900c" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="67c8f6ab-26df-4d88-8a94-0692e7c1359a" name="规划管理者" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="934e6ad7-1328-4a4a-b846-c7a2266be0a9" />
+        <generalsInternal>
+          <generalization Id="46d3926e-840e-4583-b1ff-cbfd65321198" isSubstitutable="false">
+            <actorMoniker Id="2d60a259-53a0-4e7c-8d1d-2e33e2ccd0c8" LastKnownName="民航局用户" />
+            <elementDefinition Id="55028f70-de10-4055-abfe-fa3de525418c" />
+          </generalization>
+        </generalsInternal>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="3bc718a4-3d1a-43ae-b316-1651afb488e6" name="规划人员" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f40cc508-fe71-4d54-b6f4-05e64d397d0b" />
+        <generalsInternal>
+          <generalization Id="6ecec103-dfe9-4e2c-8eaf-4be896fc56ea" isSubstitutable="false">
+            <actorMoniker Id="2d60a259-53a0-4e7c-8d1d-2e33e2ccd0c8" LastKnownName="民航局用户" />
+            <elementDefinition Id="c6d3d5f4-b1ff-4122-bc00-730992816a85" />
+          </generalization>
+        </generalsInternal>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="712f57eb-2637-4bd4-b616-0e0d59c77784" name="检查计划发布" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="188dfb51-693f-4586-8bac-a0d1e04738c3" />
+        <subjects>
+          <subsystemMoniker Id="9784fab1-6aa0-4d2c-8be1-31099075de93" LastKnownName="民航机队管理" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="759fb3a3-75a2-4527-ab83-88220c3d649d" name="计划执行" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e4d7f106-b0b6-4d89-b675-fb0b98607689" />
+        <subjects>
+          <subsystemMoniker Id="9784fab1-6aa0-4d2c-8be1-31099075de93" LastKnownName="民航机队管理" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="bfb9d557-a616-41f5-be46-e32d044f4397" name="客机、货机计划评审" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c4391f20-2dba-4469-ad90-407e5052df4e" />
+        <subjects>
+          <subsystemMoniker Id="9784fab1-6aa0-4d2c-8be1-31099075de93" LastKnownName="民航机队管理" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="d95eb547-7011-4b89-8a69-eb721e898118" name="查询计划" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="19824e7f-86c8-4d7a-a9b6-2719493a1b3e" />
+        <subjects>
+          <subsystemMoniker Id="9784fab1-6aa0-4d2c-8be1-31099075de93" LastKnownName="民航机队管理" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="1656d800-41c1-4753-aa81-a019a160db55" name="分析计划执行" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="1b017453-ebb5-4640-85ec-b6f031e392b5" />
+        <subjects>
+          <subsystemMoniker Id="9784fab1-6aa0-4d2c-8be1-31099075de93" LastKnownName="民航机队管理" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="92482ce6-36df-4554-8c0f-7f5bc61a0f49" name="录入批文" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c4f1a0f0-4e08-4658-b14c-49672b54c902" />
+        <subjects>
+          <subsystemMoniker Id="9784fab1-6aa0-4d2c-8be1-31099075de93" LastKnownName="民航机队管理" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="8e8a151f-96df-4b89-a3e7-4df3d1179359" name="检查批文匹配" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="58a9161d-37c3-4821-9638-5650d310fa4d" />
+        <subjects>
+          <subsystemMoniker Id="9784fab1-6aa0-4d2c-8be1-31099075de93" LastKnownName="民航机队管理" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="c7f43728-399f-4379-a9b2-51e3a138b4c2" name="管理批文" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="96c222d7-7b9b-4967-942a-b911ff66b865" />
+        <subjects>
+          <subsystemMoniker Id="9784fab1-6aa0-4d2c-8be1-31099075de93" LastKnownName="民航机队管理" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="dbe86893-7990-49b1-a65b-b1dd864728a9" name="管理申请" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="917729e2-bdde-4279-a3a2-74304f744e22" />
+        <subjects>
+          <subsystemMoniker Id="9784fab1-6aa0-4d2c-8be1-31099075de93" LastKnownName="民航机队管理" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="e7a49686-2017-43d7-8af1-ed36111cba00" name="UniCloud.Modeling.CAFM">
+    <elementDefinition Id="41993ae4-c3d1-4e56-95e3-496d7d3cc915" />
+    <profileInstances>
+      <packageHasProfileInstances Id="2e4cd493-71a6-4048-b46d-9fc292b03457">
+        <profileInstance Id="c6504142-c4b9-4d73-96a9-b48a46a4ada2" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="6a6c7ea0-d509-4d0a-870b-1865b1ec97c6">
+        <profileInstance Id="848757ba-6d58-4f09-8b7a-ef5dd633d2fd" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>

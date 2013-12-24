@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sequenceDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="ApprovalCheck">
+  <SequenceDesignerModelMoniker Id="305930ef-0a5b-4c62-8f5e-4c61fd19b0f0" />
+  <nestedChildShapes>
+    <lifelineShape Id="d4ffb1e5-0a53-494c-9d8e-0790d4b3035c" absoluteBounds="1.5354166666666664, 1, 0.15, 7" visible="true" visualStyleMode="Modified">
+      <lifelineMoniker Id="3896f385-4312-47a5-bc0a-9520cea46906" LastKnownName="规划人员 : 规划人员" />
+      <relativeChildShapes>
+        <umlLifelineHeadShape Id="b5590eac-585d-4e4b-9540-ff688b4c7be0" absoluteBounds="0.85437499999999977, 0.6, 1.5120833333333332, 0.4" customColor="White" visualStyleMode="Modified">
+          <lifelineMoniker Id="3896f385-4312-47a5-bc0a-9520cea46906" LastKnownName="规划人员 : 规划人员" />
+          <relativeChildShapes />
+        </umlLifelineHeadShape>
+        <lifelineHoverShape Id="aa0a2a6c-1ca9-43b4-832c-d53aa532c437" absoluteBounds="1.5354166666666664, 1, 0, 7">
+          <lifelineMoniker Id="3896f385-4312-47a5-bc0a-9520cea46906" LastKnownName="规划人员 : 规划人员" />
+        </lifelineHoverShape>
+      </relativeChildShapes>
+    </lifelineShape>
+    <lifelineShape Id="2853d6b2-39fe-4835-8edb-d2d856bf0377" absoluteBounds="3.7604167461395264, 1, 0.15, 7" visible="true" visualStyleMode="Modified">
+      <lifelineMoniker Id="f5499d32-9c73-43cd-833b-0ab5a49ffb9e" LastKnownName="批文匹配" />
+      <relativeChildShapes>
+        <umlLifelineHeadShape Id="f33f57ab-a4d7-44fd-84a5-3676f7167f9d" absoluteBounds="3.3354167461395265, 0.6, 1, 0.4" customColor="White" visualStyleMode="Modified">
+          <lifelineMoniker Id="f5499d32-9c73-43cd-833b-0ab5a49ffb9e" LastKnownName="批文匹配" />
+          <relativeChildShapes />
+        </umlLifelineHeadShape>
+        <lifelineHoverShape Id="1b0656da-1f94-48fe-ab2e-a4673ed1eee4" absoluteBounds="3.7604167461395264, 1, 0, 7">
+          <lifelineMoniker Id="f5499d32-9c73-43cd-833b-0ab5a49ffb9e" LastKnownName="批文匹配" />
+        </lifelineHoverShape>
+      </relativeChildShapes>
+    </lifelineShape>
+  </nestedChildShapes>
+</sequenceDesignerDiagram>

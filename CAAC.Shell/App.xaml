@@ -1,0 +1,28 @@
+﻿<Application xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:app="clr-namespace:UniCloud.Security.Services;assembly=UniCloud.Security.Services"
+        xmlns:appsvc="clr-namespace:System.ServiceModel.DomainServices.Client.ApplicationServices;assembly=System.ServiceModel.DomainServices.Client.Web"
+        xmlns:sec="clr-namespace:UniCloud.Security.Services;assembly=UniCloud.Security.Services"
+        x:Class="CAAC.Shell.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <app:ApplicationResources x:Key="ApplicationResources" />
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/CAAC.Infrastructure;component/Resources/UcStyles.xaml" />
+                <ResourceDictionary>
+                    <app:NotOperatorValueConverter x:Key="NotOperatorValueConverter" />
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+    <Application.ApplicationLifetimeObjects>
+        <sec:WebContext>
+            <sec:WebContext.Authentication>
+                <appsvc:FormsAuthentication
+                        DomainContextType="UniCloud.Security.Services.Web.AuthenticationDomainContext, UniCloud.Security.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                </appsvc:FormsAuthentication>
+            </sec:WebContext.Authentication>
+        </sec:WebContext>
+    </Application.ApplicationLifetimeObjects>
+
+</Application>

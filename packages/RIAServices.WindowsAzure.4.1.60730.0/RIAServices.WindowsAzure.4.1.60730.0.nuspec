@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>RIAServices.WindowsAzure</id>
+    <version>4.1.60730.0</version>
+    <title>RIAServices.WindowsAzure</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <licenseUrl>http://go.microsoft.com/fwlink/?LinkId=223397</licenseUrl>
+    <projectUrl>http://silverlight.net/riaservices/</projectUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>WCF RIA Services Toolkit - Windows Azure Table Storage Domain Service</description>
+    <summary>WCF RIA Services Toolkit - Windows Azure Table Storage Domain Service</summary>
+    <copyright>Microsoft 2011</copyright>
+    <tags>WCF RIA Services RIAServices Azure</tags>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.ServiceModel.DomainServices.Server" targetFramework=".NETFramework4.0" />
+    </frameworkAssemblies>
+  </metadata>
+</package>

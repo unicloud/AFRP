@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>RIAServices.T4</id>
+    <version>4.1.60730.0</version>
+    <title>RIAServices.T4</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <licenseUrl>http://go.microsoft.com/fwlink/?LinkId=223397</licenseUrl>
+    <projectUrl>http://silverlight.net/riaservices/</projectUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>WCF RIA Services Toolkit - T4 Code Generation</description>
+    <summary>WCF RIA Services Toolkit - T4 Code Generation</summary>
+    <copyright>Microsoft 2011</copyright>
+    <tags>WCF RIA Services RIAServices T4</tags>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="Microsoft.ServiceModel.DomainServices.Tools" targetFramework=".NETFramework4.0" />
+      <frameworkAssembly assemblyName="System.ServiceModel.DomainServices.Hosting" targetFramework=".NETFramework4.0" />
+      <frameworkAssembly assemblyName="System.ServiceModel.DomainServices.Server" targetFramework=".NETFramework4.0" />
+    </frameworkAssemblies>
+  </metadata>
+</package>

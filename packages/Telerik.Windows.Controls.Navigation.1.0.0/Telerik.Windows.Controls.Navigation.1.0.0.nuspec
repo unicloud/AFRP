@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Telerik.Windows.Controls.Navigation</id>
+    <version>1.0.0</version>
+    <title>Telerik.Windows.Controls.Navigation</title>
+    <authors>zhangnx</authors>
+    <owners>zhangnx</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Telerik.Windows.Controls.Navigation Framework
+Include Packages list 
+Telerik.Windows.Controls.Navigation.dll</description>
+    <summary>Telerik.Windows.Controls.Navigation  Framework</summary>
+  </metadata>
+</package>

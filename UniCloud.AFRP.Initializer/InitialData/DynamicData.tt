@@ -1,0 +1,787 @@
+﻿<#@ template debug="false" hostspecific="true" language="C#" #>
+<#@ output extension=".cs" #>
+<#@ assembly name="System.Data" #>
+<#@ import namespace="System.Data.SqlClient" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#
+	string connectionString="Server=.;Database=InitialAFRP;Trusted_Connection=true;Integrated Security=True;MultipleActiveResultSets=True";
+	string sqlOwner = "select * from [Fleet].[Owner] o left join [Fleet].[Airlines] a on o.OwnerID=a.OwnerID where o.SupplierType != 0 and a.OwnerID is null";
+	string sqlAirlines = "select * from [Fleet].[Airlines] a inner join [Fleet].[Owner] o on a.OwnerID=o.OwnerID";
+    string sqlPlan = "select * from [Fleet].[AircraftPlan]";
+    string sqlRequest = "select * from [Fleet].[Request]";
+    string sqlAircraft = "select * from [Fleet].[Aircraft]";
+    string sqlPlanAircraft = "select * from [Fleet].[PlanAircraft]";
+    string sqlApprovalHistory = "select * from [Fleet].[ApprovalHistory]";
+    string sqlOperationHistory = "select * from [Fleet].[OperationHistory]";
+    string sqlOwnershipHistory = "select * from [Fleet].[OwnershipHistory]";
+    string sqlOperationPlan = "select * from [Fleet].[PlanHistory] p inner join [Fleet].[OperationPlan] o on p.PlanHistoryID=o.PlanHistoryID";
+    string sqlAircraftBusiness = "select * from [Fleet].[AircraftBusiness]";
+	string className = "DynamicData";
+#>
+<#
+	List<Owner> owners = new List<Owner>();
+	List<Airlines> airlineses = new List<Airlines>();
+	List<Plan> plans = new List<Plan>();
+	List<Request> requests = new List<Request>();
+	List<Aircraft> aircrafts = new List<Aircraft>();
+	List<PlanAircraft> planAircrafts = new List<PlanAircraft>();
+	List<ApprovalHistory> approvalHistories = new List<ApprovalHistory>();
+	List<OperationHistory> operationHistories = new List<OperationHistory>();
+	List<OwnershipHistory> ownershipHistories = new List<OwnershipHistory>();
+	List<OperationPlan> operationPlans = new List<OperationPlan>();
+	List<AircraftBusiness> aircraftBusinesses = new List<AircraftBusiness>();
+
+	Owner owner;
+	Airlines airlines;
+	Plan plan;
+	Request request;
+	Aircraft aircraft;
+	PlanAircraft planAircraft;
+	ApprovalHistory approvalHistory;
+	OperationHistory operationHistory;
+	OwnershipHistory ownershipHistory;
+	OperationPlan operationPlan;
+	AircraftBusiness aircraftBusiness;
+
+	using (SqlConnection sqlConnection = new SqlConnection(connectionString))
+	{
+		sqlConnection.Open();
+		SqlCommand sqlCommand;
+		SqlDataReader reader;
+
+		sqlCommand = new SqlCommand(sqlOwner, sqlConnection);
+		reader = sqlCommand.ExecuteReader();
+		while (reader.Read())
+		{
+			owner = new Owner();
+
+			owner.OwnerID = string.IsNullOrWhiteSpace(reader["OwnerID"].ToString()) ? "null" : "Guid.Parse("+'"'+reader["OwnerID"].ToString()+'"'+")";
+			owner.Name = reader["Name"].ToString();
+			owner.ShortName = reader["ShortName"].ToString();
+			owner.Description = reader["Description"].ToString();
+			owner.SupplierType = reader["SupplierType"].ToString();
+
+			owners.Add(owner);
+		}
+
+		sqlCommand = new SqlCommand(sqlAirlines, sqlConnection);
+		reader = sqlCommand.ExecuteReader();
+		while (reader.Read())
+		{
+			airlines = new Airlines();
+
+			airlines.OwnerID = string.IsNullOrWhiteSpace(reader["OwnerID"].ToString()) ? "null" : "Guid.Parse("+'"'+reader["OwnerID"].ToString()+'"'+")";
+			airlines.Name = reader["Name"].ToString();
+			airlines.ShortName = reader["ShortName"].ToString();
+			airlines.Description = reader["Description"].ToString();
+			airlines.SupplierType = reader["SupplierType"].ToString();
+			airlines.MasterID = string.IsNullOrWhiteSpace(reader["MasterID"].ToString()) ? "null" : "Guid.Parse("+'"'+reader["MasterID"].ToString()+'"'+")";
+			airlines.ICAOCode = reader["ICAOCode"].ToString();
+			airlines.IATACode = reader["IATACode"].ToString();
+			airlines.LevelCode = reader["LevelCode"].ToString();
+			airlines.IsShareData = reader["IsShareData"].ToString().ToLower();
+			airlines.IsCurrent = reader["IsCurrent"].ToString().ToLower();
+			airlines.CreateDate = string.IsNullOrWhiteSpace(reader["CreateDate"].ToString()) ? "null" : "DateTime.Parse("+'"'+reader["CreateDate"].ToString()+'"'+")";
+			airlines.LogoutDate = string.IsNullOrWhiteSpace(reader["LogoutDate"].ToString()) ? "null" : "DateTime.Parse("+'"'+reader["LogoutDate"].ToString()+'"'+")";
+			airlines.OperationDate = string.IsNullOrWhiteSpace(reader["OperationDate"].ToString()) ? "null" : "DateTime.Parse("+'"'+reader["OperationDate"].ToString()+'"'+")";
+			airlines.ExportDate = string.IsNullOrWhiteSpace(reader["ExportDate"].ToString()) ? "null" : "DateTime.Parse("+'"'+reader["ExportDate"].ToString()+'"'+")";
+			airlines.SubType = reader["SubType"].ToString();
+			airlines.Type = reader["Type"].ToString();
+
+			airlineses.Add(airlines);
+		}
+
+		sqlCommand = new SqlCommand(sqlPlan, sqlConnection);
+		reader = sqlCommand.ExecuteReader();
+		while (reader.Read())
+		{
+			plan = new Plan();
+
+			plan.PlanID = string.IsNullOrWhiteSpace(reader["PlanID"].ToString()) ? "null" : "Guid.Parse("+'"'+reader["PlanID"].ToString()+'"'+")";
+			plan.AirlinesID = string.IsNullOrWhiteSpace(reader["AirlinesID"].ToString()) ? "null" : "Guid.Parse("+'"'+reader["AirlinesID"].ToString()+'"'+")";
+			plan.AnnualID = string.IsNullOrWhiteSpace(reader["AnnualID"].ToString()) ? "null" : "Guid.Parse("+'"'+reader["AnnualID"].ToString()+'"'+")";
+			plan.Title = reader["Title"].ToString();
+			plan.VersionNumber = reader["VersionNumber"].ToString();
+			plan.IsCurrentVersion = reader["IsCurrentVersion"].ToString().ToLower();
+			plan.IsValid = reader["IsValid"].ToString().ToLower();
+			plan.CreateDate = string.IsNullOrWhiteSpace(reader["CreateDate"].ToString()) ? "null" : "DateTime.Parse("+'"'+reader["CreateDate"].ToString()+'"'+")";
+			plan.SubmitDate = string.IsNullOrWhiteSpace(reader["CreateDate"].ToString()) ? "null" : "DateTime.Parse("+'"'+reader["CreateDate"].ToString()+'"'+")";
+			plan.IsFinished = reader["IsFinished"].ToString().ToLower();
+			plan.ManageFlagPnr = string.IsNullOrWhiteSpace(reader["ManageFlagPnr"].ToString()) ? "null" : reader["ManageFlagPnr"].ToString().ToLower();
+			plan.ManageFlagCargo = string.IsNullOrWhiteSpace(reader["ManageFlagCargo"].ToString()) ? "null" : reader["ManageFlagCargo"].ToString().ToLower();
+			plan.DocNumber = reader["DocNumber"].ToString();
+			plan.AttachDocFileName = reader["AttachDocFileName"].ToString();
+			plan.AttachDoc = reader["AttachDoc"].ToString();
+			plan.Status = reader["Status"].ToString();
+			plan.PublishStatus = reader["PublishStatus"].ToString();
+
+			plans.Add(plan);
+		}
+
+		sqlCommand = new SqlCommand(sqlRequest, sqlConnection);
+		reader = sqlCommand.ExecuteReader();
+		while (reader.Read())
+		{
+			request = new Request();
+
+			request.RequestID = string.IsNullOrWhiteSpace(reader["RequestID"].ToString()) ? "null" : "Guid.Parse("+'"'+reader["RequestID"].ToString()+'"'+")";
+			request.AirlinesID = string.IsNullOrWhiteSpace(reader["AirlinesID"].ToString()) ? "null" : "Guid.Parse("+'"'+reader["AirlinesID"].ToString()+'"'+")";
+			request.ApprovalDocID = string.IsNullOrWhiteSpace(reader["ApprovalDocID"].ToString()) ? "null" : "Guid.Parse("+'"'+reader["ApprovalDocID"].ToString()+'"'+")";
+			request.Title = reader["Title"].ToString();
+			request.CreateDate = string.IsNullOrWhiteSpace(reader["CreateDate"].ToString()) ? "null" : "DateTime.Parse("+'"'+reader["CreateDate"].ToString()+'"'+")";
+			request.SubmitDate = string.IsNullOrWhiteSpace(reader["SubmitDate"].ToString()) ? "null" : "DateTime.Parse("+'"'+reader["SubmitDate"].ToString()+'"'+")";
+			request.IsFinished = reader["IsFinished"].ToString().ToLower();
+			request.ManageFlag = string.IsNullOrWhiteSpace(reader["ManageFlag"].ToString()) ? "null" : reader["ManageFlag"].ToString().ToLower();
+			request.DocNumber = reader["DocNumber"].ToString();
+			request.AttachDocFileName = reader["AttachDocFileName"].ToString();
+			request.AttachDoc = reader["AttachDoc"].ToString();
+			request.Status = reader["Status"].ToString();
+
+			requests.Add(request);
+		}
+
+		sqlCommand = new SqlCommand(sqlAircraft, sqlConnection);
+		reader = sqlCommand.ExecuteReader();
+		while (reader.Read())
+		{
+			aircraft = new Aircraft();
+
+			aircraft.AircraftID = string.IsNullOrWhiteSpace(reader["AircraftID"].ToString()) ? "null" : "Guid.Parse("+'"'+reader["AircraftID"].ToString()+'"'+")";
+			aircraft.AircraftTypeID = string.IsNullOrWhiteSpace(reader["AircraftTypeID"].ToString()) ? "null" : "Guid.Parse("+'"'+reader["AircraftTypeID"].ToString()+'"'+")";
+			aircraft.OwnerID = string.IsNullOrWhiteSpace(reader["OwnerID"].ToString()) ? "null" : "Guid.Parse("+'"'+reader["OwnerID"].ToString()+'"'+")";
+			aircraft.AirlinesID = string.IsNullOrWhiteSpace(reader["AirlinesID"].ToString()) ? "null" : "Guid.Parse("+'"'+reader["AirlinesID"].ToString()+'"'+")";
+			aircraft.ImportCategoryID = string.IsNullOrWhiteSpace(reader["ImportCategoryID"].ToString()) ? "null" : "Guid.Parse("+'"'+reader["ImportCategoryID"].ToString()+'"'+")";
+			aircraft.RegNumber = reader["RegNumber"].ToString();
+			aircraft.SerialNumber = reader["SerialNumber"].ToString();
+			aircraft.CreateDate = string.IsNullOrWhiteSpace(reader["CreateDate"].ToString()) ? "null" : "DateTime.Parse("+'"'+reader["CreateDate"].ToString()+'"'+")";
+			aircraft.FactoryDate = string.IsNullOrWhiteSpace(reader["FactoryDate"].ToString()) ? "null" : "DateTime.Parse("+'"'+reader["FactoryDate"].ToString()+'"'+")";
+			aircraft.ImportDate = string.IsNullOrWhiteSpace(reader["ImportDate"].ToString()) ? "null" : "DateTime.Parse("+'"'+reader["ImportDate"].ToString()+'"'+")";
+			aircraft.ExportDate = string.IsNullOrWhiteSpace(reader["ExportDate"].ToString()) ? "null" : "DateTime.Parse("+'"'+reader["ExportDate"].ToString()+'"'+")";
+			aircraft.IsOperation = reader["IsOperation"].ToString().ToLower();
+
+			aircrafts.Add(aircraft);
+		}
+
+		sqlCommand = new SqlCommand(sqlPlanAircraft, sqlConnection);
+		reader = sqlCommand.ExecuteReader();
+		while (reader.Read())
+		{
+			planAircraft = new PlanAircraft();
+
+			planAircraft.PlanAircraftID = string.IsNullOrWhiteSpace(reader["PlanAircraftID"].ToString()) ? "null" : "Guid.Parse("+'"'+reader["PlanAircraftID"].ToString()+'"'+")";
+			planAircraft.AircraftTypeID = string.IsNullOrWhiteSpace(reader["AircraftTypeID"].ToString()) ? "null" : "Guid.Parse("+'"'+reader["AircraftTypeID"].ToString()+'"'+")";
+			planAircraft.AircraftID = string.IsNullOrWhiteSpace(reader["AircraftID"].ToString()) ? "null" : "Guid.Parse("+'"'+reader["AircraftID"].ToString()+'"'+")";
+			planAircraft.AirlinesID = string.IsNullOrWhiteSpace(reader["AirlinesID"].ToString()) ? "null" : "Guid.Parse("+'"'+reader["AirlinesID"].ToString()+'"'+")";
+			planAircraft.IsLock = reader["IsLock"].ToString().ToLower();
+			planAircraft.IsOwn = reader["IsOwn"].ToString().ToLower();
+			planAircraft.Status = reader["Status"].ToString();
+
+			planAircrafts.Add(planAircraft);
+		}
+
+		sqlCommand = new SqlCommand(sqlApprovalHistory, sqlConnection);
+		reader = sqlCommand.ExecuteReader();
+		while (reader.Read())
+		{
+			approvalHistory = new ApprovalHistory();
+
+			approvalHistory.ApprovalHistoryID = string.IsNullOrWhiteSpace(reader["ApprovalHistoryID"].ToString()) ? "null" : "Guid.Parse("+'"'+reader["ApprovalHistoryID"].ToString()+'"'+")";
+			approvalHistory.PlanAircraftID = string.IsNullOrWhiteSpace(reader["PlanAircraftID"].ToString()) ? "null" : "Guid.Parse("+'"'+reader["PlanAircraftID"].ToString()+'"'+")";
+			approvalHistory.RequestID = string.IsNullOrWhiteSpace(reader["RequestID"].ToString()) ? "null" : "Guid.Parse("+'"'+reader["RequestID"].ToString()+'"'+")";
+			approvalHistory.ImportCategoryID = string.IsNullOrWhiteSpace(reader["ImportCategoryID"].ToString()) ? "null" : "Guid.Parse("+'"'+reader["ImportCategoryID"].ToString()+'"'+")";
+			approvalHistory.SeatingCapacity = reader["SeatingCapacity"].ToString();
+			approvalHistory.CarryingCapacity = reader["CarryingCapacity"].ToString();
+			approvalHistory.RequestDeliverAnnualID = string.IsNullOrWhiteSpace(reader["RequestDeliverAnnualID"].ToString()) ? "null" : "Guid.Parse("+'"'+reader["RequestDeliverAnnualID"].ToString()+'"'+")";
+			approvalHistory.RequestDeliverMonth = reader["RequestDeliverMonth"].ToString();
+			approvalHistory.IsApproved = reader["IsApproved"].ToString().ToLower();
+			approvalHistory.Note = reader["Note"].ToString();
+
+			approvalHistories.Add(approvalHistory);
+		}
+
+		sqlCommand = new SqlCommand(sqlOperationHistory, sqlConnection);
+		reader = sqlCommand.ExecuteReader();
+		while (reader.Read())
+		{
+			operationHistory = new OperationHistory();
+
+			operationHistory.OperationHistoryID = string.IsNullOrWhiteSpace(reader["OperationHistoryID"].ToString()) ? "null" : "Guid.Parse("+'"'+reader["OperationHistoryID"].ToString()+'"'+")";
+			operationHistory.AirlinesID = string.IsNullOrWhiteSpace(reader["AirlinesID"].ToString()) ? "null" : "Guid.Parse("+'"'+reader["AirlinesID"].ToString()+'"'+")";
+			operationHistory.AircraftID = string.IsNullOrWhiteSpace(reader["AircraftID"].ToString()) ? "null" : "Guid.Parse("+'"'+reader["AircraftID"].ToString()+'"'+")";
+			operationHistory.ImportCategoryID = string.IsNullOrWhiteSpace(reader["ImportCategoryID"].ToString()) ? "null" : "Guid.Parse("+'"'+reader["ImportCategoryID"].ToString()+'"'+")";
+			operationHistory.ExportCategoryID =string.IsNullOrWhiteSpace(reader["ExportCategoryID"].ToString()) ? "null" : "Guid.Parse("+'"'+reader["ExportCategoryID"].ToString()+'"'+")";
+			operationHistory.RegNumber = reader["RegNumber"].ToString();
+			operationHistory.TechReceiptDate = string.IsNullOrWhiteSpace(reader["TechReceiptDate"].ToString()) ? "null" : "DateTime.Parse("+'"'+reader["TechReceiptDate"].ToString()+'"'+")";
+			operationHistory.ReceiptDate = string.IsNullOrWhiteSpace(reader["ReceiptDate"].ToString()) ? "null" : "DateTime.Parse("+'"'+reader["ReceiptDate"].ToString()+'"'+")";
+			operationHistory.StartDate = string.IsNullOrWhiteSpace(reader["StartDate"].ToString()) ? "null" : "DateTime.Parse("+'"'+reader["StartDate"].ToString()+'"'+")";
+			operationHistory.StopDate = string.IsNullOrWhiteSpace(reader["StopDate"].ToString()) ? "null" : "DateTime.Parse("+'"'+reader["StopDate"].ToString()+'"'+")";
+			operationHistory.TechDeliveryDate = string.IsNullOrWhiteSpace(reader["TechDeliveryDate"].ToString()) ? "null" : "DateTime.Parse("+'"'+reader["TechDeliveryDate"].ToString()+'"'+")";
+			operationHistory.EndDate = string.IsNullOrWhiteSpace(reader["EndDate"].ToString()) ? "null" : "DateTime.Parse("+'"'+reader["EndDate"].ToString()+'"'+")";
+			operationHistory.OnHireDate = string.IsNullOrWhiteSpace(reader["OnHireDate"].ToString()) ? "null" : "DateTime.Parse("+'"'+reader["OnHireDate"].ToString()+'"'+")";
+			operationHistory.Note = reader["Note"].ToString();
+			operationHistory.Status = reader["Status"].ToString();
+
+			operationHistories.Add(operationHistory);
+		}
+
+		sqlCommand = new SqlCommand(sqlOwnershipHistory, sqlConnection);
+		reader = sqlCommand.ExecuteReader();
+		while (reader.Read())
+		{
+			ownershipHistory = new OwnershipHistory();
+
+			ownershipHistory.OwnershipHistoryID = string.IsNullOrWhiteSpace(reader["OwnershipHistoryID"].ToString()) ? "null" : "Guid.Parse("+'"'+reader["OwnershipHistoryID"].ToString()+'"'+")";
+			ownershipHistory.AircraftID = string.IsNullOrWhiteSpace(reader["AircraftID"].ToString()) ? "null" : "Guid.Parse("+'"'+reader["AircraftID"].ToString()+'"'+")";
+			ownershipHistory.OwnerID = string.IsNullOrWhiteSpace(reader["OwnerID"].ToString()) ? "null" : "Guid.Parse("+'"'+reader["OwnerID"].ToString()+'"'+")";
+			ownershipHistory.StartDate = string.IsNullOrWhiteSpace(reader["StartDate"].ToString()) ? "null" : "DateTime.Parse("+'"'+reader["StartDate"].ToString()+'"'+")";
+			ownershipHistory.EndDate = string.IsNullOrWhiteSpace(reader["EndDate"].ToString()) ? "null" : "DateTime.Parse("+'"'+reader["EndDate"].ToString()+'"'+")";
+			ownershipHistory.Status = reader["Status"].ToString();
+
+			ownershipHistories.Add(ownershipHistory);
+		}
+
+		sqlCommand = new SqlCommand(sqlOperationPlan, sqlConnection);
+		reader = sqlCommand.ExecuteReader();
+		while (reader.Read())
+		{
+			operationPlan = new OperationPlan();
+
+			operationPlan.PlanHistoryID = string.IsNullOrWhiteSpace(reader["PlanHistoryID"].ToString()) ? "null" : "Guid.Parse("+'"'+reader["PlanHistoryID"].ToString()+'"'+")";
+			operationPlan.PlanAircraftID = string.IsNullOrWhiteSpace(reader["PlanAircraftID"].ToString()) ? "null" : "Guid.Parse("+'"'+reader["PlanAircraftID"].ToString()+'"'+")";
+			operationPlan.PlanID = string.IsNullOrWhiteSpace(reader["PlanID"].ToString()) ? "null" : "Guid.Parse("+'"'+reader["PlanID"].ToString()+'"'+")";
+			operationPlan.ApprovalHistoryID = string.IsNullOrWhiteSpace(reader["ApprovalHistoryID"].ToString()) ? "null" : "Guid.Parse("+'"'+reader["ApprovalHistoryID"].ToString()+'"'+")";
+			operationPlan.ActionCategoryID = string.IsNullOrWhiteSpace(reader["ActionCategoryID"].ToString()) ? "null" : "Guid.Parse("+'"'+reader["ActionCategoryID"].ToString()+'"'+")";
+			operationPlan.TargetCategoryID = string.IsNullOrWhiteSpace(reader["TargetCategoryID"].ToString()) ? "null" : "Guid.Parse("+'"'+reader["TargetCategoryID"].ToString()+'"'+")";
+			operationPlan.AircraftTypeID = string.IsNullOrWhiteSpace(reader["AircraftTypeID"].ToString()) ? "null" : "Guid.Parse("+'"'+reader["AircraftTypeID"].ToString()+'"'+")";
+			operationPlan.PerformAnnualID = string.IsNullOrWhiteSpace(reader["PerformAnnualID"].ToString()) ? "null" : "Guid.Parse("+'"'+reader["PerformAnnualID"].ToString()+'"'+")";
+			operationPlan.PerformMonth = reader["PerformMonth"].ToString();
+			operationPlan.SeatingCapacity = reader["SeatingCapacity"].ToString();
+			operationPlan.CarryingCapacity = reader["CarryingCapacity"].ToString();
+			operationPlan.IsValid = reader["IsValid"].ToString().ToLower();
+			operationPlan.IsAdjust = reader["IsAdjust"].ToString().ToLower();
+			operationPlan.Note = reader["Note"].ToString();
+			operationPlan.IsSubmit = reader["IsSubmit"].ToString().ToLower();
+			operationPlan.OperationHistoryID = string.IsNullOrWhiteSpace(reader["OperationHistoryID"].ToString()) ? "null" : "Guid.Parse("+'"'+reader["OperationHistoryID"].ToString()+'"'+")";
+
+			operationPlans.Add(operationPlan);
+		}
+
+		sqlCommand = new SqlCommand(sqlAircraftBusiness, sqlConnection);
+		reader = sqlCommand.ExecuteReader();
+		while (reader.Read())
+		{
+			aircraftBusiness = new AircraftBusiness();
+
+			aircraftBusiness.AircraftBusinessID = string.IsNullOrWhiteSpace(reader["AircraftBusinessID"].ToString()) ? "null" : "Guid.Parse("+'"'+reader["AircraftBusinessID"].ToString()+'"'+")";
+			aircraftBusiness.AircraftID = string.IsNullOrWhiteSpace(reader["AircraftID"].ToString()) ? "null" : "Guid.Parse("+'"'+reader["AircraftID"].ToString()+'"'+")";
+			aircraftBusiness.AircraftTypeID = string.IsNullOrWhiteSpace(reader["AircraftTypeID"].ToString()) ? "null" : "Guid.Parse("+'"'+reader["AircraftTypeID"].ToString()+'"'+")";
+			aircraftBusiness.ImportCategoryID = string.IsNullOrWhiteSpace(reader["ImportCategoryID"].ToString()) ? "null" : "Guid.Parse("+'"'+reader["ImportCategoryID"].ToString()+'"'+")";
+			aircraftBusiness.SeatingCapacity = reader["SeatingCapacity"].ToString();
+			aircraftBusiness.CarryingCapacity = reader["CarryingCapacity"].ToString();
+			aircraftBusiness.StartDate = string.IsNullOrWhiteSpace(reader["StartDate"].ToString()) ? "null" : "DateTime.Parse("+'"'+reader["StartDate"].ToString()+'"'+")";
+			aircraftBusiness.EndDate = string.IsNullOrWhiteSpace(reader["EndDate"].ToString()) ? "null" : "DateTime.Parse("+'"'+reader["EndDate"].ToString()+'"'+")";
+			aircraftBusiness.Status = reader["Status"].ToString();
+
+			aircraftBusinesses.Add(aircraftBusiness);
+		}
+
+		sqlConnection.Close();
+	}
+#>
+using System;
+using System.Collections.Generic;
+using UniCloud.Fleet.Models;
+
+namespace UniCloud.AFRP.Initializer
+{
+	public static class <#=className#>
+	{
+        
+		public static List<Owner> GetOwners()
+		{
+			return new List<Owner>
+			{
+<#
+		foreach(var item in owners)
+		{
+#>
+				new Owner
+				{
+					OwnerID = <#=item.OwnerID#>,
+					Name = "<#=item.Name#>",
+					ShortName = "<#=item.ShortName#>",
+					Description = "<#=item.Description#>",
+					SupplierType = <#=item.SupplierType#>,
+				},
+<#
+		}
+#>
+			};
+		}
+
+		public static List<Airlines> GetAirlines()
+		{
+			return new List<Airlines>
+			{
+<#
+		foreach(var item in airlineses)
+		{
+#>
+				new Airlines
+				{
+					OwnerID = <#=item.OwnerID#>,
+					Name = "<#=item.Name#>",
+					ShortName = "<#=item.ShortName#>",
+					Description = "<#=item.Description#>",
+					SupplierType = <#=item.SupplierType#>,
+					MasterID = <#=item.MasterID#>,
+					ICAOCode = "<#=item.ICAOCode#>",
+					IATACode = "<#=item.IATACode#>",
+					LevelCode = "<#=item.LevelCode#>",
+					IsShareData = <#=item.IsShareData#>,
+					IsCurrent = <#=item.IsCurrent#>,
+					CreateDate = <#=item.CreateDate#>,
+					LogoutDate = <#=item.LogoutDate#>,
+					OperationDate = <#=item.OperationDate#>,
+					ExportDate = <#=item.ExportDate#>,
+					SubType = <#=item.SubType#>,
+					Type = <#=item.Type#>,
+				},
+<#
+		}
+#>
+			};
+		}
+
+		public static List<Plan> GetPlans()
+		{
+			return new List<Plan>
+			{
+<#
+		foreach(var item in plans)
+		{
+#>
+				new Plan
+				{
+					PlanID = <#=item.PlanID#>,
+					AirlinesID = <#=item.AirlinesID#>,
+					AnnualID = <#=item.AnnualID#>,
+					Title = "<#=item.Title#>",
+					VersionNumber = <#=item.VersionNumber#>,
+					IsCurrentVersion = <#=item.IsCurrentVersion#>,
+					IsValid = <#=item.IsValid#>,
+					CreateDate = <#=item.CreateDate#>,
+					SubmitDate = <#=item.SubmitDate#>,
+					IsFinished = <#=item.IsFinished#>,
+					ManageFlagPnr = <#=item.ManageFlagPnr#>,
+					ManageFlagCargo = <#=item.ManageFlagCargo#>,
+					DocNumber = "<#=item.DocNumber#>",
+					AttachDocFileName = "<#=item.AttachDocFileName#>",
+					//AttachDoc = "<#=item.AttachDoc#>",
+					Status = <#=item.Status#>,
+					PublishStatus = <#=item.PublishStatus#>,
+				},
+<#
+		}
+#>
+			};
+		}
+
+		public static List<Request> GetRequests()
+		{
+			return new List<Request>
+			{
+<#
+		foreach(var item in requests)
+		{
+#>
+				new Request
+				{
+					RequestID = <#=item.RequestID#>,
+					AirlinesID = <#=item.AirlinesID#>,
+					ApprovalDocID = <#=item.ApprovalDocID#>,
+					Title = "<#=item.Title#>",
+					CreateDate = <#=item.CreateDate#>,
+					SubmitDate = <#=item.SubmitDate#>,
+					IsFinished = <#=item.IsFinished#>,
+					ManageFlag = <#=item.ManageFlag#>,
+					DocNumber = "<#=item.DocNumber#>",
+					AttachDocFileName = "<#=item.AttachDocFileName#>",
+					//AttachDoc = "<#=item.AttachDoc#>",
+					Status = <#=item.Status#>,
+				},
+<#
+		}
+#>
+			};
+		}
+
+		public static List<Aircraft> GetAircrafts()
+		{
+			return new List<Aircraft>
+			{
+<#
+		foreach(var item in aircrafts)
+		{
+#>
+				new Aircraft
+				{	
+					AircraftID = <#=item.AircraftID#>,
+					AircraftTypeID = <#=item.AircraftTypeID#>,
+					OwnerID = <#=item.OwnerID#>,
+					AirlinesID = <#=item.AirlinesID#>,
+					ImportCategoryID = <#=item.ImportCategoryID#>,
+					RegNumber = "<#=item.RegNumber#>",
+					SerialNumber = "<#=item.SerialNumber#>",
+					CreateDate = <#=item.CreateDate#>,
+					FactoryDate = <#=item.FactoryDate#>,
+					ImportDate = <#=item.ImportDate#>,
+					ExportDate = <#=item.ExportDate#>,
+					IsOperation = <#=item.IsOperation#>
+				},
+<#
+		}
+#>
+			};
+		}
+
+		public static List<PlanAircraft> GetPlanAircrafts()
+		{
+			return new List<PlanAircraft>
+			{
+<#
+		foreach(var item in planAircrafts)
+		{
+#>
+				new PlanAircraft
+				{
+					PlanAircraftID = <#=item.PlanAircraftID#>,
+					AircraftID = <#=item.AircraftID#>,
+					AircraftTypeID = <#=item.AircraftTypeID#>,
+					AirlinesID = <#=item.AirlinesID#>,
+					IsLock = <#=item.IsLock#>,
+					IsOwn = <#=item.IsOwn#>,
+					Status = <#=item.Status#>,
+				},
+<#
+		}
+#>
+			};
+		}
+		
+		public static List<ApprovalHistory> GetApprovalHistories()
+		{
+			return new List<ApprovalHistory>
+			{
+<#
+		foreach(var item in approvalHistories)
+		{
+#>
+				new ApprovalHistory
+				{
+					ApprovalHistoryID = <#=item.ApprovalHistoryID#>,
+					PlanAircraftID = <#=item.PlanAircraftID#>,
+					RequestID = <#=item.RequestID#>,
+					ImportCategoryID = <#=item.ImportCategoryID#>,
+					SeatingCapacity = <#=item.SeatingCapacity#>,
+					CarryingCapacity = <#=item.CarryingCapacity#>M,
+					RequestDeliverAnnualID = <#=item.RequestDeliverAnnualID#>,
+					RequestDeliverMonth = <#=item.RequestDeliverMonth#>,
+					IsApproved = <#=item.IsApproved#>,
+					Note = "<#=item.Note#>",
+				},
+<#
+		}
+#>
+			};
+		}
+
+		public static List<OperationHistory> GetOperationHistories()
+		{
+			return new List<OperationHistory>
+			{
+<#
+		foreach(var item in operationHistories)
+		{
+#>
+				new OperationHistory
+				{
+					OperationHistoryID = <#=item.OperationHistoryID#>,
+					AirlinesID = <#=item.AirlinesID#>,
+					AircraftID = <#=item.AircraftID#>,
+					ImportCategoryID = <#=item.ImportCategoryID#>,
+					ExportCategoryID = <#=item.ExportCategoryID#>,
+					RegNumber = "<#=item.RegNumber#>",
+					TechReceiptDate = <#=item.TechReceiptDate#>,
+					ReceiptDate = <#=item.ReceiptDate#>,
+					StartDate = <#=item.StartDate#>,
+					StopDate = <#=item.StopDate#>,
+					TechDeliveryDate = <#=item.TechDeliveryDate#>,
+					EndDate = <#=item.EndDate#>,
+					OnHireDate = <#=item.OnHireDate#>,
+					Note = "<#=item.Note#>",
+					Status = <#=item.Status#>,
+				},
+<#
+		}
+#>
+			};
+		}
+
+		public static List<OwnershipHistory> GetOwnershipHistories()
+		{
+			return new List<OwnershipHistory>
+			{
+<#
+		foreach(var item in ownershipHistories)
+		{
+#>
+				new OwnershipHistory
+				{
+				    OwnershipHistoryID = <#=item.OwnershipHistoryID#>,
+					AircraftID = <#=item.AircraftID#>,
+					OwnerID = <#=item.OwnerID#>,
+					StartDate = <#=item.StartDate#>,
+					EndDate = <#=item.EndDate#>,
+					Status = <#=item.Status#>,
+				},
+<#
+		}
+#>
+			};
+		}
+
+		public static List<OperationPlan> GetOperationPlans()
+		{
+			return new List<OperationPlan>
+			{
+<#
+		foreach(var item in operationPlans)
+		{
+#>
+				new OperationPlan
+				{
+					PlanHistoryID = <#=item.PlanHistoryID#>,
+					PlanAircraftID = <#=item.PlanAircraftID#>,
+					PlanID = <#=item.PlanID#>,
+					ApprovalHistoryID = <#=item.ApprovalHistoryID#>,
+					ActionCategoryID = <#=item.ActionCategoryID#>,
+					TargetCategoryID = <#=item.TargetCategoryID#>,
+					AircraftTypeID = <#=item.AircraftTypeID#>,
+					PerformAnnualID = <#=item.PerformAnnualID#>,
+					PerformMonth = <#=item.PerformMonth#>,
+					SeatingCapacity = <#=item.SeatingCapacity#>,
+					CarryingCapacity = <#=item.CarryingCapacity#>M,
+					IsValid = <#=item.IsValid#>,
+					IsAdjust = <#=item.IsAdjust#>,
+					Note = "<#=item.Note#>",
+					IsSubmit = <#=item.IsSubmit#>,
+					OperationHistoryID = <#=item.OperationHistoryID#>,
+				},
+<#
+		}
+#>
+			};
+		}
+
+		public static List<AircraftBusiness> GetAircraftBusinesses()
+		{
+			return new List<AircraftBusiness>
+			{
+<#
+		foreach(var item in aircraftBusinesses)
+		{
+#>
+				new AircraftBusiness
+				{
+					AircraftBusinessID = <#=item.AircraftBusinessID#>,
+					AircraftID = <#=item.AircraftID#>,
+					AircraftTypeID = <#=item.AircraftTypeID#>,
+					ImportCategoryID = <#=item.ImportCategoryID#>,
+					SeatingCapacity = <#=item.SeatingCapacity#>,
+					CarryingCapacity = <#=item.CarryingCapacity#>M,
+					StartDate = <#=item.StartDate#>,
+					EndDate = <#=item.EndDate#>,
+					Status = <#=item.Status#>,
+				},
+<#
+		}
+#>
+			};
+		}
+
+	}
+}
+
+<#+
+    public class Owner
+    {
+        public string OwnerID { get; set; }
+        public string Name { get; set; }
+        public string ShortName { get; set; }
+        public string Description { get; set; }
+        public string SupplierType { get; set; } 
+    }
+
+    public class Airlines
+    {
+        public string OwnerID { get; set; }
+        public string Name { get; set; }
+        public string ShortName { get; set; }
+        public string Description { get; set; }
+        public string SupplierType { get; set; } 
+        public string MasterID { get; set; }
+        public string ICAOCode { get; set; } 
+        public string IATACode { get; set; } 
+        public string LevelCode { get; set; }
+        public string IsShareData { get; set; }
+        public string IsCurrent { get; set; } 
+        public string CreateDate { get; set; }
+        public string LogoutDate { get; set; }
+        public string OperationDate { get; set; }
+        public string ExportDate { get; set; }
+        public string SubType { get; set; }
+        public string Type { get; set; }
+ }
+
+    public class Plan
+    {
+        public string PlanID { get; set; }
+        public string AirlinesID { get; set; }
+        public string AnnualID { get; set; }
+        public string Title { get; set; }
+        public string VersionNumber { get; set; }
+        public string IsCurrentVersion { get; set; }
+        public string IsValid { get; set; } 
+        public string CreateDate { get; set; }
+        public string SubmitDate { get; set; }
+        public string IsFinished { get; set; } 
+        public string ManageFlagPnr { get; set; } 
+        public string ManageFlagCargo { get; set; } 
+        public string DocNumber { get; set; }
+        public string AttachDocFileName { get; set; }
+        public string AttachDoc { get; set; }
+		public string Status { get; set; }
+		public string PublishStatus { get; set; }
+    }
+
+    public class Request
+    {
+        public string RequestID { get; set; }
+        public string AirlinesID { get; set; }
+        public string ApprovalDocID { get; set; }
+        public string Title { get; set; } 
+        public string CreateDate { get; set; } 
+        public string SubmitDate { get; set; } 
+        public string IsFinished { get; set; } 
+        public string ManageFlag { get; set; }
+        public string DocNumber { get; set; } 
+        public string AttachDocFileName { get; set; } 
+        public string AttachDoc { get; set; } 
+		public string Status { get; set; }
+    }
+
+    public class Aircraft
+    {
+        public string AircraftID { get; set; }
+        public string AircraftTypeID { get; set; }
+        public string OwnerID { get; set; }
+        public string AirlinesID { get; set; }
+        public string ImportCategoryID { get; set; } 
+        public string RegNumber { get; set; } 
+        public string SerialNumber { get; set; }
+        public string CreateDate { get; set; } 
+        public string FactoryDate { get; set; } 
+        public string ImportDate { get; set; } 
+        public string ExportDate { get; set; } 
+        public string IsOperation { get; set; } 
+    }
+
+    public class PlanAircraft
+    {
+        public string PlanAircraftID { get; set; }
+		public string AircraftID { get; set; }
+        public string AircraftTypeID { get; set; }
+        public string AirlinesID { get; set; }
+        public string IsLock { get; set; } 
+        public string IsOwn { get; set; }
+		public string Status { get; set; }
+    }
+
+    public class ApprovalHistory
+    {
+        public string ApprovalHistoryID { get; set; }
+        public string PlanAircraftID { get; set; }
+        public string RequestID { get; set; }
+        public string ImportCategoryID { get; set; }
+        public string SeatingCapacity { get; set; }
+        public string CarryingCapacity { get; set; }
+        public string RequestDeliverAnnualID { get; set; }
+        public string RequestDeliverMonth { get; set; }
+        public string IsApproved { get; set; }
+        public string Note { get; set; }
+    }
+
+    public class OperationHistory
+    {
+        public string OperationHistoryID { get; set; }
+        public string AirlinesID { get; set; }
+        public string AircraftID { get; set; }
+        public string ImportCategoryID { get; set; } 
+        public string ExportCategoryID { get; set; }
+        public string RegNumber { get; set; }
+        public string TechReceiptDate { get; set; }
+        public string ReceiptDate { get; set; }
+        public string StartDate { get; set; }
+        public string StopDate { get; set; }
+        public string TechDeliveryDate { get; set; }
+        public string EndDate { get; set; }
+        public string OnHireDate { get; set; }
+        public string Note { get; set; }
+		public string Status { get; set; }
+    }
+
+    public class OwnershipHistory
+    {
+        public string OwnershipHistoryID { get; set; }
+        public string AircraftID { get; set; }
+        public string OwnerID { get; set; }
+        public string StartDate { get; set; }
+        public string EndDate { get; set; }
+        public string Status { get; set; }
+    }
+
+    public class OperationPlan
+    {
+        public string PlanHistoryID { get; set; }
+        public string PlanAircraftID { get; set; }
+        public string PlanID { get; set; }
+        public string ApprovalHistoryID { get; set; }
+        public string ActionCategoryID { get; set; }
+        public string TargetCategoryID { get; set; }
+        public string AircraftTypeID { get; set; }
+        public string PerformAnnualID { get; set; }
+        public string PerformMonth { get; set; }
+        public string SeatingCapacity { get; set; }
+        public string CarryingCapacity { get; set; }
+        public string IsValid { get; set; }
+        public string IsAdjust { get; set; }
+        public string Note { get; set; }
+        public string IsSubmit { get; set; }
+		public string OperationHistoryID { get; set; }
+    }
+
+    public class AircraftBusiness
+    {
+        public string AircraftBusinessID { get; set; }
+        public string AircraftID { get; set; }
+        public string AircraftTypeID { get; set; }
+        public string ImportCategoryID { get; set; }
+        public string SeatingCapacity { get; set; }
+        public string CarryingCapacity { get; set; }
+        public string StartDate { get; set; } 
+        public string EndDate { get; set; }
+		public string Status { get; set; }
+    }
+
+#>

@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="4361e32c-4714-4acf-8fce-c5bad214dc69" name="Request" linkedPackageId="1befe252-f4ac-4ced-adf3-30ccf0088853" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <ownedCommentsInternal>
+    <comment Id="ec43409c-1106-4575-bc55-7e6b5122c387">
+      <elementDefinition Id="b0a2eeb4-9d7e-44ba-a7fb-5c44ac732832" />
+      <body>目标：
+1、跟踪管理未完成的申请。
+2、申请的符合性检查。
+
+说明：
+1、符合性检查：一方面检查书面报送的申请是否已经报了电子版；另一方面检查报送的申请是否符合要求，不合要求的需要重报，重报的覆盖之前的记录，标记为空的是需要检查的申请。
+2、对所有申请的查询从计划的角度展开。</body>
+    </comment>
+  </ownedCommentsInternal>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="16676bbb-a1b6-48cf-91c0-a04c50e0db37" name="规划人员" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f40cc508-fe71-4d54-b6f4-05e64d397d0b" />
+        <targetEnds>
+          <association Id="44b8f492-ca62-4c45-9aa9-0c0bf98c1e45" isDerived="false" sourceEndRoleName="规划人员" targetEndRoleName="申请管理" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="fce2e615-fe88-40c7-a62d-909b6779a645" LastKnownName="申请管理" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a0ec5ecf-4e46-4f7b-9c59-940463e32632" name="规划人员" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d64d34e4-e0eb-45b2-8d22-d6350b22d642" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ff574dac-9d45-4411-9aaa-e719fd56827d" name="申请管理" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d183c940-e36d-4cc8-8be8-02b80f30f8e2" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="c78884e5-2397-4ba9-abfe-ee82c005566b" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="59e26fb6-0dba-422f-a3fd-2c1d3b7db065" name="规划管理者" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="934e6ad7-1328-4a4a-b846-c7a2266be0a9" />
+        <targetEnds>
+          <association Id="837658d2-0bc2-4bd7-8bf8-8e640fe3ab4f" isDerived="false" sourceEndRoleName="规划管理者" targetEndRoleName="申请管理" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="fce2e615-fe88-40c7-a62d-909b6779a645" LastKnownName="申请管理" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="76b86cea-051c-4c03-884e-b17862c0ed3d" name="规划管理者" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="98cc3e67-e18a-44cf-bd62-8522aae3cc8e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a3ad5081-325e-49d9-bfa7-04172dfea414" name="申请管理" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="04154a9d-c6a6-4f0f-905b-5bc47ddfabd3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="3cf73e71-63f9-4864-8996-05058433cf5a" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="fce2e615-fe88-40c7-a62d-909b6779a645" name="申请管理" isAbstract="false" isLeaf="false">
+        <referencesInternal>
+          <reference Id="d680eda3-1f8f-461b-b2c9-8e237ab9e5a6" handle="%justhonor\DefaultCollection#9b56e60f-6fab-49b2-af31-4b0a4df8b7cc$17" tag="Work Item Reference">
+            <elementDefinition Id="3fd9235f-0fe7-4426-b707-3be49d5c5e69" />
+          </reference>
+        </referencesInternal>
+        <elementDefinition Id="24d7a080-ac1c-4970-8b4f-73838c19a6ff" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="1befe252-f4ac-4ced-adf3-30ccf0088853" name="UniCloud.Modeling.CAFM">
+    <elementDefinition Id="41993ae4-c3d1-4e56-95e3-496d7d3cc915" />
+    <profileInstances>
+      <packageHasProfileInstances Id="0aad0e40-f57c-43d4-ab9f-38014f569569">
+        <profileInstance Id="c0071a7c-5514-4327-83f7-5986cc98e5fb" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="28c75239-cd68-4a51-b531-cbcebe177dda">
+        <profileInstance Id="713d925a-c9c0-4d69-b004-224167df4a06" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>

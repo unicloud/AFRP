@@ -1,0 +1,400 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="627cd551-a9af-4f89-8687-78863b1d4406" name="Main" linkedPackageId="590b025b-b80f-41b1-a53b-883836b6b1d4" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <ownedCommentsInternal>
+    <comment Id="33f86260-bdcb-4d56-bb99-6cadcdbe965e">
+      <elementDefinition Id="f235726f-84ea-42e5-ba19-62e4a7fc8554" />
+      <body>解决方案分成航空公司使用的机队资源规划和民航局使用的民航机队管理两个物理隔离的部分，设计要点包括：
+1、每家航空公司一套独立系统。
+2、民航局除了维护批文，并且和航空公司报送的批文数据匹配外，不做任何数据维护工作，所有相关工作由航空公司承担。
+3、通过邮件传输数据，只有航空公司往民航局的上行数据，民航局不往下发送数据。
+4、推行围绕计划进行管理的模式，分年度滚动拟订完整的飞机资源规划；对于当年度的计划进行控制。
+5、业务目标主要包括两方面：其一，辅助民航局更好评审、确定计划；其二，跟踪计划的执行过程，对于需要审批的计划项需要跟踪到相关的申请和批文。</body>
+      <annotatedElements>
+        <subsystemMoniker Id="38a0c611-ae8d-4c88-9557-7ac433a0b2c0" LastKnownName="机队资源规划" />
+        <subsystemMoniker Id="db2d23df-b454-4195-a2d8-d97bfcf3dedf" LastKnownName="民航机队管理" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <appliedStereotypesInternal>
+    <stereotypeInstance Id="6f54d21f-ad1d-4eb4-9857-7a7907d47d97" name="namespace" profile="CSharpProfile">
+      <elementDefinition Id="fee99419-37c7-4492-a33d-4337488ab899" />
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="e7c24e3e-1307-459b-b68a-8aa5b5a6abeb">
+          <propertyInstance Id="09fec9f8-9fe5-4b12-848d-40122fb39330" name="BaseName">
+            <elementDefinition Id="f5ef5e8b-7224-4cc9-944e-d588d5abea0b" />
+          </propertyInstance>
+          <elementDefinition Id="91928667-5ba7-4de0-8153-94eefc417b7c" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="77df8b8c-2d99-42f5-b2bc-2478f1120278">
+          <propertyInstance Id="b8d08071-4955-425f-90c2-adb44ae631ba" name="ClrAttributes">
+            <elementDefinition Id="836b0ceb-ad47-419e-a6b2-8ab00cf808d9" />
+          </propertyInstance>
+          <elementDefinition Id="b6d4784f-8fe7-4a9a-85df-97d9836ab123" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="5705611a-2069-4781-9f64-c44598ae9194">
+          <propertyInstance Id="0dac8e72-c263-4d2b-8caf-a5cfc2bcd2b4" name="Usings">
+            <elementDefinition Id="a7ea15bd-1fb1-4809-a656-cf472be52f67" />
+          </propertyInstance>
+          <elementDefinition Id="a79ac1e5-1566-4019-bc7c-88c4394a13c9" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+    <stereotypeInstance Id="5f9c7587-ca33-45c8-b00f-4a7aac5d1e40" name="TextTemplateBindings" profile="TextTemplateBindings">
+      <elementDefinition Id="4a82aa2d-6e49-4e2c-8c91-e261cee29c0a" />
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="a07b9ccd-665c-4f2e-a522-78ebf36ab543">
+          <propertyInstance Id="61c51778-c767-42ee-91ca-e523cef5806e" name="Alias" value="ClassTemplate|EnumTemplate|InterfaceTemplate|StructTemplate">
+            <elementDefinition Id="46e58ae0-a242-4714-ae3e-e2206d762585" />
+          </propertyInstance>
+          <elementDefinition Id="0b5cf2dc-c94a-4d01-b6d2-ce8b6c88eb7f" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="cd855827-38e2-4855-8b1e-b1e9fafe34a7">
+          <propertyInstance Id="6b9e09c1-6237-40f5-a864-44395ff65e91" name="TemplateFilePath" value="ClassTemplate=C:\Program Files\Microsoft Visual Studio 10.0\Common7\IDE\Extensions\Microsoft\Visualization and Modeling Feature Pack\2.0\Templates\Text\ClassTemplate.t4|EnumTemplate=C:\Program Files\Microsoft Visual Studio 10.0\Common7\IDE\Extensions\Microsoft\Visualization and Modeling Feature Pack\2.0\Templates\Text\EnumTemplate.t4|InterfaceTemplate=C:\Program Files\Microsoft Visual Studio 10.0\Common7\IDE\Extensions\Microsoft\Visualization and Modeling Feature Pack\2.0\Templates\Text\InterfaceTemplate.t4|StructTemplate=C:\Program Files\Microsoft Visual Studio 10.0\Common7\IDE\Extensions\Microsoft\Visualization and Modeling Feature Pack\2.0\Templates\Text\StructTemplate.t4">
+            <elementDefinition Id="df136b86-f025-4be2-8c77-3700db3c41f6" />
+          </propertyInstance>
+          <elementDefinition Id="83f41b50-4b79-4acd-ba1d-d6a06b4318c3" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="764611b1-3dec-4a6c-b34a-c8994dd1ff13">
+          <propertyInstance Id="5431e4b3-7335-4d0b-b40b-8ca4ee7ebb4a" name="ProjectPath" value="ClassTemplate=..\UniCloud.Modeling.AFRPLib\UniCloud.Modeling.AFRPLib.csproj|EnumTemplate=..\UniCloud.Modeling.AFRPLib\UniCloud.Modeling.AFRPLib.csproj|InterfaceTemplate=..\UniCloud.Modeling.AFRPLib\UniCloud.Modeling.AFRPLib.csproj|StructTemplate=..\UniCloud.Modeling.AFRPLib\UniCloud.Modeling.AFRPLib.csproj">
+            <elementDefinition Id="b9147c9f-b358-453c-8bbd-84b65f58d606" />
+          </propertyInstance>
+          <elementDefinition Id="c48fadbb-8144-47f8-a9b5-94d8f20a4e67" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="0149228c-8ab8-4034-8475-c00c89a36462">
+          <propertyInstance Id="b28e236f-36ff-42c9-9d64-056b391ece98" name="TargetDirectory" value="ClassTemplate=GeneratedCode\{PackageStructure}|EnumTemplate=GeneratedCode\{PackageStructure}|InterfaceTemplate=GeneratedCode\{PackageStructure}|StructTemplate=GeneratedCode\{PackageStructure}">
+            <elementDefinition Id="8fc7f675-eb40-450f-910d-40ffe6c82df8" />
+          </propertyInstance>
+          <elementDefinition Id="4a112ad9-ddb8-468d-90e9-699230def26e" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="96dc9dbb-7d90-4e45-ba3d-af619d9b19d2">
+          <propertyInstance Id="830b4787-4a75-4467-9698-8c3e6a92bf8b" name="TargetName" value="ClassTemplate={Name}|EnumTemplate={Name}|InterfaceTemplate={Name}|StructTemplate={Name}">
+            <elementDefinition Id="1f343d94-4eb7-4b90-9648-17cbe7eb3e8c" />
+          </propertyInstance>
+          <elementDefinition Id="6338dec8-dd9c-4226-adca-f9443fc4d6c3" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="7719ab6d-c5c5-44ab-bc8a-0321614869e3">
+          <propertyInstance Id="3c3cb44f-7897-4f7e-8b9a-4e7cb3ac6c1c" name="Overwrite" value="ClassTemplate=True|EnumTemplate=True|InterfaceTemplate=True|StructTemplate=True">
+            <elementDefinition Id="9ca1028a-2335-4ca7-94dc-b37b85a6c852" />
+          </propertyInstance>
+          <elementDefinition Id="93782927-be25-4d12-ab39-c78b61aad122" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="d372f546-dc1f-432f-b13b-9753477f1252">
+          <propertyInstance Id="9058c8cd-ce49-4c7f-9eeb-1a28f2f1f3a3" name="Parameters">
+            <elementDefinition Id="f21f305b-f066-4eb8-ba6e-90eec29098d0" />
+          </propertyInstance>
+          <elementDefinition Id="26f6e06e-b4c2-4a00-890a-4e95f473f81b" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+  </appliedStereotypesInternal>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="38a0c611-ae8d-4c88-9557-7ac433a0b2c0" name="机队资源规划" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="045bd48a-74ad-44dc-8ed8-cc928ddf9907" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="df826a6f-45f5-4c2d-a5c8-1b2546b18c5f" name="计划编制" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a6b87b97-5ef1-43c9-b5e0-45d30957f02a" />
+        <subjects>
+          <subsystemMoniker Id="38a0c611-ae8d-4c88-9557-7ac433a0b2c0" LastKnownName="机队资源规划" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="5bb1720c-2526-4d30-9e66-249c1cf2b931" name="计划执行" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="381ceb2d-6311-4b63-b559-7fe886a3e162" />
+        <subjects>
+          <subsystemMoniker Id="38a0c611-ae8d-4c88-9557-7ac433a0b2c0" LastKnownName="机队资源规划" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="eedc3309-50b2-4776-9bac-21d31cbe8baa" name="机队数据" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a20cec90-d420-40bf-ae47-c26ead88c9f3" />
+        <subjects>
+          <subsystemMoniker Id="38a0c611-ae8d-4c88-9557-7ac433a0b2c0" LastKnownName="机队资源规划" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="0f731377-dacd-4354-ab91-e22f60e80b98" name="执行分析" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2817ff8f-4511-47fe-95d3-94da75093f38" />
+        <subjects>
+          <subsystemMoniker Id="38a0c611-ae8d-4c88-9557-7ac433a0b2c0" LastKnownName="机队资源规划" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="34b0f4a8-a287-441c-a5b9-bbec99246b30" name="统计分析" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="85c8aa83-04cf-4d4a-806a-20f0bc037d78" />
+        <subjects>
+          <subsystemMoniker Id="38a0c611-ae8d-4c88-9557-7ac433a0b2c0" LastKnownName="机队资源规划" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="db2d23df-b454-4195-a2d8-d97bfcf3dedf" name="民航机队管理" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="29721281-b16f-46f4-ad68-1549653a9167" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="1c9634a2-e5c1-4643-a147-b17cbce6b8c7" name="计划管理" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2209cbf6-09b4-4ff5-b2f6-3d69b8320155" />
+        <subjects>
+          <subsystemMoniker Id="db2d23df-b454-4195-a2d8-d97bfcf3dedf" LastKnownName="民航机队管理" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="3d1caa75-7ef8-48a7-a762-ea77cdd1c902" name="申请评审" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b6376c70-3dcd-4a6a-bfd5-cf6234ce16e1" />
+        <subjects>
+          <subsystemMoniker Id="db2d23df-b454-4195-a2d8-d97bfcf3dedf" LastKnownName="民航机队管理" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="e50badd2-765d-4d90-a63b-3a9c84a3cea5" name="统计分析" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="030bc995-e8b4-4657-932b-e32234df15bc" />
+        <subjects>
+          <subsystemMoniker Id="db2d23df-b454-4195-a2d8-d97bfcf3dedf" LastKnownName="民航机队管理" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <useCaseModelRootHasTypes>
+      <actor Id="565be9a2-3468-421f-be42-35b481b58624" name="航空公司用户" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="4d13b828-48e5-4ded-a770-ad7414b0204c" />
+        <targetEnds>
+          <association Id="026a0d0d-17c7-49c6-a45c-f0672f93211d" isDerived="false" sourceEndRoleName="航空公司用户" targetEndRoleName="计划编制" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="df826a6f-45f5-4c2d-a5c8-1b2546b18c5f" LastKnownName="计划编制" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="bd644b65-6bc3-4969-b48a-2177279a8771" name="航空公司用户" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="386493d1-dc19-4528-bbbb-75db56db5f69" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5115dafb-2c4d-4857-bd0a-5809c83aed02" name="计划编制" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="9d46dfc1-4583-4438-b3b1-1eb65d8830f3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a48ecdba-f884-4791-b615-d4bf7d801c00" />
+          </association>
+          <association Id="09273961-3bd8-42c4-8ff9-5514433edc12" isDerived="false" sourceEndRoleName="航空公司用户" targetEndRoleName="计划执行" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="5bb1720c-2526-4d30-9e66-249c1cf2b931" LastKnownName="计划执行" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8b053091-7156-4460-8be2-a6e317c362c0" name="航空公司用户" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="3e27b994-c1f7-408f-8f38-76bb5526adc6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4aff5f1c-847e-4193-9174-28baabe7cae8" name="计划执行" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="3b712e1c-9c59-4f77-8171-2eeb735883b4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="97de4f5a-e12a-4744-a8dd-ae7dff46fb65" />
+          </association>
+          <association Id="45f64f41-a4aa-434a-a1fe-f2591b2467c4" isDerived="false" sourceEndRoleName="航空公司用户" targetEndRoleName="机队数据" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="eedc3309-50b2-4776-9bac-21d31cbe8baa" LastKnownName="机队数据" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6b6e4ded-4738-478a-a26c-6935afeba67b" name="航空公司用户" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="9151487b-a8d8-4e66-857e-cc3eac95d055" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b3f2c57d-c67a-4517-850c-b0cbad71e38e" name="机队数据" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="beabd88f-8834-457a-82e1-e72030b39eab" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="4ba1b87b-6d41-4926-b397-4913d3ce49b2" />
+          </association>
+          <association Id="e183b0ff-feaf-4993-ab1e-fffd47f6b416" isDerived="false" sourceEndRoleName="航空公司用户" targetEndRoleName="统计分析" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="34b0f4a8-a287-441c-a5b9-bbec99246b30" LastKnownName="统计分析" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="24507971-3ab3-4c66-83bd-4c434df6a170" name="航空公司用户" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="f93bc465-ef83-4083-a089-2d3f6d143562" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0060392f-bcae-4bb2-a2a5-51378357006c" name="统计分析" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ba61966d-19be-4880-899f-2f20ee5d0a84" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="515f4d3f-b3a4-4168-bb05-2afcd006d40c" />
+          </association>
+          <association Id="8c0d8c43-d3cb-4d57-bcec-0780e5343592" isDerived="false" sourceEndRoleName="航空公司用户" targetEndRoleName="执行分析" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="0f731377-dacd-4354-ab91-e22f60e80b98" LastKnownName="执行分析" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="bcb733e5-37dc-4768-a54c-b786d141b1fc" name="航空公司用户" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="f0f9621f-e6b6-401e-815b-a88567a5d24c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6b516b5f-23d2-4dc7-ad69-d65e999eb517" name="执行分析" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="738bef2b-acd5-4abb-b608-89679b2983e2" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="4af59a77-4e53-445e-a6f4-e6f904a2fae1" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="326fafa9-cc2b-4c4e-8b6e-9db2e9f971ba" name="规划管理者" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="1338b91b-4e26-4d12-94d2-d3dddbbf12ce" />
+        <generalsInternal>
+          <generalization Id="2d98f782-7b62-4fb7-8f29-4e01312ed14e" isSubstitutable="false">
+            <actorMoniker Id="565be9a2-3468-421f-be42-35b481b58624" LastKnownName="航空公司用户" />
+            <elementDefinition Id="c89ecaa5-6e87-4331-8f3c-eeaf789f284b" />
+          </generalization>
+        </generalsInternal>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="e4e14462-7067-4a46-89ff-0f380ae36c82" name="规划人员" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="30bec987-89c9-4bf1-8bd0-95f6eff22ff5" />
+        <generalsInternal>
+          <generalization Id="7ffe7582-6b31-4402-be32-af71f3870bd1" isSubstitutable="false">
+            <actorMoniker Id="565be9a2-3468-421f-be42-35b481b58624" LastKnownName="航空公司用户" />
+            <elementDefinition Id="b8ad7465-7185-4aef-a7d3-4ee52df1b542" />
+          </generalization>
+        </generalsInternal>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="11c17c4d-9b4e-4dd9-9e8f-7dd0456ae883" name="提交人" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e7cc4298-f9b2-453e-957c-dd6a59b1d4fc" />
+        <generalsInternal>
+          <generalization Id="e44f8400-ba48-440d-9f31-985fdaca1ce3" isSubstitutable="false">
+            <actorMoniker Id="565be9a2-3468-421f-be42-35b481b58624" LastKnownName="航空公司用户" />
+            <elementDefinition Id="85167b9c-0438-40dc-9b3a-de21244f11c3" />
+          </generalization>
+        </generalsInternal>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="2fe87962-a486-4b53-a073-a087c775eaa3" name="接收数据" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="95c3bdcc-5da6-4c35-878b-1c68077142f8" />
+        <subjects>
+          <subsystemMoniker Id="db2d23df-b454-4195-a2d8-d97bfcf3dedf" LastKnownName="民航机队管理" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <useCaseModelRootHasTypes>
+      <actor Id="121e7fb6-df72-40f9-a29b-f0a313ab872e" name="民航局用户" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="5ee81784-92cd-4c27-a3f7-cc3f0e6b68c3" />
+        <targetEnds>
+          <association Id="50a13749-4a2a-4795-aff5-d95eeadf6eca" isDerived="false" sourceEndRoleName="民航局用户" targetEndRoleName="计划管理" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="1c9634a2-e5c1-4643-a147-b17cbce6b8c7" LastKnownName="计划管理" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7a9030dc-c2d4-4186-8526-22483875089e" name="民航局用户" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="05ec7102-548d-4d29-88ff-34b0489b3372" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="78357e45-414e-49cc-a0e0-2ab02a7f2425" name="计划管理" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="6330e4fa-f3eb-4d29-b17e-467c970ef3ef" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="42fc0baa-8407-497b-9857-c75a5340d896" />
+          </association>
+          <association Id="b9b87b7b-bfb7-46de-a25b-737d84314372" isDerived="false" sourceEndRoleName="民航局用户" targetEndRoleName="申请评审" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="3d1caa75-7ef8-48a7-a762-ea77cdd1c902" LastKnownName="申请评审" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="93e7e668-d667-45bb-956d-51487e4e4a55" name="民航局用户" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="ca97acf0-63be-4f22-82ca-8417f44a8b86" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4e9e0874-4fee-4164-9b73-7da5cba2ac4a" name="申请评审" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="582ddba8-3328-43ce-856b-da1e74454c86" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="9233de7e-d0ad-474c-8617-cc2757951587" />
+          </association>
+          <association Id="0f073191-ab6c-4009-84e8-534f1323deba" isDerived="false" sourceEndRoleName="民航局用户" targetEndRoleName="统计分析" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="e50badd2-765d-4d90-a63b-3a9c84a3cea5" LastKnownName="统计分析" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="04548512-d2a9-4b6d-93a0-a6d292736cf3" name="民航局用户" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="4577e5c9-0c21-4b0e-a10e-71b5924cd7d6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9a1e6635-a079-4b79-912d-993fad7541bf" name="统计分析" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="cac65b94-1eed-4011-916c-a49c9de4740b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="6b90a032-3775-4481-b102-2ddef1761493" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="6372aaea-ae7b-4ca2-992f-fdb8252470d8" name="规划管理者" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="850c5254-7f49-4d0e-901c-b7039e076d4b" />
+        <generalsInternal>
+          <generalization Id="38cd2b05-aa73-4d2e-bf19-0c3ad86bd8a0" isSubstitutable="false">
+            <actorMoniker Id="121e7fb6-df72-40f9-a29b-f0a313ab872e" LastKnownName="民航局用户" />
+            <elementDefinition Id="6357de3b-fee2-4b10-83d6-10efdd63e8b4" />
+          </generalization>
+        </generalsInternal>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="41c315d8-fba8-4c62-8c7c-0a585338edb8" name="规划人员" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b1e9d8af-fb8f-43ea-ab53-aa98ab467442" />
+        <generalsInternal>
+          <generalization Id="c99d4577-1e96-435c-b284-b8c9e7174039" isSubstitutable="false">
+            <actorMoniker Id="121e7fb6-df72-40f9-a29b-f0a313ab872e" LastKnownName="民航局用户" />
+            <elementDefinition Id="bcb1fdf8-21e1-4f99-9b15-83bcc86142cc" />
+          </generalization>
+        </generalsInternal>
+      </actor>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="590b025b-b80f-41b1-a53b-883836b6b1d4" name="UniCloud.Modeling.AFRP">
+    <elementDefinition Id="9bdd35a4-fbe8-4aca-9c17-238e86c1b9a7" />
+    <profileInstances>
+      <packageHasProfileInstances Id="54e76c63-90e5-435f-9a49-2e00a66fc396">
+        <profileInstance Id="f69ed580-34a3-40d3-bf93-33c7d9319484" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="c82d4048-b5e5-48f2-90f7-212ef5e0e8ad">
+        <profileInstance Id="801fffc2-7b40-40ad-931a-b2614c84047f" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="b13d2738-8a48-4d7a-ae67-bf9717411d90">
+        <profileInstance Id="061589f5-f2f7-4907-b248-c67d1de92cdc" name="CSharpProfile">
+          <elementDefinition Id="b9fca0e6-470e-480c-8c6b-d494e23c6ac5" />
+        </profileInstance>
+        <elementDefinition Id="75d83f27-fe60-4c37-b380-0b79bc7cbe32" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="9f28b39f-932f-44c9-9d53-14e684e1f97e">
+        <profileInstance Id="6606d283-fd28-4211-bde6-f4641abe8078" name="TextTemplateBindings">
+          <elementDefinition Id="e053fc01-dc47-43df-9316-d2e48bb86319" />
+        </profileInstance>
+        <elementDefinition Id="d9101ad5-2059-43f6-9e84-00919da40cc2" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>

@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="4f112b1a-dbb1-45eb-a4ac-5ae54232d865" name="PlanQuery" linkedPackageId="5272479f-988b-44fd-be3e-875bdafb09ad" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <ownedCommentsInternal>
+    <comment Id="ae4875be-96b0-447a-a13f-5736dcac184d">
+      <elementDefinition Id="79d1520f-af35-440b-a479-9e0debd97e4a" />
+      <body>目标：
+1、从编制年度、航空公司等维度查询计划，并查看计划明细。
+2、对两份计划进行对比。
+
+说明：
+1、在对计划进行评审时，可以通过对比不同版本的计划查看差异，辅助决策。</body>
+    </comment>
+  </ownedCommentsInternal>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="ce13931a-9c3d-4115-9429-946a9967f5ba" name="规划人员" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f40cc508-fe71-4d54-b6f4-05e64d397d0b" />
+        <targetEnds>
+          <association Id="ccb18459-bbd0-492e-a6fd-046e607f0e0e" isDerived="false" sourceEndRoleName="规划人员" targetEndRoleName="计划查询" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="dadef9c6-63e6-40fd-9b94-16858fe9a3dd" LastKnownName="计划查询" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="889f6787-85ce-4340-ab2c-5dad03b52177" name="规划人员" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="829e65e8-1d90-4bb9-b737-b49756b032f6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4298ff07-329e-4711-8131-f5b0d752ab97" name="计划查询" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ad1292c7-728f-4fd1-848d-70c54023fd49" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="9aba49b8-9ea1-4279-8227-d6c59dd159a7" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="fc475f33-c6c2-4e28-813a-fb41d65e6423" name="规划管理者" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="934e6ad7-1328-4a4a-b846-c7a2266be0a9" />
+        <targetEnds>
+          <association Id="65beab26-0879-4ed4-96a9-dae14868e8a2" isDerived="false" sourceEndRoleName="规划管理者" targetEndRoleName="计划查询" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="dadef9c6-63e6-40fd-9b94-16858fe9a3dd" LastKnownName="计划查询" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a4f534c7-e6cd-4794-a091-a608b2f5a3b2" name="规划管理者" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="b97139d5-f481-484f-938a-f5d995a3a6a4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="671d632c-297e-4878-8be8-4fce49aea86a" name="计划查询" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="0e06273b-ea55-400f-a25f-4c6207db2811" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="d73530c8-1206-498e-b9bb-bebc9b256470" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="dadef9c6-63e6-40fd-9b94-16858fe9a3dd" name="计划查询" isAbstract="false" isLeaf="false">
+        <referencesInternal>
+          <reference Id="22e56b00-36ca-412e-91ab-229942f148fc" handle="%justhonor\DefaultCollection#9b56e60f-6fab-49b2-af31-4b0a4df8b7cc$14" tag="Work Item Reference">
+            <elementDefinition Id="2cf6445c-b536-4f8f-85c9-3b03e14519d2" />
+          </reference>
+        </referencesInternal>
+        <elementDefinition Id="3fba8a92-9443-4af8-81fa-e46f7121e2e6" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="5272479f-988b-44fd-be3e-875bdafb09ad" name="UniCloud.Modeling.CAFM">
+    <elementDefinition Id="41993ae4-c3d1-4e56-95e3-496d7d3cc915" />
+    <profileInstances>
+      <packageHasProfileInstances Id="f7734b08-2d18-4c97-8045-f23f0a8dfbdc">
+        <profileInstance Id="ba58da3c-0b74-46fb-8b37-929dc84575d5" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="d13b0466-48ee-47cc-9bd5-aa76dbe08b15">
+        <profileInstance Id="296b9593-0ac6-4e10-a362-be4fe79f5c57" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>

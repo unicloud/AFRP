@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="36b71a56-10d2-43e8-b753-137e9902d172" name="AircraftRegional" linkedPackageId="82932993-fc4a-4441-b70f-badd3ed214b4" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <ownedCommentsInternal>
+    <comment Id="88c631a4-891e-4c56-ad13-d2d4e4577d74">
+      <elementDefinition Id="c2574ce8-dfae-4722-98f8-bc86d435bbb7" />
+      <body>目标：
+
+1、分析各不同引进方式机队的变化趋势，同时查看飞机总数。
+2、查看各年度各引进方式飞机分布。
+3、查看各年度数据，从引进方式的维度分析。
+
+
+
+说明：
+</body>
+    </comment>
+  </ownedCommentsInternal>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <useCase Id="d75a3209-9299-4621-8afa-93f64747ac6e" name="引进方式" isAbstract="false" isLeaf="false">
+        <referencesInternal>
+          <reference Id="a4000747-7b24-4523-bf2b-bb0bc0f31a01" handle="%justhonor\DefaultCollection#9b56e60f-6fab-49b2-af31-4b0a4df8b7cc$25" tag="Work Item Reference">
+            <elementDefinition Id="68a8670f-bd32-46ad-b6eb-06d65724ec5c" />
+          </reference>
+        </referencesInternal>
+        <elementDefinition Id="6b0d6ad4-c7e7-4cf5-9226-e6e56cce360f" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="67ea71d3-6054-4849-ac9e-d376be492f08" name="规划人员" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f40cc508-fe71-4d54-b6f4-05e64d397d0b" />
+        <targetEnds>
+          <association Id="94a91104-1698-426a-acdb-70b4135b18ee" isDerived="false" sourceEndRoleName="规划人员" targetEndRoleName="座级分析" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="d75a3209-9299-4621-8afa-93f64747ac6e" LastKnownName="引进方式" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e4d7041e-5f6b-41c3-bb1d-608e321f7c24" name="规划人员" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a9c34b0a-9247-4296-8e42-47f4f2f47e5e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="15ba7a74-50a2-4d56-ab0a-341e35b0c792" name="座级分析" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="cc21cedb-63b7-455f-afa2-cfee88a00935" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="c2fe5224-2d0f-43fc-b1cd-de7d20f11367" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="461d39b2-ceb8-4e8f-a5d2-21b2c2d11970" name="规划管理者" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="934e6ad7-1328-4a4a-b846-c7a2266be0a9" />
+        <targetEnds>
+          <association Id="9d4613e3-d91a-47e6-a4ba-83b239b0c9a1" isDerived="false" sourceEndRoleName="规划管理者" targetEndRoleName="座级分析" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="d75a3209-9299-4621-8afa-93f64747ac6e" LastKnownName="引进方式" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0388b725-b28f-4b4c-ab17-c71b28f7341c" name="规划管理者" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="96c2f20c-981e-4559-94e3-3d4546a0c86d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6cb42c93-0dea-4a9a-822e-93bdd65c9dcd" name="座级分析" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="cb6be634-4251-43e0-8381-68c07dacd3f0" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="16233a78-d235-421a-90d2-c369eef4f2f1" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="82932993-fc4a-4441-b70f-badd3ed214b4" name="UniCloud.Modeling.CAFM">
+    <elementDefinition Id="41993ae4-c3d1-4e56-95e3-496d7d3cc915" />
+    <profileInstances>
+      <packageHasProfileInstances Id="330fc456-eaf0-489e-8df9-bb0b4aa8cb9b">
+        <profileInstance Id="ff081a87-5953-4444-98f7-770e2cf00ba9" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="c4afb973-d28a-4665-b918-57a58e2bec95">
+        <profileInstance Id="7cea66be-ec8d-40b3-86b7-d644b6ff5d35" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>

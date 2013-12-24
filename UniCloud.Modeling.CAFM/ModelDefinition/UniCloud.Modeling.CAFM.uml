@@ -1,0 +1,4075 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel"
+  dslVersion="1.0.0.0"
+  Id="41993ae4-c3d1-4e56-95e3-496d7d3cc915"
+  name="UniCloud.Modeling.CAFM" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <ownedCommentsInternal>
+    <comment
+      Id="f6ab6445-73f4-42c3-ac0c-dee9c114a3a6">
+      <body>航空公司</body>
+    </comment>
+    <comment
+      Id="6e569590-957a-4d52-b24d-10dd077f176f">
+      <body>民航局</body>
+    </comment>
+    <comment
+      Id="c42f79ae-d89f-4e7b-851d-f492a688a91e">
+      <body>邮件系统</body>
+    </comment>
+    <comment
+      Id="5bafd2b9-fb94-41c1-8460-dc0280cf5925">
+      <body>修改提交当年新计划通过创建新版本的方式</body>
+      <annotatedElements>
+        <mergeNodeMoniker
+          Id="ef891ca3-2221-48ac-88af-04c662fd778e"
+          LastKnownName="Merge1"
+          LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="f47899ea-0e24-4bd1-9a0f-4cd0c5514adf">
+      <body>航空公司</body>
+    </comment>
+    <comment
+      Id="4c5c4874-c7b3-410b-9dee-3f00a08be5ad">
+      <body>民航局</body>
+    </comment>
+    <comment
+      Id="f7fdd16a-fd61-40ab-96ea-68d74ae4a60c">
+      <body>邮件系统</body>
+    </comment>
+    <comment
+      Id="badb2931-4289-4537-b5cc-0e161cefe3ba">
+      <body>以航空公司提交的结果为准，修改民航局维护的批准项。</body>
+      <annotatedElements>
+        <opaqueActionMoniker
+          Id="5dfc5fa4-9e4d-4774-950b-60642aa05516"
+          LastKnownName="匹配"
+          LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="0fded9a7-cf3a-405e-a13a-3a2fb16e92a9">
+      <body>反馈给航空公司的批件只有一份，或为民航局批准的，或为发改委批准。</body>
+      <annotatedElements>
+        <objectNodeMoniker
+          Id="956c2d06-de87-4fc4-82b7-dfc7940ecb42"
+          LastKnownName="批件"
+          LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="383f9db9-08c9-446e-8f6a-358698c1fcb0">
+      <body>目标：
+1、检查航空公司是否都已申报。
+2、评审确认航空公司申报的客机计划是否可行。
+3、对于可行的航空公司计划打上“符合”标志。
+4、对于已经打上“符合”标志的计划如果有新版本的计划需要提醒。
+
+说明：
+</body>
+    </comment>
+    <comment
+      Id="d697e620-d642-41c8-90ff-437097aa755b">
+      <body>目标：
+1、检查航空公司是否都已申报。
+2、评审确认航空公司申报的货机计划是否可行。
+3、对于可行的航空公司计划打上“符合”标志。
+4、对于已经打上“符合”标志的计划如果有新版本的计划需要提醒。
+
+说明：
+</body>
+    </comment>
+    <comment
+      Id="e11f2937-933e-4dff-bdf6-4ecfdc0cb679">
+      <body>目标：
+1、检查航空公司是否已发布计划。
+2、检查航空公司发布的计划是否民航局确认符合的计划。
+
+说明：
+1、符合标志分别针对客机、货机做出，最终符合的计划应该是整份计划都符合。</body>
+    </comment>
+    <comment
+      Id="6b54f6bd-ebbe-4c3a-8154-87e3b09ce98e">
+      <body>目标：
+1、跟踪当前年度计划执行情况。
+2、可以导航到申请、批文，运营历史，商业数据。
+
+说明：
+</body>
+    </comment>
+    <comment
+      Id="79d1520f-af35-440b-a479-9e0debd97e4a">
+      <body>目标：
+1、从编制年度、航空公司等维度查询计划，并查看计划明细。
+2、对两份计划进行对比。
+
+说明：
+1、在对计划进行评审时，可以通过对比不同版本的计划查看差异，辅助决策。</body>
+    </comment>
+    <comment
+      Id="c465e315-9adb-4d57-ba34-800adbc70bcf">
+      <body>目标：
+
+1、查看飞机架数、座位数、商载变化趋势。
+2、查看各年度运力在各航空公司的分布。
+
+
+
+说明：
+</body>
+    </comment>
+    <comment
+      Id="35a6859c-0834-43a9-a5a7-dd7953873248">
+      <body>目标：
+
+1、查看飞机架数、商载变化趋势。
+2、查看各年度运力在各航空公司的分布。
+
+
+
+说明：
+</body>
+    </comment>
+    <comment
+      Id="9d190365-7ba7-4353-8e85-6e14d312eba9">
+      <body>目标：
+
+1、分析非自有飞机的供应商情况。
+2、查看各供应商提供飞机数量，同时查看非自有飞机总数。
+3、查看各年度各供应商份额。
+4、查看各年度数据。
+
+
+
+说明：
+</body>
+    </comment>
+    <comment
+      Id="899a4ab5-46ca-4b6b-973f-4710ac7b9675">
+      <body>目标：
+
+1、分析各制造商情况。
+2、查看各制造商提供飞机变化趋势，同时查看飞机总数。
+3、查看各年度各制造商份额。
+4、查看各年度数据。
+
+
+
+说明：
+</body>
+    </comment>
+    <comment
+      Id="d7cedfeb-c668-4c31-aba6-89f0400042a8">
+      <body>目标：
+
+1、分析各不同座级机队的变化趋势，同时查看飞机总数。
+2、查看各年度各座级飞机分布。
+3、查看各年度各机型飞机分布。
+
+
+
+说明：
+</body>
+    </comment>
+    <comment
+      Id="c2574ce8-dfae-4722-98f8-bc86d435bbb7">
+      <body>目标：
+
+1、分析各不同引进方式机队的变化趋势，同时查看飞机总数。
+2、查看各年度各引进方式飞机分布。
+3、查看各年度数据，从引进方式的维度分析。
+
+
+
+说明：
+</body>
+    </comment>
+    <comment
+      Id="c31b328a-2ff6-4ec9-b82c-b7a6e32cb569">
+      <body>目标：
+
+1、查看所有飞机。
+2、查看各飞机的相关历史数据。
+
+
+
+说明：
+</body>
+    </comment>
+    <comment
+      Id="e5358deb-a893-4f38-bf2d-989f0c867d6c">
+      <body>目标：
+
+1、查看各航空公司执行水平及其变化趋势。
+2、查看某年度某航空公司的计划及执行情况。
+
+
+
+说明：
+</body>
+    </comment>
+    <comment
+      Id="b0a2eeb4-9d7e-44ba-a7fb-5c44ac732832">
+      <body>目标：
+1、跟踪管理未完成的申请。
+2、申请的符合性检查。
+
+说明：
+1、符合性检查：一方面检查书面报送的申请是否已经报了电子版；另一方面检查报送的申请是否符合要求，不合要求的需要重报，重报的覆盖之前的记录，标记为空的是需要检查的申请。
+2、对所有申请的查询从计划的角度展开。</body>
+    </comment>
+    <comment
+      Id="d2056534-d65c-4c1a-b849-8a0e65876c52">
+      <body>目标：
+1、查看所有批文。
+2、查看批文对应的申请及其明细。
+3、查看批准项是否执行。
+
+说明：
+
+</body>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <subsystem
+        Id="17c25cc5-6368-4433-9392-f90d4891685a"
+        name="计划管理"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="cde6e2e1-22ee-4552-81d9-0b297aab1326"
+            handle="%justhonor\DefaultCollection#9b56e60f-6fab-49b2-af31-4b0a4df8b7cc$7"
+            tag="Work Item Reference" />
+        </referencesInternal>
+        <suppliersInternal>
+          <dependency
+            Id="a95b7a13-9cba-42a6-b272-f998350f2463">
+            <artifactMoniker
+              Id="9d6d8908-8d2d-4a0f-bd4e-858f8af760d1"
+              LastKnownName="计划管理活动"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+          </dependency>
+        </suppliersInternal>
+      </subsystem>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="f40cc508-fe71-4d54-b6f4-05e64d397d0b"
+        name="规划人员"
+        isAbstract="false"
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="c6d3d5f4-b1ff-4122-bc00-730992816a85"
+            isSubstitutable="false">
+            <actorMoniker
+              Id="91688d82-7560-4dee-af02-7483286bdc44"
+              LastKnownName="民航局用户"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association
+            Id="7ab844cd-624b-4b07-8a7a-f47dcf766da4"
+            isDerived="false"
+            sourceEndRoleName="规划人员"
+            targetEndRoleName="客机计划"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="6473c0fd-b5d8-409f-be18-3819a79a890c"
+              LastKnownName="客机计划"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4581b25e-f4ed-4e23-ae96-6866ae2fbc76"
+                  name="规划人员"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c3b38c29-b925-4867-bd86-b2b597515363"
+                  name="客机计划"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="8b1909d6-40e8-473a-8773-0e96b193c0df"
+            isDerived="false"
+            sourceEndRoleName="规划人员"
+            targetEndRoleName="货机计划"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="51812f09-f872-43fa-8b03-39998b193659"
+              LastKnownName="货机计划"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1b3beca4-0243-4e78-b347-61a42258bacc"
+                  name="规划人员"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ddaf3f8a-6f00-4610-9985-a8e246ba53b9"
+                  name="货机计划"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="235df9c8-f22e-479f-9b26-445ed502e11d"
+            isDerived="false"
+            sourceEndRoleName="规划人员"
+            targetEndRoleName="计划执行"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="06321081-d998-4d7e-ba42-287c7f99d290"
+              LastKnownName="计划执行"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="89c4f5f8-a791-468c-8243-6dfa19a3a02c"
+                  name="规划人员"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7906238e-6103-41bd-b159-a1fe172c81f1"
+                  name="计划执行"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="9aba49b8-9ea1-4279-8227-d6c59dd159a7"
+            isDerived="false"
+            sourceEndRoleName="规划人员"
+            targetEndRoleName="计划查询"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="3fba8a92-9443-4af8-81fa-e46f7121e2e6"
+              LastKnownName="计划查询"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="829e65e8-1d90-4bb9-b737-b49756b032f6"
+                  name="规划人员"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ad1292c7-728f-4fd1-848d-70c54023fd49"
+                  name="计划查询"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="a274c28f-3ff5-4f12-aa07-8cd07fcf6f41"
+            isDerived="false"
+            sourceEndRoleName="规划人员"
+            targetEndRoleName="批文录入"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="b4eaa37e-f7e3-49d6-9e80-0a7de97ac090"
+              LastKnownName="批文录入"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="bfc14fba-1d81-49c5-8207-7aebb645bf4f"
+                  name="规划人员"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="12cceb21-94ff-411b-a677-cd24b625d1c4"
+                  name="批文录入"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="90b1e571-2af9-485a-adf9-16ce3a79482b"
+            isDerived="false"
+            sourceEndRoleName="规划人员"
+            targetEndRoleName="批文匹配"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="c8bcb372-c6fd-4f63-aa50-caddb44afdcd"
+              LastKnownName="批文匹配"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ba392ad5-7ef1-4045-b10d-3227ede10ac4"
+                  name="规划人员"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4633e2af-0c71-4ba1-831e-49d1bcde0a1e"
+                  name="批文匹配"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="c78884e5-2397-4ba9-abfe-ee82c005566b"
+            isDerived="false"
+            sourceEndRoleName="规划人员"
+            targetEndRoleName="申请管理"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="24d7a080-ac1c-4970-8b4f-73838c19a6ff"
+              LastKnownName="申请管理"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d64d34e4-e0eb-45b2-8d22-d6350b22d642"
+                  name="规划人员"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d183c940-e36d-4cc8-8be8-02b80f30f8e2"
+                  name="申请管理"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="909ae479-439d-4a36-8c0e-58f3ce60fd74"
+            isDerived="false"
+            sourceEndRoleName="规划人员"
+            targetEndRoleName="批文管理"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="67d0dd2c-adc8-485c-bb11-06ffaf2a090c"
+              LastKnownName="批文管理"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c4b73fab-c4a5-426e-baf3-1d7bccfb4696"
+                  name="规划人员"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1f14336a-7d00-4870-936e-ebf266706fee"
+                  name="批文管理"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="0c33f0b6-e90c-4c5b-9419-3b56abd07058"
+            isDerived="false"
+            sourceEndRoleName="规划人员"
+            targetEndRoleName="客机运力"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="5c54edb2-dfee-4702-a19a-e0a3d32b24d8"
+              LastKnownName="客机运力"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2621205a-a97d-4e18-af0e-87ce7d0616fd"
+                  name="规划人员"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1aeec662-29b8-45f7-bdf4-7b11e081a9ac"
+                  name="客机运力"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="9750dd13-9130-41a8-8948-f7c9d548c94f"
+            isDerived="false"
+            sourceEndRoleName="规划人员"
+            targetEndRoleName="货机运力"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="96a265b0-279e-49b1-b7f3-94c85b7c5205"
+              LastKnownName="货机运力"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2dee81f3-73a6-49c8-ad17-cbf382b1b708"
+                  name="规划人员"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="05a4324b-16c9-4f37-8132-52ebae72e294"
+                  name="货机运力"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="61be3a0f-ba79-4b61-bc1e-e680b2a46f24"
+            isDerived="false"
+            sourceEndRoleName="规划人员"
+            targetEndRoleName="制造商"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="a4592ebf-8cbb-4f7f-9c75-2b4db818819e"
+              LastKnownName="制造商"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b7790ba5-1404-44b8-a09d-9948351322b0"
+                  name="规划人员"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="47ea2840-ce25-4fad-9817-78d4bc7b6183"
+                  name="制造商"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="0fca247a-fe31-4616-a060-032127bc68fa"
+            isDerived="false"
+            sourceEndRoleName="规划人员"
+            targetEndRoleName="机型分析"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="477ad047-fed4-400d-96f5-25c8a24027a6"
+              LastKnownName="机型分析"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8528e699-bcf9-4685-b779-b5814ef6db3a"
+                  name="规划人员"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="801af9ec-e2e4-4a88-992d-7b06433d860b"
+                  name="机型分析"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="bc2e0879-2f0b-4def-94f7-fe7f65a21a0b"
+            isDerived="false"
+            sourceEndRoleName="规划人员"
+            targetEndRoleName="飞机数据"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="d89f85d5-8406-41a8-99c8-d52b66eb964b"
+              LastKnownName="飞机数据"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="00e05877-9b99-4174-a6c5-69a1e54b39bc"
+                  name="规划人员"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8c5840f0-0b86-4b52-91c5-e8ae47bc10ee"
+                  name="飞机数据"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="e4369adf-2a44-467f-a348-e33e00d7ae2e"
+            isDerived="false"
+            sourceEndRoleName="规划人员"
+            targetEndRoleName="供应商"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="214e790c-55d2-4309-a4e7-c1f5fca0cdd9"
+              LastKnownName="供应商"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="994181ca-37a8-4c59-98f9-3045ac77affc"
+                  name="规划人员"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7e8deeaa-90ba-4f0e-8688-9d5245758c20"
+                  name="供应商"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="c2fe5224-2d0f-43fc-b1cd-de7d20f11367"
+            isDerived="false"
+            sourceEndRoleName="规划人员"
+            targetEndRoleName="座级分析"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="6b0d6ad4-c7e7-4cf5-9226-e6e56cce360f"
+              LastKnownName="引进方式"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a9c34b0a-9247-4296-8e42-47f4f2f47e5e"
+                  name="规划人员"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="cc21cedb-63b7-455f-afa2-cfee88a00935"
+                  name="座级分析"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="7891291d-898f-475e-b302-47dd2ebc6004"
+            isDerived="false"
+            sourceEndRoleName="规划人员"
+            targetEndRoleName="执行分析"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="3709a35f-86a1-4850-b6de-4d00c7c5af43"
+              LastKnownName="执行分析"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d7aadc10-19da-4c9a-8423-39c1d1525e52"
+                  name="规划人员"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5f371c04-c014-48e3-9d8e-b6bc803ade83"
+                  name="执行分析"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="20df797a-c000-4976-89de-f0476ebc425b"
+            isDerived="false"
+            sourceEndRoleName="规划人员"
+            targetEndRoleName="计划发布"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="a0608bf8-3cad-479a-899c-1d7d09504c0b"
+              LastKnownName="计划发布"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b188d470-4c9a-4418-9638-5f8f4a72cc79"
+                  name="规划人员"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="117f37a1-e357-4e8e-a8a8-ea7940649630"
+                  name="计划发布"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="934e6ad7-1328-4a4a-b846-c7a2266be0a9"
+        name="规划管理者"
+        isAbstract="false"
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="55028f70-de10-4055-abfe-fa3de525418c"
+            isSubstitutable="false">
+            <actorMoniker
+              Id="91688d82-7560-4dee-af02-7483286bdc44"
+              LastKnownName="民航局用户"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association
+            Id="4a0f9e85-63e6-40ae-9d8e-b27cac3dedda"
+            isDerived="false"
+            sourceEndRoleName="规划管理者"
+            targetEndRoleName="客机计划"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="6473c0fd-b5d8-409f-be18-3819a79a890c"
+              LastKnownName="客机计划"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9865df16-aada-42e6-901b-2a524acff22b"
+                  name="规划管理者"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="dec7f6bf-0554-4dde-a731-959ddb2ef641"
+                  name="客机计划"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="50f193f5-cc76-4dd9-b23a-dd01d945a44d"
+            isDerived="false"
+            sourceEndRoleName="规划管理者"
+            targetEndRoleName="计划执行"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="06321081-d998-4d7e-ba42-287c7f99d290"
+              LastKnownName="计划执行"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d64410f4-c413-44a2-a28a-aa9efcc18905"
+                  name="规划管理者"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b95e029c-6d33-447e-b234-838ca04c4e7d"
+                  name="计划执行"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="e2eda695-b00f-4670-9c64-6461e41fe2b3"
+            isDerived="false"
+            sourceEndRoleName="规划管理者"
+            targetEndRoleName="货机计划"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="51812f09-f872-43fa-8b03-39998b193659"
+              LastKnownName="货机计划"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="fbb344cc-2f8b-4efe-ba72-19ff680588a7"
+                  name="规划管理者"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f6e0b1c6-f224-45fb-a972-d4926c5bad6a"
+                  name="货机计划"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="d73530c8-1206-498e-b9bb-bebc9b256470"
+            isDerived="false"
+            sourceEndRoleName="规划管理者"
+            targetEndRoleName="计划查询"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="3fba8a92-9443-4af8-81fa-e46f7121e2e6"
+              LastKnownName="计划查询"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b97139d5-f481-484f-938a-f5d995a3a6a4"
+                  name="规划管理者"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0e06273b-ea55-400f-a25f-4c6207db2811"
+                  name="计划查询"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="3cf73e71-63f9-4864-8996-05058433cf5a"
+            isDerived="false"
+            sourceEndRoleName="规划管理者"
+            targetEndRoleName="申请管理"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="24d7a080-ac1c-4970-8b4f-73838c19a6ff"
+              LastKnownName="申请管理"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="98cc3e67-e18a-44cf-bd62-8522aae3cc8e"
+                  name="规划管理者"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="04154a9d-c6a6-4f0f-905b-5bc47ddfabd3"
+                  name="申请管理"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="a390846d-d545-4f30-aac9-0543ff8df474"
+            isDerived="false"
+            sourceEndRoleName="规划管理者"
+            targetEndRoleName="批文管理"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="67d0dd2c-adc8-485c-bb11-06ffaf2a090c"
+              LastKnownName="批文管理"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0c40c87c-395d-45f6-ac08-fd9971b28fc0"
+                  name="规划管理者"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1fdff9fc-2fa8-4f7a-8172-7c8b8c60ad7f"
+                  name="批文管理"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="9295cca2-7bab-474f-b197-bac0721fc612"
+            isDerived="false"
+            sourceEndRoleName="规划管理者"
+            targetEndRoleName="客机运力"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="5c54edb2-dfee-4702-a19a-e0a3d32b24d8"
+              LastKnownName="客机运力"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c0319ff1-2210-4f74-83bf-25bb2174d26e"
+                  name="规划管理者"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5890b0fc-20a7-4bad-a75c-a9911e13aeb0"
+                  name="客机运力"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="423fbedf-b2a8-493c-987e-54b6e8880655"
+            isDerived="false"
+            sourceEndRoleName="规划管理者"
+            targetEndRoleName="制造商"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="a4592ebf-8cbb-4f7f-9c75-2b4db818819e"
+              LastKnownName="制造商"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1a6e977b-59cb-49f5-8a7b-6fd5b9c95429"
+                  name="规划管理者"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="561915b0-14fa-48fc-a868-954a3e032d4a"
+                  name="制造商"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="7f6ae8e8-8b3b-49d2-80ea-dbe2a8747040"
+            isDerived="false"
+            sourceEndRoleName="规划管理者"
+            targetEndRoleName="机型分析"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="477ad047-fed4-400d-96f5-25c8a24027a6"
+              LastKnownName="机型分析"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0fa99248-1462-43f0-a267-fd4e30a173d7"
+                  name="规划管理者"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="cb714f7e-e029-4490-8913-13b0cc2c8958"
+                  name="机型分析"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="85ba8952-b277-4201-9205-8c74f0dd9ecd"
+            isDerived="false"
+            sourceEndRoleName="规划管理者"
+            targetEndRoleName="飞机数据"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="d89f85d5-8406-41a8-99c8-d52b66eb964b"
+              LastKnownName="飞机数据"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="bc9ba4d1-e524-42fe-8144-0e46de117922"
+                  name="规划管理者"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="54e18c0f-9483-4cff-85e2-2da9e669d40a"
+                  name="飞机数据"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="c58878c0-36d8-4659-954d-febe38010bfc"
+            isDerived="false"
+            sourceEndRoleName="规划管理者"
+            targetEndRoleName="货机运力"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="96a265b0-279e-49b1-b7f3-94c85b7c5205"
+              LastKnownName="货机运力"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f4e9e124-247c-453e-a6b4-1d02fc950a62"
+                  name="规划管理者"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7e91461e-8872-4eb0-b310-fc1215225502"
+                  name="货机运力"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="16233a78-d235-421a-90d2-c369eef4f2f1"
+            isDerived="false"
+            sourceEndRoleName="规划管理者"
+            targetEndRoleName="座级分析"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="6b0d6ad4-c7e7-4cf5-9226-e6e56cce360f"
+              LastKnownName="引进方式"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="96c2f20c-981e-4559-94e3-3d4546a0c86d"
+                  name="规划管理者"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="cb6be634-4251-43e0-8381-68c07dacd3f0"
+                  name="座级分析"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="a7f81b18-2543-46a3-8496-169c47c602e3"
+            isDerived="false"
+            sourceEndRoleName="规划管理者"
+            targetEndRoleName="供应商"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="214e790c-55d2-4309-a4e7-c1f5fca0cdd9"
+              LastKnownName="供应商"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3b718eb2-b0b1-4407-a14c-e80a61be822f"
+                  name="规划管理者"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e6808f3b-7ca7-4dba-b32d-d9129b849a70"
+                  name="供应商"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="57bb5704-2884-422b-b34b-648b2394b988"
+            isDerived="false"
+            sourceEndRoleName="规划管理者"
+            targetEndRoleName="执行分析"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="3709a35f-86a1-4850-b6de-4d00c7c5af43"
+              LastKnownName="执行分析"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3d8f2b50-9a39-48fc-87f9-bf60ca8b22d5"
+                  name="规划管理者"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d4b7b9ff-0df8-4fec-87a9-484ae1df7048"
+                  name="执行分析"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="d7d11d4c-4ab9-434d-8ea8-54ae40cb8684"
+            isDerived="false"
+            sourceEndRoleName="规划管理者"
+            targetEndRoleName="计划发布"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="a0608bf8-3cad-479a-899c-1d7d09504c0b"
+              LastKnownName="计划发布"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="430fb006-5475-4d90-9aa9-76fc46d03588"
+                  name="规划管理者"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e1eb60f9-33dc-4212-92c3-d04b57be94a7"
+                  name="计划发布"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="6473c0fd-b5d8-409f-be18-3819a79a890c"
+        name="客机计划"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="9e43b190-4296-4cdc-a12c-e61acb413a6d"
+            handle="%justhonor\DefaultCollection#9b56e60f-6fab-49b2-af31-4b0a4df8b7cc$10"
+            tag="Work Item Reference" />
+        </referencesInternal>
+        <suppliersInternal>
+          <dependency
+            Id="ef2a6095-8761-4b87-87d2-fad18b943872">
+            <artifactMoniker
+              Id="2864930b-0019-475b-80f3-b3640c6ae785"
+              LastKnownName="客机计划用例"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+          </dependency>
+        </suppliersInternal>
+        <subjects>
+          <subsystemMoniker
+            Id="17c25cc5-6368-4433-9392-f90d4891685a"
+            LastKnownName="计划管理"
+            LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="51812f09-f872-43fa-8b03-39998b193659"
+        name="货机计划"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="3178d822-32c4-4635-99cf-7a0abd2b18b3"
+            handle="%justhonor\DefaultCollection#9b56e60f-6fab-49b2-af31-4b0a4df8b7cc$12"
+            tag="Work Item Reference" />
+        </referencesInternal>
+        <suppliersInternal>
+          <dependency
+            Id="5a9d9dfa-eb78-495f-a433-a9b6bf9efd35">
+            <artifactMoniker
+              Id="1a42d8b7-5ead-42da-8568-0561650071ad"
+              LastKnownName="货机计划用例"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+          </dependency>
+        </suppliersInternal>
+        <subjects>
+          <subsystemMoniker
+            Id="17c25cc5-6368-4433-9392-f90d4891685a"
+            LastKnownName="计划管理"
+            LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="06321081-d998-4d7e-ba42-287c7f99d290"
+        name="计划执行"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="aec5387d-724e-401c-8d5e-0d93113419f1"
+            handle="%justhonor\DefaultCollection#9b56e60f-6fab-49b2-af31-4b0a4df8b7cc$13"
+            tag="Work Item Reference" />
+        </referencesInternal>
+        <suppliersInternal>
+          <dependency
+            Id="d4f302ec-3878-4c7c-b8b8-d3efd0433b53">
+            <artifactMoniker
+              Id="2b4ebdc7-379e-41d5-9d9f-08b1ded0dd25"
+              LastKnownName="计划执行用例"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+          </dependency>
+        </suppliersInternal>
+        <subjects>
+          <subsystemMoniker
+            Id="17c25cc5-6368-4433-9392-f90d4891685a"
+            LastKnownName="计划管理"
+            LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="3fba8a92-9443-4af8-81fa-e46f7121e2e6"
+        name="计划查询"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="2cf6445c-b536-4f8f-85c9-3b03e14519d2"
+            handle="%justhonor\DefaultCollection#9b56e60f-6fab-49b2-af31-4b0a4df8b7cc$14"
+            tag="Work Item Reference" />
+        </referencesInternal>
+        <suppliersInternal>
+          <dependency
+            Id="55e0eb3b-ade0-4493-bbf3-afe9614fbd17">
+            <artifactMoniker
+              Id="450dea79-5381-45f1-bd4e-241eef802ac4"
+              LastKnownName="计划查询用例"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+          </dependency>
+        </suppliersInternal>
+        <subjects>
+          <subsystemMoniker
+            Id="17c25cc5-6368-4433-9392-f90d4891685a"
+            LastKnownName="计划管理"
+            LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="84d48c62-eb2a-41b2-ae39-f1bb21529829"
+        name="申请评审"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="b228bc53-25f1-4d06-804d-beee83997030"
+            handle="%justhonor\DefaultCollection#9b56e60f-6fab-49b2-af31-4b0a4df8b7cc$8"
+            tag="Work Item Reference" />
+        </referencesInternal>
+        <suppliersInternal>
+          <dependency
+            Id="d990deac-2b4a-4948-bdb6-5aaf6270ad0a">
+            <artifactMoniker
+              Id="e17cd256-f6c0-4de6-91fd-cbd8b917a3d8"
+              LastKnownName="申请评审活动"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+          </dependency>
+        </suppliersInternal>
+      </subsystem>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="b4eaa37e-f7e3-49d6-9e80-0a7de97ac090"
+        name="批文录入"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="88926473-357e-479a-b58e-d02ef9ceb3b5"
+            handle="%justhonor\DefaultCollection#9b56e60f-6fab-49b2-af31-4b0a4df8b7cc$15"
+            tag="Work Item Reference" />
+        </referencesInternal>
+        <suppliersInternal>
+          <dependency
+            Id="774e53b7-daab-4a0e-96ff-f04c5d81b7da">
+            <artifactMoniker
+              Id="cea64292-467c-48c4-aec0-12ffebf367bb"
+              LastKnownName="批文录入用例"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+          </dependency>
+          <dependency
+            Id="e958dc7e-3d75-4ad1-a657-66199cd267f9">
+            <artifactMoniker
+              Id="2200974c-9b9a-43d3-ab92-dadede5c891e"
+              LastKnownName="批文录入序列"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+          </dependency>
+        </suppliersInternal>
+        <subjects>
+          <subsystemMoniker
+            Id="84d48c62-eb2a-41b2-ae39-f1bb21529829"
+            LastKnownName="申请评审"
+            LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="c8bcb372-c6fd-4f63-aa50-caddb44afdcd"
+        name="批文匹配"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="894b2055-cd9c-4b84-b5d8-b4d3e6574932"
+            handle="%justhonor\DefaultCollection#9b56e60f-6fab-49b2-af31-4b0a4df8b7cc$16"
+            tag="Work Item Reference" />
+        </referencesInternal>
+        <suppliersInternal>
+          <dependency
+            Id="693e6f3b-7d44-4e9d-b511-0ca1d28bc4f0">
+            <artifactMoniker
+              Id="ff90d07a-4e9f-4693-9a12-cafb2691c1f7"
+              LastKnownName="批文匹配用例"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+          </dependency>
+          <dependency
+            Id="ac7ecb6f-e8b8-4a00-bdd6-155358332e43">
+            <artifactMoniker
+              Id="82129ca1-d74d-4416-a048-43f185d5df4a"
+              LastKnownName="批文匹配序列"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+          </dependency>
+        </suppliersInternal>
+        <subjects>
+          <subsystemMoniker
+            Id="84d48c62-eb2a-41b2-ae39-f1bb21529829"
+            LastKnownName="申请评审"
+            LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="24d7a080-ac1c-4970-8b4f-73838c19a6ff"
+        name="申请管理"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="3fd9235f-0fe7-4426-b707-3be49d5c5e69"
+            handle="%justhonor\DefaultCollection#9b56e60f-6fab-49b2-af31-4b0a4df8b7cc$17"
+            tag="Work Item Reference" />
+        </referencesInternal>
+        <suppliersInternal>
+          <dependency
+            Id="8033c6d5-a17d-4308-99a4-1b34e9c36fdf">
+            <artifactMoniker
+              Id="f3e87264-c562-4933-9c1a-6ab008fae6ec"
+              LastKnownName="申请管理用例"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+          </dependency>
+        </suppliersInternal>
+        <subjects>
+          <subsystemMoniker
+            Id="84d48c62-eb2a-41b2-ae39-f1bb21529829"
+            LastKnownName="申请评审"
+            LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="67d0dd2c-adc8-485c-bb11-06ffaf2a090c"
+        name="批文管理"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="d04045d8-fcd8-4700-884b-fa2422ea0557"
+            handle="%justhonor\DefaultCollection#9b56e60f-6fab-49b2-af31-4b0a4df8b7cc$18"
+            tag="Work Item Reference" />
+        </referencesInternal>
+        <suppliersInternal>
+          <dependency
+            Id="8305ace4-eb41-4ff7-a467-c15f2f4cbaa1">
+            <artifactMoniker
+              Id="6462a317-a01f-4afc-af7c-bc34cecab248"
+              LastKnownName="批文管理用例"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+          </dependency>
+        </suppliersInternal>
+        <subjects>
+          <subsystemMoniker
+            Id="84d48c62-eb2a-41b2-ae39-f1bb21529829"
+            LastKnownName="申请评审"
+            LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="8078e17e-86b1-48b8-83c6-609b2be14aef"
+        name="统计分析"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="af1118a0-a423-4ccc-8581-518425bd4b3d"
+            handle="%justhonor\DefaultCollection#9b56e60f-6fab-49b2-af31-4b0a4df8b7cc$9"
+            tag="Work Item Reference" />
+        </referencesInternal>
+      </subsystem>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="5c54edb2-dfee-4702-a19a-e0a3d32b24d8"
+        name="客机运力"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="05492880-54ea-4eee-bb00-2cc0948fc615"
+            handle="%justhonor\DefaultCollection#9b56e60f-6fab-49b2-af31-4b0a4df8b7cc$21"
+            tag="Work Item Reference" />
+        </referencesInternal>
+        <suppliersInternal>
+          <dependency
+            Id="a2b5c87e-7fbb-4207-a7b5-f44b7a379a20">
+            <artifactMoniker
+              Id="8f2ff4b8-1e8e-413a-8d15-8d7d14f56c5f"
+              LastKnownName="客机运力用例"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+          </dependency>
+        </suppliersInternal>
+        <subjects>
+          <subsystemMoniker
+            Id="8078e17e-86b1-48b8-83c6-609b2be14aef"
+            LastKnownName="统计分析"
+            LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="96a265b0-279e-49b1-b7f3-94c85b7c5205"
+        name="货机运力"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="60d78f22-56e8-4133-bef0-70dd648de021"
+            handle="%justhonor\DefaultCollection#9b56e60f-6fab-49b2-af31-4b0a4df8b7cc$22"
+            tag="Work Item Reference" />
+        </referencesInternal>
+        <suppliersInternal>
+          <dependency
+            Id="0b54be41-e519-44b4-9116-a67976d9fede">
+            <artifactMoniker
+              Id="2770d20e-a955-45f9-af33-74476f215e3c"
+              LastKnownName="货机运力用例"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+          </dependency>
+        </suppliersInternal>
+        <subjects>
+          <subsystemMoniker
+            Id="8078e17e-86b1-48b8-83c6-609b2be14aef"
+            LastKnownName="统计分析"
+            LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="a4592ebf-8cbb-4f7f-9c75-2b4db818819e"
+        name="制造商"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="222c0e74-df0a-47d0-bd32-a31f611b18fe"
+            handle="%justhonor\DefaultCollection#9b56e60f-6fab-49b2-af31-4b0a4df8b7cc$19"
+            tag="Work Item Reference" />
+        </referencesInternal>
+        <suppliersInternal>
+          <dependency
+            Id="5606d625-23c4-46aa-9ba0-0a7e1d26b213">
+            <artifactMoniker
+              Id="78ec5d9b-e2f2-476e-82e7-e3bde6f28663"
+              LastKnownName="制造商用例"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+          </dependency>
+        </suppliersInternal>
+        <subjects>
+          <subsystemMoniker
+            Id="8078e17e-86b1-48b8-83c6-609b2be14aef"
+            LastKnownName="统计分析"
+            LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="214e790c-55d2-4309-a4e7-c1f5fca0cdd9"
+        name="供应商"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="8cccc613-1532-4bb4-b892-549ecc1484bb"
+            handle="%justhonor\DefaultCollection#9b56e60f-6fab-49b2-af31-4b0a4df8b7cc$20"
+            tag="Work Item Reference" />
+        </referencesInternal>
+        <suppliersInternal>
+          <dependency
+            Id="d0066f89-0683-4180-96e3-250678ac22f3">
+            <artifactMoniker
+              Id="4e7339bb-6dba-4b9c-940a-60d8f219cc9c"
+              LastKnownName="供应商用例"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+          </dependency>
+        </suppliersInternal>
+        <subjects>
+          <subsystemMoniker
+            Id="8078e17e-86b1-48b8-83c6-609b2be14aef"
+            LastKnownName="统计分析"
+            LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="477ad047-fed4-400d-96f5-25c8a24027a6"
+        name="机型分析"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="975111d8-263a-4c06-88ba-1567c917c3a0"
+            handle="%justhonor\DefaultCollection#9b56e60f-6fab-49b2-af31-4b0a4df8b7cc$24"
+            tag="Work Item Reference" />
+        </referencesInternal>
+        <suppliersInternal>
+          <dependency
+            Id="81bab4d8-3255-4d52-b7ce-4f4b82aaa494">
+            <artifactMoniker
+              Id="d6332856-0e84-45d7-896e-a47013ef1dc4"
+              LastKnownName="机型分析用例"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+          </dependency>
+        </suppliersInternal>
+        <subjects>
+          <subsystemMoniker
+            Id="8078e17e-86b1-48b8-83c6-609b2be14aef"
+            LastKnownName="统计分析"
+            LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="6b0d6ad4-c7e7-4cf5-9226-e6e56cce360f"
+        name="引进方式"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="68a8670f-bd32-46ad-b6eb-06d65724ec5c"
+            handle="%justhonor\DefaultCollection#9b56e60f-6fab-49b2-af31-4b0a4df8b7cc$25"
+            tag="Work Item Reference" />
+        </referencesInternal>
+        <suppliersInternal>
+          <dependency
+            Id="61af4bd1-958f-48ec-af9f-c9679a813b57">
+            <artifactMoniker
+              Id="d28bd41b-3089-41d6-86e4-42a79a991416"
+              LastKnownName="引进方式用例"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+          </dependency>
+        </suppliersInternal>
+        <subjects>
+          <subsystemMoniker
+            Id="8078e17e-86b1-48b8-83c6-609b2be14aef"
+            LastKnownName="统计分析"
+            LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="d89f85d5-8406-41a8-99c8-d52b66eb964b"
+        name="飞机数据"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="cb35f7a7-53d8-4625-b5b7-badadeb02abe"
+            handle="%justhonor\DefaultCollection#9b56e60f-6fab-49b2-af31-4b0a4df8b7cc$23"
+            tag="Work Item Reference" />
+        </referencesInternal>
+        <suppliersInternal>
+          <dependency
+            Id="a386c874-54fd-499c-95d2-4dd3f5511d85">
+            <artifactMoniker
+              Id="2efa1df3-d201-4fd4-a8df-c2fcee12fca5"
+              LastKnownName="飞机数据用例"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+          </dependency>
+        </suppliersInternal>
+        <subjects>
+          <subsystemMoniker
+            Id="8078e17e-86b1-48b8-83c6-609b2be14aef"
+            LastKnownName="统计分析"
+            LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="8925b712-ab97-4138-b7da-abcc5e43e2a0"
+        name="机队资源规划"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="a505804f-8bcf-410f-8509-d49ea5b9b27d"
+        name="计划编制"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="8d85f3d8-2bfe-4faf-a8df-75b8a0ca39c1"
+        name="计划执行"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="4f613335-dc0e-4f1b-8ec5-204ef00cd83f"
+        name="飞机数据"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="26e9241c-0a3d-46fb-add8-06745b5d8a38"
+        name="执行分析"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="5b862696-1caa-481b-97ea-4f1ee22a88cd"
+        name="统计分析"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="3adf9d8c-d5bb-40bb-b8c1-e1b271a63c06"
+        name="合同管理"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="f8888a10-9781-457b-b1b1-7ffa7e3d48c0"
+        name="民航机队管理"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="aaaf4345-81a9-4db3-abf0-93a8eec4e668"
+        name="计划管理"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="7a8e686a-4394-42a7-a49b-79a53c5455f9">
+            <useCaseMoniker
+              Id="c4391f20-2dba-4469-ad90-407e5052df4e"
+              LastKnownName="客机、货机计划评审"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+          </include>
+          <include
+            Id="1b09f922-2804-41a6-b9f9-59c5de5f7fdf">
+            <useCaseMoniker
+              Id="188dfb51-693f-4586-8bac-a0d1e04738c3"
+              LastKnownName="检查计划发布"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+          </include>
+          <include
+            Id="cb6660ec-95c4-4c02-acbd-8371f5238209">
+            <useCaseMoniker
+              Id="e4d7f106-b0b6-4d89-b675-fb0b98607689"
+              LastKnownName="计划执行"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+          </include>
+          <include
+            Id="4710e62a-02f6-478e-9c3f-2266e144d8bc">
+            <useCaseMoniker
+              Id="19824e7f-86c8-4d7a-a9b6-2719493a1b3e"
+              LastKnownName="查询计划"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+          </include>
+          <include
+            Id="ea9a107f-1b65-4748-9473-d567e19ab363">
+            <useCaseMoniker
+              Id="1b017453-ebb5-4640-85ec-b6f031e392b5"
+              LastKnownName="分析计划执行"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker
+            Id="f8888a10-9781-457b-b1b1-7ffa7e3d48c0"
+            LastKnownName="民航机队管理"
+            LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="e9cb657d-31f5-4c5c-94e7-9abff26ea995"
+        name="评审申请"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="cce94909-d1aa-49ce-a54f-4604904dbc56">
+            <useCaseMoniker
+              Id="96c222d7-7b9b-4967-942a-b911ff66b865"
+              LastKnownName="管理批文"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+          </include>
+          <include
+            Id="3a6bde40-152f-4fee-b737-03a62fec43dc">
+            <useCaseMoniker
+              Id="c4f1a0f0-4e08-4658-b14c-49672b54c902"
+              LastKnownName="录入批文"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+          </include>
+          <include
+            Id="f5229a08-9948-40ba-a202-17064de4e0ac">
+            <useCaseMoniker
+              Id="917729e2-bdde-4279-a3a2-74304f744e22"
+              LastKnownName="管理申请"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+          </include>
+          <include
+            Id="ada10b0a-9a47-4bd6-a9a5-b7e08331f99e">
+            <useCaseMoniker
+              Id="58a9161d-37c3-4821-9638-5650d310fa4d"
+              LastKnownName="检查批文匹配"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker
+            Id="f8888a10-9781-457b-b1b1-7ffa7e3d48c0"
+            LastKnownName="民航机队管理"
+            LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="f6ed8488-1ef9-4e5b-a974-4a75e03f7da7"
+        name="统计分析"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="f8888a10-9781-457b-b1b1-7ffa7e3d48c0"
+            LastKnownName="民航机队管理"
+            LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <artifact
+        Id="8406b8a0-7dd3-4a85-87f9-01c3d52768e8"
+        name="统计分析"
+        isAbstract="false"
+        isLeaf="false"
+        fileName="UniCloud.Modeling.CAFM\DataAnalyse.usecasediagram" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <artifact
+        Id="258266c0-e229-4fe9-befc-dd1688da892d"
+        name="计划管理"
+        isAbstract="false"
+        isLeaf="false"
+        fileName="UniCloud.Modeling.CAFM\PlanManage.usecasediagram">
+        <targetEnds>
+          <association
+            Id="7b7da705-d688-4179-a215-8652e048b301"
+            isDerived="false"
+            sourceEndRoleName="计划管理"
+            targetEndRoleName="计划管理"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="aaaf4345-81a9-4db3-abf0-93a8eec4e668"
+              LastKnownName="计划管理"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="418233f6-06d7-4889-9393-2e9a19f50aea"
+                  name="计划管理"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4e93f949-4bdf-4d6e-b974-548ab29e8d42"
+                  name="计划管理"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </artifact>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <artifact
+        Id="c6ef420b-05d3-4ff1-bc09-3d7e8ef594c6"
+        name="申请评审"
+        isAbstract="false"
+        isLeaf="false"
+        fileName="UniCloud.Modeling.CAFM\RequestExamine.usecasediagram">
+        <targetEnds>
+          <association
+            Id="e2e07cb2-4c6e-48c9-a8bf-4e80b10df17b"
+            isDerived="false"
+            sourceEndRoleName="申请评审"
+            targetEndRoleName="申请评审"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="e9cb657d-31f5-4c5c-94e7-9abff26ea995"
+              LastKnownName="评审申请"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="32cdb1f1-2dec-496b-ba3a-c8d6c5d34ece"
+                  name="申请评审"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="526b1683-0a98-41a7-a43e-6e8f21662f40"
+                  name="申请评审"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </artifact>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="9d03c126-3513-45ac-a239-ff703656fe9a"
+        name="航空公司用户"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="0d2f04db-5ae1-432b-9d58-90001ea0f7c0"
+            isDerived="false"
+            sourceEndRoleName="航空公司用户"
+            targetEndRoleName="计划编制"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="a505804f-8bcf-410f-8509-d49ea5b9b27d"
+              LastKnownName="计划编制"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="eebef3d2-03c0-4b57-9c38-b58239a49455"
+                  name="航空公司用户"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c888297b-2201-41b1-9b5c-e9d18c89705a"
+                  name="计划编制"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="7dd9a6fd-ddad-448a-bd0b-8371fbffa2d9"
+            isDerived="false"
+            sourceEndRoleName="航空公司用户"
+            targetEndRoleName="计划执行"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="8d85f3d8-2bfe-4faf-a8df-75b8a0ca39c1"
+              LastKnownName="计划执行"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6117c7e8-a817-489d-908a-cfe66fa0288b"
+                  name="航空公司用户"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4b8866fd-f8a6-4860-a759-a7fb940cccae"
+                  name="计划执行"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="0aed95d7-1c1c-422c-80a2-6ccf30a82de2"
+            isDerived="false"
+            sourceEndRoleName="航空公司用户"
+            targetEndRoleName="飞机数据"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="4f613335-dc0e-4f1b-8ec5-204ef00cd83f"
+              LastKnownName="飞机数据"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="cd4c47c2-9a2d-45d0-b666-e53e7d131c6d"
+                  name="航空公司用户"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2aebedd8-7260-4bec-9a88-924e6e94d692"
+                  name="飞机数据"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="003238e2-017b-4278-84c6-64ec7bf456cb"
+            isDerived="false"
+            sourceEndRoleName="航空公司用户"
+            targetEndRoleName="合同管理"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="3adf9d8c-d5bb-40bb-b8c1-e1b271a63c06"
+              LastKnownName="合同管理"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="aec1e2d5-7a47-4aec-bd81-61c3bf6bf70d"
+                  name="航空公司用户"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="eda24f62-5a53-4b2b-9e80-a5728bc35c18"
+                  name="合同管理"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="f009112c-b453-4c1d-95dd-8d4033b6c276"
+            isDerived="false"
+            sourceEndRoleName="航空公司用户"
+            targetEndRoleName="统计分析"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="5b862696-1caa-481b-97ea-4f1ee22a88cd"
+              LastKnownName="统计分析"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3321282f-5320-4a6a-9a30-22cb3aa7762c"
+                  name="航空公司用户"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="344f5fac-7ed9-474b-b028-9c61bb9a8c6a"
+                  name="统计分析"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="49a18383-5c06-4b7f-8fcf-be8867e0583c"
+            isDerived="false"
+            sourceEndRoleName="航空公司用户"
+            targetEndRoleName="执行分析"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="26e9241c-0a3d-46fb-add8-06745b5d8a38"
+              LastKnownName="执行分析"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ad970905-ed19-4952-a10d-cfa2e61f3817"
+                  name="航空公司用户"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="32d9da46-037d-4478-8d7c-5e0cdbeb644d"
+                  name="执行分析"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="a158b592-5f8e-47b9-9b64-f72af10a974c"
+        name="规划人员"
+        isAbstract="false"
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="c4dc5013-cd5b-4b6a-9f29-a5295fbcbf08"
+            isSubstitutable="false">
+            <actorMoniker
+              Id="9d03c126-3513-45ac-a239-ff703656fe9a"
+              LastKnownName="航空公司用户"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+          </generalization>
+        </generalsInternal>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="1e0a8994-172f-4405-a493-a147f6b66b55"
+        name="规划管理者"
+        isAbstract="false"
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="b3ae071d-1151-4a27-af86-acb882645408"
+            isSubstitutable="false">
+            <actorMoniker
+              Id="9d03c126-3513-45ac-a239-ff703656fe9a"
+              LastKnownName="航空公司用户"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+          </generalization>
+        </generalsInternal>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="7ecdbc7e-efb4-43da-be61-41ff293de421"
+        name="提交人"
+        isAbstract="false"
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="f8ba002d-ead2-44d3-be25-74854490cef7"
+            isSubstitutable="false">
+            <actorMoniker
+              Id="9d03c126-3513-45ac-a239-ff703656fe9a"
+              LastKnownName="航空公司用户"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+          </generalization>
+        </generalsInternal>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="095180bd-0488-49dc-9ff1-5e83097db0a2"
+        name="发送数据"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="698cd387-39a5-4acb-bd59-282e86b27210"
+        name="邮件系统"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="fda03929-047d-4ef1-ac65-f5ec84329c1b"
+            isDerived="false"
+            sourceEndRoleName="邮件系统"
+            targetEndRoleName="发送数据"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="095180bd-0488-49dc-9ff1-5e83097db0a2"
+              LastKnownName="发送数据"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6f1afcfe-d9dd-401f-8de8-de52d75c5489"
+                  name="邮件系统"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4862b425-2067-44c0-8475-4202ad929d42"
+                  name="发送数据"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="712355f2-ebfa-472b-ba2c-0106917cabde"
+        name="接收数据"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="ac8e0bbd-b238-4d38-98eb-e47440b33b6c">
+            <useCaseMoniker
+              Id="aea42a49-25ae-4b7d-8202-74ea30418f09"
+              LastKnownName="邮件解析"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker
+            Id="f8888a10-9781-457b-b1b1-7ffa7e3d48c0"
+            LastKnownName="民航机队管理"
+            LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="91688d82-7560-4dee-af02-7483286bdc44"
+        name="民航局用户"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="d31c10fd-0c78-42a9-93de-60ed963baae3"
+            isDerived="false"
+            sourceEndRoleName="民航局用户"
+            targetEndRoleName="申请评审"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="e9cb657d-31f5-4c5c-94e7-9abff26ea995"
+              LastKnownName="评审申请"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="82fcb99a-e436-4388-aee6-fab1f9e2d572"
+                  name="民航局用户"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a04ef376-b4d1-4390-96b8-20272e1f05c1"
+                  name="申请评审"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="e589b2e9-e521-4dc0-a172-f633c6e6be38"
+            isDerived="false"
+            sourceEndRoleName="民航局用户"
+            targetEndRoleName="计划管理"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="aaaf4345-81a9-4db3-abf0-93a8eec4e668"
+              LastKnownName="计划管理"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8c07f7b6-e180-4b23-9ef2-56ec3d53f7e2"
+                  name="民航局用户"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="67ac4cb2-ee0f-4f0d-a75e-1c07757557e1"
+                  name="计划管理"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="81194fb9-f6ed-46d4-a2aa-42cc9f8a8880"
+            isDerived="false"
+            sourceEndRoleName="民航局用户"
+            targetEndRoleName="接收数据"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="712355f2-ebfa-472b-ba2c-0106917cabde"
+              LastKnownName="接收数据"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="40001733-0084-4a9d-976a-9461c76211dc"
+                  name="民航局用户"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="518a97e7-bbf5-4c6d-bcda-8e95aaa1d915"
+                  name="接收数据"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="64234274-f92a-424e-824d-16693f37900c"
+            isDerived="false"
+            sourceEndRoleName="民航局用户"
+            targetEndRoleName="统计分析"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="f6ed8488-1ef9-4e5b-a974-4a75e03f7da7"
+              LastKnownName="统计分析"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5d1614f6-9ba5-45fe-94c8-1a328ed783be"
+                  name="民航局用户"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="abbc0772-9b05-4021-9458-0d10491164bf"
+                  name="统计分析"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="f6f73e5f-857e-4559-a86c-2835d7a8ab5b"
+        name="PlanManage"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <opaqueAction
+            Id="1b8d6a2f-d0eb-4528-99cb-1521a3de0d97"
+            name="编制计划"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="96c6a675-165f-4c54-9a7b-bb9b46650686"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="20365142-ab55-483d-92d2-980c7cec92c3"
+                  LastKnownName="提交"
+                  LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="20365142-ab55-483d-92d2-980c7cec92c3"
+            name="提交"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="9997b5f5-8a79-4801-bbe9-a9cd25438e63"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="24cb4cc2-55b9-469e-baba-3ed0b77e025d"
+                  LastKnownName="发送数据"
+                  LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="24cb4cc2-55b9-469e-baba-3ed0b77e025d"
+            name="发送数据"
+            isLeaf="false">
+            <objectFlowTargets>
+              <objectFlow
+                Id="cbc4f37e-61bc-40ac-af5f-930c01f8472c"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <objectNodeMoniker
+                  Id="5c9bbb9c-1956-44c3-aecf-6a6be51b7423"
+                  LastKnownName="计划及相关数据"
+                  LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+              </objectFlow>
+            </objectFlowTargets>
+          </opaqueAction>
+          <objectNode
+            Id="5c9bbb9c-1956-44c3-aecf-6a6be51b7423"
+            name="计划及相关数据"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <objectFlowTargets>
+              <objectFlow
+                Id="d9649abf-339d-42cb-b568-1444151c32f5"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <opaqueActionMoniker
+                  Id="54cab3ca-bd2e-4f4f-808c-c33b14ef5d60"
+                  LastKnownName="接收数据"
+                  LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger
+                Id="54ef9f46-a5ac-41df-8b3e-c51ef4bf055c"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+          <opaqueAction
+            Id="54cab3ca-bd2e-4f4f-808c-c33b14ef5d60"
+            name="接收数据"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="22fb4a08-a4f2-4a7f-abaa-89a53c087efc"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="11ec45e9-afb6-429a-ad50-d4860bfdfaea"
+                  LastKnownName="评审计划"
+                  LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="11ec45e9-afb6-429a-ad50-d4860bfdfaea"
+            name="评审计划"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="881217e4-42b4-4ce5-895b-a803fc8967fd"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="d4346a4a-6d5b-481b-9f96-86e9e8bd04cb"
+                  LastKnownName="Decision1"
+                  LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="d4346a4a-6d5b-481b-9f96-86e9e8bd04cb"
+            name="Decision1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="a673cd74-d9c6-4f02-aceb-547afbc3e820"
+                guard="存在不符合项"
+                isLeaf="false">
+                <mergeNodeMoniker
+                  Id="ef891ca3-2221-48ac-88af-04c662fd778e"
+                  LastKnownName="Merge1"
+                  LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="f96df36f-9f55-4ccf-b00c-c117be5c8d80"
+                isLeaf="false">
+                <mergeNodeMoniker
+                  Id="982b9655-064c-4f37-a7c4-e9ef1299a788"
+                  LastKnownName="Merge2"
+                  LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <mergeNode
+            Id="ef891ca3-2221-48ac-88af-04c662fd778e"
+            name="Merge1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="65cb1793-74a2-4bf8-9ab8-315093e7755b"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="1b8d6a2f-d0eb-4528-99cb-1521a3de0d97"
+                  LastKnownName="编制计划"
+                  LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </mergeNode>
+          <initialNode
+            Id="cb2412be-5ca6-4f2a-af48-fab5515a834d"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="3d645a62-f9a6-4925-bb36-2edcbd52e83b"
+                isLeaf="false">
+                <mergeNodeMoniker
+                  Id="ef891ca3-2221-48ac-88af-04c662fd778e"
+                  LastKnownName="Merge1"
+                  LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction
+            Id="72f07631-8ea2-4345-a80f-68374d86db3a"
+            name="发布计划"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="19f461bb-fe52-4fe1-868e-0e2116f08070"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="214352a3-8048-4d32-becc-2dcd2bc03bda"
+                  LastKnownName="提交"
+                  LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="214352a3-8048-4d32-becc-2dcd2bc03bda"
+            name="提交"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="00f5bd08-38c6-42f6-8327-0c723e31d3b3"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="33a80f30-1d4e-4c9b-8de0-221b7cbff7d5"
+                  LastKnownName="发送数据"
+                  LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="33a80f30-1d4e-4c9b-8de0-221b7cbff7d5"
+            name="发送数据"
+            isLeaf="false">
+            <objectFlowTargets>
+              <objectFlow
+                Id="75074f03-a520-4a01-bcd8-e3aa787d9f50"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <objectNodeMoniker
+                  Id="4407319b-485a-41ea-ad39-c27715ed3b53"
+                  LastKnownName="确定的计划及相关数据"
+                  LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+              </objectFlow>
+            </objectFlowTargets>
+          </opaqueAction>
+          <objectNode
+            Id="4407319b-485a-41ea-ad39-c27715ed3b53"
+            name="确定的计划及相关数据"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <objectFlowTargets>
+              <objectFlow
+                Id="64c278d2-b1c4-4fb2-8bae-a1d005c444a3"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <opaqueActionMoniker
+                  Id="40720349-aae9-4e24-9a0e-2f3de40608ed"
+                  LastKnownName="接收数据"
+                  LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger
+                Id="119f551e-0b39-4521-9fb2-942e175e7ec0"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+          <opaqueAction
+            Id="40720349-aae9-4e24-9a0e-2f3de40608ed"
+            name="接收数据"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="bc89939c-a43c-4faf-9724-adb718c24454"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="1c256c54-7725-4647-9507-9a49655f4c0b"
+                  LastKnownName="检查发布的计划"
+                  LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="1c256c54-7725-4647-9507-9a49655f4c0b"
+            name="检查发布的计划"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="f5324aaa-8189-488c-b8a5-025ac5f0289c"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="c4019781-a48e-4115-b43c-887efd6a9032"
+                  LastKnownName="Decision2"
+                  LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode
+            Id="d990e146-4618-4fe0-a63d-4cfe709511f2"
+            name="ActivityFinal1"
+            isLeaf="false" />
+          <mergeNode
+            Id="982b9655-064c-4f37-a7c4-e9ef1299a788"
+            name="Merge2"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="e8504ec8-cac7-425b-9856-1b00714a659a"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="72f07631-8ea2-4345-a80f-68374d86db3a"
+                  LastKnownName="发布计划"
+                  LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </mergeNode>
+          <decisionNode
+            Id="c4019781-a48e-4115-b43c-887efd6a9032"
+            name="Decision2"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="bddd6c9e-93bc-4c12-9676-43726147f5f2"
+                guard="存在不符合项"
+                isLeaf="false">
+                <mergeNodeMoniker
+                  Id="982b9655-064c-4f37-a7c4-e9ef1299a788"
+                  LastKnownName="Merge2"
+                  LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="4ad1b08d-fedc-4eaf-a697-f76d005e30ec"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="d990e146-4618-4fe0-a63d-4cfe709511f2"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="54fa3c95-1fe1-494e-b332-668e464c6c59"
+        name="RequestExamine"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <opaqueAction
+            Id="bc2b7f04-7ae3-4f07-9c59-765aaaedb33e"
+            name="提出申请"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="e50a4acc-af31-4c4f-bdfd-5a971ac64958"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="07f17a91-e6ed-4052-b801-2aa11af7a459"
+                  LastKnownName="提交"
+                  LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="07f17a91-e6ed-4052-b801-2aa11af7a459"
+            name="提交"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="237bf624-2e65-40c8-8f0f-2339348db2a2"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="7f859e2e-53be-4caf-941f-e32195ffb171"
+                  LastKnownName="发送数据"
+                  LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="7f859e2e-53be-4caf-941f-e32195ffb171"
+            name="发送数据"
+            isLeaf="false">
+            <objectFlowTargets>
+              <objectFlow
+                Id="f580a70e-135a-48f5-a75e-7bebe50f076c"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <objectNodeMoniker
+                  Id="b7e78836-2a69-422b-ae9b-e6549e1f13ad"
+                  LastKnownName="申请及相关数据"
+                  LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+              </objectFlow>
+            </objectFlowTargets>
+          </opaqueAction>
+          <objectNode
+            Id="b7e78836-2a69-422b-ae9b-e6549e1f13ad"
+            name="申请及相关数据"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <objectFlowTargets>
+              <objectFlow
+                Id="21a664e8-a405-4a7c-915d-f00e4b0683c2"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <opaqueActionMoniker
+                  Id="9e712a82-5f0b-4424-877e-a34a66e565ea"
+                  LastKnownName="接收数据"
+                  LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger
+                Id="039f2ccf-357e-410f-ad5e-a24fca28b685"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+          <opaqueAction
+            Id="9e712a82-5f0b-4424-877e-a34a66e565ea"
+            name="接收数据"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="45fb72ff-8bb6-4cc2-b9e4-8a8f06742493"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="0bab7ea1-e5c1-4e57-82d8-388de83ef097"
+                  LastKnownName="评审申请"
+                  LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="0bab7ea1-e5c1-4e57-82d8-388de83ef097"
+            name="评审申请"
+            isLeaf="false">
+            <objectFlowTargets>
+              <objectFlow
+                Id="f7b25bb1-e5d3-49d6-97fa-1abf4890f4ed"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <objectNodeMoniker
+                  Id="956c2d06-de87-4fc4-82b7-dfc7940ecb42"
+                  LastKnownName="批件"
+                  LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+              </objectFlow>
+            </objectFlowTargets>
+          </opaqueAction>
+          <initialNode
+            Id="5962d441-24c6-4db1-91fa-a060187875db"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="0618c773-7954-4d20-87bf-c5d2b636b1fa"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="bc2b7f04-7ae3-4f07-9c59-765aaaedb33e"
+                  LastKnownName="提出申请"
+                  LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction
+            Id="71fe36e0-46a2-41cc-ad86-8b5651806885"
+            name="录入批文"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="5c544b45-44a8-4f41-aae1-2756d07f1840"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="1d09137a-4fa9-41a9-8bed-517cf4195072"
+                  LastKnownName="提交"
+                  LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="1d09137a-4fa9-41a9-8bed-517cf4195072"
+            name="提交"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="5ebda377-5e77-4916-abef-d36a0f0ca8fa"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="69c2c445-e2c8-4a86-94b3-8bc5a2667654"
+                  LastKnownName="发送数据"
+                  LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="69c2c445-e2c8-4a86-94b3-8bc5a2667654"
+            name="发送数据"
+            isLeaf="false">
+            <objectFlowTargets>
+              <objectFlow
+                Id="fcfe60cd-206d-4f30-81b5-b63d0cb13e00"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <objectNodeMoniker
+                  Id="7a773d82-bf73-4594-9992-d73415fe40c7"
+                  LastKnownName="批文及相关数据"
+                  LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+              </objectFlow>
+            </objectFlowTargets>
+          </opaqueAction>
+          <objectNode
+            Id="7a773d82-bf73-4594-9992-d73415fe40c7"
+            name="批文及相关数据"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <objectFlowTargets>
+              <objectFlow
+                Id="2c6f778f-8e77-435a-824e-737781d63699"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <opaqueActionMoniker
+                  Id="6af0997c-59db-43e2-bb59-53f67687045a"
+                  LastKnownName="接收数据"
+                  LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger
+                Id="ad47f106-c24a-4242-b797-c0a6bad5431b"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+          <opaqueAction
+            Id="6af0997c-59db-43e2-bb59-53f67687045a"
+            name="接收数据"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="d72cdc4e-705f-4364-8b90-31bed5d26df1"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="13f0affa-fe44-4705-a366-12d7b58c6145"
+                  LastKnownName="批文匹配检查"
+                  LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="13f0affa-fe44-4705-a366-12d7b58c6145"
+            name="批文匹配检查"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="0d4b7cdf-f0fc-4aad-bf43-a2e0fdf6d35a"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="20ec7158-9e42-438a-ab51-43cd4eac7b70"
+                  LastKnownName="Decision1"
+                  LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <mergeNode
+            Id="344f5024-b7bf-458a-b419-2c4348099849"
+            name="Merge2"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="543cb4b6-45dd-453b-a865-ace2b874a783"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="71fe36e0-46a2-41cc-ad86-8b5651806885"
+                  LastKnownName="录入批文"
+                  LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </mergeNode>
+          <forkNode
+            Id="17b29d49-ee96-470a-983b-8fe3750987cb"
+            name="Fork1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="a0986f39-c182-43e9-a47e-5c5ad77c9ab5"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="ebce08bf-baa9-489e-bd54-313431b55842"
+                  LastKnownName="批文录入"
+                  LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="8bacd494-3170-43f4-bcc9-c809658a8df4"
+                isLeaf="false">
+                <mergeNodeMoniker
+                  Id="344f5024-b7bf-458a-b419-2c4348099849"
+                  LastKnownName="Merge2"
+                  LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </forkNode>
+          <opaqueAction
+            Id="ebce08bf-baa9-489e-bd54-313431b55842"
+            name="批文录入"
+            isLeaf="false" />
+          <decisionNode
+            Id="20ec7158-9e42-438a-ab51-43cd4eac7b70"
+            name="Decision1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="4e94c0cf-e9e9-4042-a6d6-77768ffd5710"
+                guard="存在不符合项"
+                isLeaf="false">
+                <mergeNodeMoniker
+                  Id="344f5024-b7bf-458a-b419-2c4348099849"
+                  LastKnownName="Merge2"
+                  LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="9ddb3528-5ea9-4865-ac31-3836cea3e53f"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="5dfc5fa4-9e4d-4774-950b-60642aa05516"
+                  LastKnownName="匹配"
+                  LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="5dfc5fa4-9e4d-4774-950b-60642aa05516"
+            name="匹配"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="207ee2a0-31af-4571-b0c2-ec10fef77c3a"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="5c118320-14fb-4023-8763-e0c47710fd2c"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode
+            Id="5c118320-14fb-4023-8763-e0c47710fd2c"
+            name="ActivityFinal1"
+            isLeaf="false" />
+          <objectNode
+            Id="956c2d06-de87-4fc4-82b7-dfc7940ecb42"
+            name="批件"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <objectFlowTargets>
+              <objectFlow
+                Id="4a60db76-d91c-45e5-85eb-264946e50176"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <forkNodeMoniker
+                  Id="17b29d49-ee96-470a-983b-8fe3750987cb"
+                  LastKnownName="Fork1"
+                  LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger
+                Id="f41847f4-b3c3-46d9-b231-85748236d2a0"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="3709a35f-86a1-4850-b6de-4d00c7c5af43"
+        name="执行分析"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="1d9bb881-d161-4fed-9288-7f81b726a0c2"
+            handle="%justhonor\DefaultCollection#9b56e60f-6fab-49b2-af31-4b0a4df8b7cc$26"
+            tag="Work Item Reference" />
+        </referencesInternal>
+        <suppliersInternal>
+          <dependency
+            Id="67dbcf31-a384-43b6-8158-c6ca42e9fdf7">
+            <artifactMoniker
+              Id="9da75ce1-55e1-42f4-b498-1bed1c50f7db"
+              LastKnownName="执行分析用例"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+          </dependency>
+        </suppliersInternal>
+        <subjects>
+          <subsystemMoniker
+            Id="8078e17e-86b1-48b8-83c6-609b2be14aef"
+            LastKnownName="统计分析"
+            LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="a0608bf8-3cad-479a-899c-1d7d09504c0b"
+        name="计划发布"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="bad67636-2c9d-440f-86bb-16bb2377d97f"
+            handle="%justhonor\DefaultCollection#9b56e60f-6fab-49b2-af31-4b0a4df8b7cc$11"
+            tag="Work Item Reference" />
+        </referencesInternal>
+        <suppliersInternal>
+          <dependency
+            Id="432e9b27-141f-48de-99f5-8d084d8bc0aa">
+            <artifactMoniker
+              Id="e22c0389-44b9-4750-a75b-eef278541bb6"
+              LastKnownName="计划发布用例"
+              LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+          </dependency>
+        </suppliersInternal>
+        <subjects>
+          <subsystemMoniker
+            Id="17c25cc5-6368-4433-9392-f90d4891685a"
+            LastKnownName="计划管理"
+            LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <artifact
+        Id="9d6d8908-8d2d-4a0f-bd4e-858f8af760d1"
+        name="计划管理活动"
+        isAbstract="false"
+        isLeaf="false"
+        fileName="UniCloud.Modeling.CAFM\PlanManage.activitydiagram" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <artifact
+        Id="e17cd256-f6c0-4de6-91fd-cbd8b917a3d8"
+        name="申请评审活动"
+        isAbstract="false"
+        isLeaf="false"
+        fileName="UniCloud.Modeling.CAFM\RequestExamine.activitydiagram" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <artifact
+        Id="2864930b-0019-475b-80f3-b3640c6ae785"
+        name="客机计划用例"
+        isAbstract="false"
+        isLeaf="false"
+        fileName="UniCloud.Modeling.CAFM\PlanPnr.usecasediagram" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <artifact
+        Id="1a42d8b7-5ead-42da-8568-0561650071ad"
+        name="货机计划用例"
+        isAbstract="false"
+        isLeaf="false"
+        fileName="UniCloud.Modeling.CAFM\PlanCargo.usecasediagram" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <artifact
+        Id="2b4ebdc7-379e-41d5-9d9f-08b1ded0dd25"
+        name="计划执行用例"
+        isAbstract="false"
+        isLeaf="false"
+        fileName="UniCloud.Modeling.CAFM\PlanPerform.usecasediagram" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <artifact
+        Id="e22c0389-44b9-4750-a75b-eef278541bb6"
+        name="计划发布用例"
+        isAbstract="false"
+        isLeaf="false"
+        fileName="UniCloud.Modeling.CAFM\PlanPublish.usecasediagram" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <artifact
+        Id="450dea79-5381-45f1-bd4e-241eef802ac4"
+        name="计划查询用例"
+        isAbstract="false"
+        isLeaf="false"
+        fileName="UniCloud.Modeling.CAFM\PlanQuery.usecasediagram" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <artifact
+        Id="cea64292-467c-48c4-aec0-12ffebf367bb"
+        name="批文录入用例"
+        isAbstract="false"
+        isLeaf="false"
+        fileName="UniCloud.Modeling.CAFM\Approval.usecasediagram" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <artifact
+        Id="ff90d07a-4e9f-4693-9a12-cafb2691c1f7"
+        name="批文匹配用例"
+        isAbstract="false"
+        isLeaf="false"
+        fileName="UniCloud.Modeling.CAFM\ApprovalCheck.usecasediagram" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <artifact
+        Id="6462a317-a01f-4afc-af7c-bc34cecab248"
+        name="批文管理用例"
+        isAbstract="false"
+        isLeaf="false"
+        fileName="UniCloud.Modeling.CAFM\ApprovalManage.usecasediagram" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <artifact
+        Id="f3e87264-c562-4933-9c1a-6ab008fae6ec"
+        name="申请管理用例"
+        isAbstract="false"
+        isLeaf="false"
+        fileName="UniCloud.Modeling.CAFM\Request.usecasediagram" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <artifact
+        Id="8f2ff4b8-1e8e-413a-8d15-8d7d14f56c5f"
+        name="客机运力用例"
+        isAbstract="false"
+        isLeaf="false"
+        fileName="UniCloud.Modeling.CAFM\FleetTrendPnr.usecasediagram" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <artifact
+        Id="78ec5d9b-e2f2-476e-82e7-e3bde6f28663"
+        name="制造商用例"
+        isAbstract="false"
+        isLeaf="false"
+        fileName="UniCloud.Modeling.CAFM\Manufacturer.usecasediagram" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <artifact
+        Id="4e7339bb-6dba-4b9c-940a-60d8f219cc9c"
+        name="供应商用例"
+        isAbstract="false"
+        isLeaf="false"
+        fileName="UniCloud.Modeling.CAFM\Supperlier.usecasediagram" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <artifact
+        Id="d6332856-0e84-45d7-896e-a47013ef1dc4"
+        name="机型分析用例"
+        isAbstract="false"
+        isLeaf="false"
+        fileName="UniCloud.Modeling.CAFM\AircraftType.usecasediagram" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <artifact
+        Id="2770d20e-a955-45f9-af33-74476f215e3c"
+        name="货机运力用例"
+        isAbstract="false"
+        isLeaf="false"
+        fileName="UniCloud.Modeling.CAFM\FleetTrendCargo.usecasediagram" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <artifact
+        Id="2efa1df3-d201-4fd4-a8df-c2fcee12fca5"
+        name="飞机数据用例"
+        isAbstract="false"
+        isLeaf="false"
+        fileName="UniCloud.Modeling.CAFM\FleetQuery.usecasediagram" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <artifact
+        Id="d28bd41b-3089-41d6-86e4-42a79a991416"
+        name="引进方式用例"
+        isAbstract="false"
+        isLeaf="false"
+        fileName="UniCloud.Modeling.CAFM\ImportType.usecasediagram" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <artifact
+        Id="9da75ce1-55e1-42f4-b498-1bed1c50f7db"
+        name="执行分析用例"
+        isAbstract="false"
+        isLeaf="false"
+        fileName="UniCloud.Modeling.CAFM\PerformAnalyse.usecasediagram" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <artifact
+        Id="2200974c-9b9a-43d3-ab92-dadede5c891e"
+        name="批文录入序列"
+        isAbstract="false"
+        isLeaf="false"
+        fileName="UniCloud.Modeling.CAFM\Approval.sequencediagram" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <artifact
+        Id="82129ca1-d74d-4416-a048-43f185d5df4a"
+        name="批文匹配序列"
+        isAbstract="false"
+        isLeaf="false"
+        fileName="UniCloud.Modeling.CAFM\ApprovalCheck.sequencediagram" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <interaction
+        Id="4f1e5040-7818-4bd9-bbba-b36a5ded2e1a"
+        name="Approval"
+        collapseFragmentsFlag="false"
+        isActiveClass="false"
+        isAbstract="false"
+        isLeaf="false"
+        isReentrant="false">
+        <lifelines>
+          <lifeline
+            Id="d2fe687d-9426-4fb2-9701-db0386c0c06a"
+            name="规划人员 : 规划人员"
+            isActor="true"
+            lifelineDisplayName="‎规划人员‎ : ‎规划人员‎">
+            <represents>
+              <propertyMoniker
+                Id="1f495e89-b69d-4a75-8be1-4c6aa4c3928c"
+                LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+            </represents>
+          </lifeline>
+          <lifeline
+            Id="caae2583-d2ee-4342-bbbd-4e075927f45d"
+            name="批文录入"
+            isActor="false"
+            lifelineDisplayName="‎批文录入‎">
+            <represents>
+              <propertyMoniker
+                Id="7414fcbe-2d4c-41a2-b7ec-834fc9bc653d"
+                LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+            </represents>
+          </lifeline>
+        </lifelines>
+        <ownedAttributesInternal>
+          <property
+            Id="1f495e89-b69d-4a75-8be1-4c6aa4c3928c"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <actorMoniker
+                Id="f40cc508-fe71-4d54-b6f4-05e64d397d0b"
+                LastKnownName="规划人员"
+                LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="d240605e-272d-4100-b9ba-e86526ea06c5"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <actorMoniker
+                Id="934e6ad7-1328-4a4a-b846-c7a2266be0a9"
+                LastKnownName="规划管理者"
+                LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="7414fcbe-2d4c-41a2-b7ec-834fc9bc653d"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <useCaseMoniker
+                Id="b4eaa37e-f7e3-49d6-9e80-0a7de97ac090"
+                LastKnownName="批文录入"
+                LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </interaction>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <interaction
+        Id="c250d6ce-b84b-41c9-8759-d895452938a9"
+        name="ApprovalCheck"
+        collapseFragmentsFlag="false"
+        isActiveClass="false"
+        isAbstract="false"
+        isLeaf="false"
+        isReentrant="false">
+        <lifelines>
+          <lifeline
+            Id="8c45dc68-1c9f-419c-a27c-4ea9d4f06746"
+            name="规划人员 : 规划人员"
+            isActor="true"
+            lifelineDisplayName="‎规划人员‎ : ‎规划人员‎">
+            <represents>
+              <propertyMoniker
+                Id="31fd6272-fb9e-4527-bbf8-2e8682e046a7"
+                LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+            </represents>
+          </lifeline>
+          <lifeline
+            Id="2dd0737f-bc26-4da6-b272-5a13e942b781"
+            name="批文匹配"
+            isActor="false"
+            lifelineDisplayName="‎批文匹配‎">
+            <represents>
+              <propertyMoniker
+                Id="0d9b4bca-95aa-41c6-93b1-cae7f7587cd1"
+                LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+            </represents>
+          </lifeline>
+        </lifelines>
+        <ownedAttributesInternal>
+          <property
+            Id="31fd6272-fb9e-4527-bbf8-2e8682e046a7"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <actorMoniker
+                Id="f40cc508-fe71-4d54-b6f4-05e64d397d0b"
+                LastKnownName="规划人员"
+                LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="0d9b4bca-95aa-41c6-93b1-cae7f7587cd1"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <useCaseMoniker
+                Id="c8bcb372-c6fd-4f63-aa50-caddb44afdcd"
+                LastKnownName="批文匹配"
+                LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </interaction>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="188dfb51-693f-4586-8bac-a0d1e04738c3"
+        name="检查计划发布"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="f8888a10-9781-457b-b1b1-7ffa7e3d48c0"
+            LastKnownName="民航机队管理"
+            LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="e4d7f106-b0b6-4d89-b675-fb0b98607689"
+        name="计划执行"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="f8888a10-9781-457b-b1b1-7ffa7e3d48c0"
+            LastKnownName="民航机队管理"
+            LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="c4391f20-2dba-4469-ad90-407e5052df4e"
+        name="客机、货机计划评审"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="f8888a10-9781-457b-b1b1-7ffa7e3d48c0"
+            LastKnownName="民航机队管理"
+            LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="215cf047-2020-4ea0-901a-a82b96b2ad3c"
+        name="计划执行1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="19824e7f-86c8-4d7a-a9b6-2719493a1b3e"
+        name="查询计划"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="f8888a10-9781-457b-b1b1-7ffa7e3d48c0"
+            LastKnownName="民航机队管理"
+            LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="1b017453-ebb5-4640-85ec-b6f031e392b5"
+        name="分析计划执行"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="f8888a10-9781-457b-b1b1-7ffa7e3d48c0"
+            LastKnownName="民航机队管理"
+            LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="c4f1a0f0-4e08-4658-b14c-49672b54c902"
+        name="录入批文"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="f8888a10-9781-457b-b1b1-7ffa7e3d48c0"
+            LastKnownName="民航机队管理"
+            LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="58a9161d-37c3-4821-9638-5650d310fa4d"
+        name="检查批文匹配"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="f8888a10-9781-457b-b1b1-7ffa7e3d48c0"
+            LastKnownName="民航机队管理"
+            LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="3b83bfaf-409a-4b56-9321-b71842446dbc"
+        name="录入批文2"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="96c222d7-7b9b-4967-942a-b911ff66b865"
+        name="管理批文"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="f8888a10-9781-457b-b1b1-7ffa7e3d48c0"
+            LastKnownName="民航机队管理"
+            LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="917729e2-bdde-4279-a3a2-74304f744e22"
+        name="管理申请"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="f8888a10-9781-457b-b1b1-7ffa7e3d48c0"
+            LastKnownName="民航机队管理"
+            LastKnownLocation="UniCloud.Modeling.CAFM.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="aea42a49-25ae-4b7d-8202-74ea30418f09"
+        name="邮件解析"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>

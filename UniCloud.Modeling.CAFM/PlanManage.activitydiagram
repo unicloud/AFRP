@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="17825f9e-9fb8-49b8-b867-e2be31dc8dec" name="PlanManage" linkedPackageId="1e43deec-9ac7-45ed-a798-97adba595bd2" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <ownedCommentsInternal>
+    <comment Id="f890fc77-e343-4b69-9c71-2a5261ec1cbc">
+      <elementDefinition Id="f6ab6445-73f4-42c3-ac0c-dee9c114a3a6" />
+      <body>航空公司</body>
+    </comment>
+    <comment Id="671be2ce-b590-43a6-9e4a-8d779335d704">
+      <elementDefinition Id="6e569590-957a-4d52-b24d-10dd077f176f" />
+      <body>民航局</body>
+    </comment>
+    <comment Id="50bd91a9-0c50-4da6-a3db-13f463673e34">
+      <elementDefinition Id="c42f79ae-d89f-4e7b-851d-f492a688a91e" />
+      <body>邮件系统</body>
+    </comment>
+    <comment Id="2b352aa4-65c4-4300-9db1-51efb52ecc64">
+      <elementDefinition Id="5bafd2b9-fb94-41c1-8460-dc0280cf5925" />
+      <body>修改提交当年新计划通过创建新版本的方式</body>
+      <annotatedElements>
+        <mergeNodeMoniker Id="1952c84f-47c2-4b86-9901-d9a28d90a14b" LastKnownName="Merge1" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <referencesInternal>
+    <reference Id="e4f05a8b-0d2b-4238-9749-8f61f390a8c6" handle="%justhonor\DefaultCollection#9b56e60f-6fab-49b2-af31-4b0a4df8b7cc$7" tag="Work Item Reference" />
+  </referencesInternal>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="4075cf11-4b07-4ee1-9b66-05ff8011dc50" name="PlanManage" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="f6f73e5f-857e-4559-a86c-2835d7a8ab5b" />
+        <nodes>
+          <opaqueAction Id="159c0786-4261-4120-80cf-4588ea27d8ea" name="编制计划" isLeaf="false">
+            <elementDefinition Id="1b8d6a2f-d0eb-4528-99cb-1521a3de0d97" />
+            <flowNodeTargets>
+              <controlFlow Id="9b963c55-c231-43f5-bc17-a7a41565ed05" isLeaf="false">
+                <opaqueActionMoniker Id="bf30b18a-073c-410d-b5a4-fe81b2685416" LastKnownName="提交" />
+                <elementDefinition Id="96c6a675-165f-4c54-9a7b-bb9b46650686" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="bf30b18a-073c-410d-b5a4-fe81b2685416" name="提交" isLeaf="false">
+            <elementDefinition Id="20365142-ab55-483d-92d2-980c7cec92c3" />
+            <flowNodeTargets>
+              <controlFlow Id="4a38cb89-227e-4ccb-9236-71bcb4e83889" isLeaf="false">
+                <opaqueActionMoniker Id="504da620-e6a0-4545-8a13-e539ab288c7f" LastKnownName="发送数据" />
+                <elementDefinition Id="9997b5f5-8a79-4801-bbe9-a9cd25438e63" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="504da620-e6a0-4545-8a13-e539ab288c7f" name="发送数据" isLeaf="false">
+            <elementDefinition Id="24cb4cc2-55b9-469e-baba-3ed0b77e025d" />
+            <objectFlowTargets>
+              <objectFlow Id="f530f3ab-216d-404f-bd62-860fd9fbfd6b" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="8691977e-d63f-401a-b2ab-27a21aba5e4e" LastKnownName="计划及相关数据" />
+                <elementDefinition Id="cbc4f37e-61bc-40ac-af5f-930c01f8472c" />
+              </objectFlow>
+            </objectFlowTargets>
+          </opaqueAction>
+          <objectNode Id="8691977e-d63f-401a-b2ab-27a21aba5e4e" name="计划及相关数据" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="5c9bbb9c-1956-44c3-aecf-6a6be51b7423" />
+            <objectFlowTargets>
+              <objectFlow Id="ca7a0710-e945-49c4-86d9-30f5920cc091" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <opaqueActionMoniker Id="080441a9-9bc6-48c6-8be7-ac92c0a2d9f6" LastKnownName="接收数据" />
+                <elementDefinition Id="d9649abf-339d-42cb-b568-1444151c32f5" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="f1dc5b4d-97f7-4136-9938-1460d1d457a6" name="2147483647" value="2147483647">
+                <elementDefinition Id="54ef9f46-a5ac-41df-8b3e-c51ef4bf055c" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <opaqueAction Id="080441a9-9bc6-48c6-8be7-ac92c0a2d9f6" name="接收数据" isLeaf="false">
+            <elementDefinition Id="54cab3ca-bd2e-4f4f-808c-c33b14ef5d60" />
+            <flowNodeTargets>
+              <controlFlow Id="fee3b8d7-83e2-4596-add0-51a6314272a6" isLeaf="false">
+                <opaqueActionMoniker Id="4226c159-c7ac-4b67-876d-c5eae14ca0a7" LastKnownName="评审计划" />
+                <elementDefinition Id="22fb4a08-a4f2-4a7f-abaa-89a53c087efc" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="4226c159-c7ac-4b67-876d-c5eae14ca0a7" name="评审计划" isLeaf="false">
+            <elementDefinition Id="11ec45e9-afb6-429a-ad50-d4860bfdfaea" />
+            <flowNodeTargets>
+              <controlFlow Id="2eaff447-095b-4771-90ec-303bd7ae6cf6" isLeaf="false">
+                <decisionNodeMoniker Id="02e736eb-d253-49c7-a646-aa73863b4ab5" LastKnownName="Decision1" />
+                <elementDefinition Id="881217e4-42b4-4ce5-895b-a803fc8967fd" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="02e736eb-d253-49c7-a646-aa73863b4ab5" name="Decision1" isLeaf="false">
+            <elementDefinition Id="d4346a4a-6d5b-481b-9f96-86e9e8bd04cb" />
+            <flowNodeTargets>
+              <controlFlow Id="3d9972a1-f4ec-4f7f-91a9-15e7c306dd54" guard="存在不符合项" isLeaf="false">
+                <mergeNodeMoniker Id="1952c84f-47c2-4b86-9901-d9a28d90a14b" LastKnownName="Merge1" />
+                <elementDefinition Id="a673cd74-d9c6-4f02-aceb-547afbc3e820" />
+              </controlFlow>
+              <controlFlow Id="128e9db9-2cbe-421e-a1ea-daeb4f1feafd" isLeaf="false">
+                <mergeNodeMoniker Id="80a76f3f-943b-472d-a8ba-49eba03dbbad" LastKnownName="Merge2" />
+                <elementDefinition Id="f96df36f-9f55-4ccf-b00c-c117be5c8d80" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <mergeNode Id="1952c84f-47c2-4b86-9901-d9a28d90a14b" name="Merge1" isLeaf="false">
+            <elementDefinition Id="ef891ca3-2221-48ac-88af-04c662fd778e" />
+            <flowNodeTargets>
+              <controlFlow Id="05aa45b7-a144-4440-9f94-1d811e5e1073" isLeaf="false">
+                <opaqueActionMoniker Id="159c0786-4261-4120-80cf-4588ea27d8ea" LastKnownName="编制计划" />
+                <elementDefinition Id="65cb1793-74a2-4bf8-9ab8-315093e7755b" />
+              </controlFlow>
+            </flowNodeTargets>
+          </mergeNode>
+          <initialNode Id="8d683f10-b577-42a4-8bef-f9189e8b4258" name="Initial1" isLeaf="false">
+            <elementDefinition Id="cb2412be-5ca6-4f2a-af48-fab5515a834d" />
+            <flowNodeTargets>
+              <controlFlow Id="1092a638-98de-4302-8b36-67fdce4aa8d0" isLeaf="false">
+                <mergeNodeMoniker Id="1952c84f-47c2-4b86-9901-d9a28d90a14b" LastKnownName="Merge1" />
+                <elementDefinition Id="3d645a62-f9a6-4925-bb36-2edcbd52e83b" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction Id="d1e6037e-d7d4-43c6-906b-4d84d0ea7332" name="发布计划" isLeaf="false">
+            <elementDefinition Id="72f07631-8ea2-4345-a80f-68374d86db3a" />
+            <flowNodeTargets>
+              <controlFlow Id="b5aae617-c12e-4ce3-a244-a5dc782f1864" isLeaf="false">
+                <opaqueActionMoniker Id="51e7bace-5ad4-4f0e-94a5-b44ef87028e4" LastKnownName="提交" />
+                <elementDefinition Id="19f461bb-fe52-4fe1-868e-0e2116f08070" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="51e7bace-5ad4-4f0e-94a5-b44ef87028e4" name="提交" isLeaf="false">
+            <elementDefinition Id="214352a3-8048-4d32-becc-2dcd2bc03bda" />
+            <flowNodeTargets>
+              <controlFlow Id="5bd43a16-84a6-4f0e-aba2-492b3b62ea6b" isLeaf="false">
+                <opaqueActionMoniker Id="e3c10d13-7cf1-4fc6-a776-65886c8f3155" LastKnownName="发送数据" />
+                <elementDefinition Id="00f5bd08-38c6-42f6-8327-0c723e31d3b3" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="e3c10d13-7cf1-4fc6-a776-65886c8f3155" name="发送数据" isLeaf="false">
+            <elementDefinition Id="33a80f30-1d4e-4c9b-8de0-221b7cbff7d5" />
+            <objectFlowTargets>
+              <objectFlow Id="4e6ea94a-363f-4b7d-895d-65e64f7cb06e" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="41f2c86a-2e13-4199-a5fb-c32da9f10581" LastKnownName="确定的计划及相关数据" />
+                <elementDefinition Id="75074f03-a520-4a01-bcd8-e3aa787d9f50" />
+              </objectFlow>
+            </objectFlowTargets>
+          </opaqueAction>
+          <objectNode Id="41f2c86a-2e13-4199-a5fb-c32da9f10581" name="确定的计划及相关数据" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="4407319b-485a-41ea-ad39-c27715ed3b53" />
+            <objectFlowTargets>
+              <objectFlow Id="87343cc1-8565-4c25-b383-257104e6ca5f" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <opaqueActionMoniker Id="b12fb75d-f05c-4ac6-9b1f-70d9e0e13b48" LastKnownName="接收数据" />
+                <elementDefinition Id="64c278d2-b1c4-4fb2-8bae-a1d005c444a3" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="f2769ef5-a790-42cf-b641-410bc3f52730" name="2147483647" value="2147483647">
+                <elementDefinition Id="119f551e-0b39-4521-9fb2-942e175e7ec0" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <opaqueAction Id="b12fb75d-f05c-4ac6-9b1f-70d9e0e13b48" name="接收数据" isLeaf="false">
+            <elementDefinition Id="40720349-aae9-4e24-9a0e-2f3de40608ed" />
+            <flowNodeTargets>
+              <controlFlow Id="f5062831-c9cd-4ff3-8948-070c8d4c8a1b" isLeaf="false">
+                <opaqueActionMoniker Id="cc63d5b7-4925-46ad-8da0-3cd3bc2b42ba" LastKnownName="检查发布的计划" />
+                <elementDefinition Id="bc89939c-a43c-4faf-9724-adb718c24454" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="cc63d5b7-4925-46ad-8da0-3cd3bc2b42ba" name="检查发布的计划" isLeaf="false">
+            <elementDefinition Id="1c256c54-7725-4647-9507-9a49655f4c0b" />
+            <flowNodeTargets>
+              <controlFlow Id="1ea748cc-d696-4e54-939c-4c64ab0c4d05" isLeaf="false">
+                <decisionNodeMoniker Id="a6fb824e-e88e-4110-95f6-4685b30d83fc" LastKnownName="Decision2" />
+                <elementDefinition Id="f5324aaa-8189-488c-b8a5-025ac5f0289c" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode Id="b24c4c51-f624-4ef4-8341-4404f0370039" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="d990e146-4618-4fe0-a63d-4cfe709511f2" />
+          </activityFinalNode>
+          <mergeNode Id="80a76f3f-943b-472d-a8ba-49eba03dbbad" name="Merge2" isLeaf="false">
+            <elementDefinition Id="982b9655-064c-4f37-a7c4-e9ef1299a788" />
+            <flowNodeTargets>
+              <controlFlow Id="75314207-c532-462e-9664-5e837c922b18" isLeaf="false">
+                <opaqueActionMoniker Id="d1e6037e-d7d4-43c6-906b-4d84d0ea7332" LastKnownName="发布计划" />
+                <elementDefinition Id="e8504ec8-cac7-425b-9856-1b00714a659a" />
+              </controlFlow>
+            </flowNodeTargets>
+          </mergeNode>
+          <decisionNode Id="a6fb824e-e88e-4110-95f6-4685b30d83fc" name="Decision2" isLeaf="false">
+            <elementDefinition Id="c4019781-a48e-4115-b43c-887efd6a9032" />
+            <flowNodeTargets>
+              <controlFlow Id="39619bc5-35ae-4bf6-a4e5-308d4101a374" guard="存在不符合项" isLeaf="false">
+                <mergeNodeMoniker Id="80a76f3f-943b-472d-a8ba-49eba03dbbad" LastKnownName="Merge2" />
+                <elementDefinition Id="bddd6c9e-93bc-4c12-9676-43726147f5f2" />
+              </controlFlow>
+              <controlFlow Id="2c4f27fd-50b5-46e5-839c-34b3fe0e1e23" isLeaf="false">
+                <activityFinalNodeMoniker Id="b24c4c51-f624-4ef4-8341-4404f0370039" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="4ad1b08d-fedc-4eaf-a697-f76d005e30ec" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="1e43deec-9ac7-45ed-a798-97adba595bd2" name="UniCloud.Modeling.CAFM">
+    <elementDefinition Id="41993ae4-c3d1-4e56-95e3-496d7d3cc915" />
+    <profileInstances>
+      <packageHasProfileInstances Id="f5a9fdf7-2302-478d-9584-a64d02125956">
+        <profileInstance Id="7d4f9759-fc61-449c-ba4a-93a5152f18a8" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="f2a6fdb7-d79e-4cc3-9ce4-18d059528a4d">
+        <profileInstance Id="2090b3b7-ce57-4210-8bda-77b9e61390f6" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</activityRootModel>

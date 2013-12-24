@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Supperlier">
+  <useCaseModelRootMoniker Id="2541c231-d0d6-435d-8c8e-d66652ba2da2" />
+  <nestedChildShapes>
+    <actorShape Id="3e38ddaf-2db6-44f4-8909-219db10d857a" absoluteBounds="1.25, 1.125, 0.5, 0.5" isReference="false" heightOffset="0">
+      <actorMoniker Id="83ba0b6a-18b4-4ab5-9ff9-42cea7382ea8" LastKnownName="规划人员" />
+      <relativeChildShapes />
+    </actorShape>
+    <actorShape Id="576135ab-8d00-4a8b-b585-2e3f1bed35ef" absoluteBounds="4.5, 1.125, 0.5, 0.5" isReference="false" heightOffset="0">
+      <actorMoniker Id="61e0f5ef-d298-48f4-be3a-5685ab9473cc" LastKnownName="规划管理者" />
+      <relativeChildShapes />
+    </actorShape>
+    <useCaseShape Id="62779fe8-d802-4d25-8eeb-67e3d1eb6d96" absoluteBounds="2.625, 1.125, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="256835cc-9eef-4733-8113-bdd66f4b83a1" LastKnownName="供应商" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseAssociationConnector edgePoints="[(1.75 : 1.375); (2.625 : 1.375)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="3e1bae56-2ac8-410c-b966-52e572237703" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="3e38ddaf-2db6-44f4-8909-219db10d857a" />
+        <useCaseShapeMoniker Id="62779fe8-d802-4d25-8eeb-67e3d1eb6d96" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <useCaseAssociationConnector edgePoints="[(4.5 : 1.375); (3.625 : 1.375)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="a8f5e6e4-09d2-42fa-8489-5f4ef7c5d00d" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="576135ab-8d00-4a8b-b585-2e3f1bed35ef" />
+        <useCaseShapeMoniker Id="62779fe8-d802-4d25-8eeb-67e3d1eb6d96" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <commentShape Id="76b2d5d8-f125-4f20-aa9a-c52abfb03b9d" absoluteBounds="1, 2.5, 4.5, 1.75" customColor="251, 247, 200">
+      <commentMoniker Id="ad810928-948d-4f39-816e-b78e6b3ff347" />
+      <relativeChildShapes />
+    </commentShape>
+  </nestedChildShapes>
+</useCaseDiagram>

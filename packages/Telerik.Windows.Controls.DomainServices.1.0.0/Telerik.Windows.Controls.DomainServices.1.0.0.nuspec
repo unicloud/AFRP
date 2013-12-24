@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Telerik.Windows.Controls.DomainServices</id>
+    <version>1.0.0</version>
+    <title>Telerik.Windows.Controls.DomainServices</title>
+    <authors>zhangnx</authors>
+    <owners>zhangnx</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Telerik.Windows.Controls.DomainServices Framework
+Include Packages list
+ Telerik.Windows.Controls.DomainServices.dll</description>
+    <summary>Telerik.Windows.Controls.DomainServices  Framework</summary>
+  </metadata>
+</package>

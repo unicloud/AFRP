@@ -1,0 +1,104 @@
+﻿<UserControl x:Class="UniCloud.AFRP.Views.AfrpFilialeSettingView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        xmlns:uc="http://schemas.unicloud.com/2012/xaml/presentation"
+        xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        d:DataContext="{d:DesignInstance uc:AfrpFilialeSettingViewModel}" mc:Ignorable="d" d:DesignHeight="600"
+        d:DesignWidth="800">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/UniCloud.Infrastructure;component/Resources/CafmStyle.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <uc:EnumToStringValueConverter x:Key="EnumToStringValueConverter" />
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Rectangle Height="7" VerticalAlignment="Bottom" StrokeThickness="0" Margin="0,0,0,-7"
+                Fill="{StaticResource Shadow}" />
+        <Grid Height="50" Background="{StaticResource ToolBarBackground}">
+            <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Margin="20,4,0,0">
+                <Button Style="{StaticResource CafmToolButtonStyle}" ToolTipService.ToolTip="保存"
+                        Command="{Binding SaveCommand}">
+                    <Image Stretch="Fill" Source="/UniCloud.AFRP;component/Images/Save.png" />
+                </Button>
+                <Button Style="{StaticResource CafmToolButtonStyle}" ToolTipService.ToolTip="放弃更改"
+                        Command="{Binding AbortCommand}">
+                    <Image Stretch="Fill" Source="/UniCloud.AFRP;component/Images/Rotate.png" />
+                </Button>
+                <Button Style="{StaticResource CafmToolButtonStyle}" ToolTipService.ToolTip="增加分公司"
+                        Command="{Binding AddCommand}">
+                    <Image Stretch="Fill" Source="/UniCloud.AFRP;component/Images/Add.png" />
+                </Button>
+                <Button Style="{StaticResource CafmToolButtonStyle}" ToolTipService.ToolTip="移除分公司"
+                        Command="{Binding RemoveCommand}">
+                    <Image Stretch="Fill" Source="/UniCloud.AFRP;component/Images/Remove.png" />
+                </Button>
+            </StackPanel>
+        </Grid>
+
+        <Border BorderThickness="0" CornerRadius="5" Background="White" Margin="22,12" Grid.Row="1">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="5" ShadowDepth="4" Opacity="0.3" />
+            </Border.Effect>
+            <telerik:RadDocking BorderThickness="0" Padding="0" Margin="5" HasDocumentHost="False">
+                <telerik:RadSplitContainer>
+                    <telerik:RadPaneGroup>
+                        <telerik:RadPane Header="分公司管理">
+                            <telerik:RadGridView x:Name="Owner" ItemsSource="{Binding ViewOwner}" ShowGroupPanel="False"
+                                    IsFilteringAllowed="False" CanUserSortColumns="False" EditTriggers="CellClick"
+                                    SelectedItem="{Binding SelOwner, Mode=TwoWay}">
+                                <i:Interaction.Triggers>
+                                    <i:EventTrigger EventName="SelectionChanged">
+                                        <ei:CallMethodAction TargetObject="{Binding}"
+                                                MethodName="GridViewSelectionChanged" />
+                                    </i:EventTrigger>
+                                </i:Interaction.Triggers>
+                                <telerik:RadContextMenu.ContextMenu>
+                                    <telerik:RadContextMenu>
+                                        <telerik:RadMenuItem Header="导出Excel" Command="{Binding ExcelExportCommand}"
+                                                CommandParameter="{Binding ElementName=Owner, Mode=OneWay}" />
+                                        <telerik:RadMenuItem Header="导出Word" Command="{Binding WordExportCommand}"
+                                                CommandParameter="{Binding ElementName=Owner, Mode=OneWay}" />
+                                    </telerik:RadContextMenu>
+                                </telerik:RadContextMenu.ContextMenu>
+                                <telerik:RadGridView.Columns>
+                                    <uc:SerialColumn Header="序号" CellStyle="{StaticResource style}" />
+                                    <telerik:GridViewDataColumn Header="名称" MinWidth="120"
+                                            DataMemberBinding="{Binding Name}" />
+                                    <telerik:GridViewDataColumn Header="短名称" MinWidth="80"
+                                            DataMemberBinding="{Binding ShortName}" />
+                                    <telerik:GridViewDataColumn Header="成立日期" DataMemberBinding="{Binding CreateDate}"
+                                            DataFormatString="{StaticResource DateStringFormat}" />
+                                    <telerik:GridViewDataColumn Header="注销日期" DataMemberBinding="{Binding LogoutDate}"
+                                            DataFormatString="{StaticResource DateStringFormat}" />
+                                    <telerik:GridViewDataColumn Header="运营日期"
+                                            DataMemberBinding="{Binding OperationDate}"
+                                            DataFormatString="{StaticResource DateStringFormat}" />
+                                    <telerik:GridViewDataColumn Header="退出运营日期" DataMemberBinding="{Binding ExportDate}"
+                                            DataFormatString="{StaticResource DateStringFormat}" />
+                                    <telerik:GridViewDataColumn Header="运营状态" IsReadOnly="True"
+                                            DataMemberBinding="{Binding Status, ConverterParameter=FilialeStatus, Converter={StaticResource EnumToStringValueConverter}}" />
+                                    <telerik:GridViewDataColumn Header="备注" MinWidth="120"
+                                            DataMemberBinding="{Binding Description}" />
+                                </telerik:RadGridView.Columns>
+                            </telerik:RadGridView>
+                        </telerik:RadPane>
+                    </telerik:RadPaneGroup>
+                </telerik:RadSplitContainer>
+            </telerik:RadDocking>
+        </Border>
+    </Grid>
+
+</UserControl>

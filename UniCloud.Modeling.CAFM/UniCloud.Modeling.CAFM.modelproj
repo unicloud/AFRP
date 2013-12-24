@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{dd66b2b5-7c82-4a1d-b00d-0c61109a3c2e}</ProjectGuid>
+    <ArchitectureToolsVersion>2.0.0.0</ArchitectureToolsVersion>
+    <Name>UniCloud.Modeling.CAFM</Name>
+    <RootNamespace>UniCloud.Modeling.CAFM</RootNamespace>
+    <SccProjectName>
+    </SccProjectName>
+    <SccProvider>
+    </SccProvider>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccLocalPath>
+    </SccLocalPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v10.0\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="false" />
+  <ItemGroup>
+    <Content Include="ImportType.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ImportType.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>ImportType.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="AircraftType.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="AircraftType.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>AircraftType.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="Approval.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Approval.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Approval.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="ApprovalCheck.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ApprovalCheck.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>ApprovalCheck.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="ApprovalManage.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ApprovalManage.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>ApprovalManage.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="DataAnalyse.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DataAnalyse.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>DataAnalyse.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="FleetQuery.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="FleetQuery.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>FleetQuery.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="FleetTrendCargo.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="FleetTrendCargo.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>FleetTrendCargo.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="FleetTrendPnr.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="FleetTrendPnr.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>FleetTrendPnr.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="Main.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Main.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Main.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="Manufacturer.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Manufacturer.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Manufacturer.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="PerformAnalyse.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="PerformAnalyse.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>PerformAnalyse.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="PlanCargo.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="PlanCargo.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>PlanCargo.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="PlanManage.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="PlanManage.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>PlanManage.activitydiagram</DependentUpon>
+    </Content>
+    <Content Include="PlanManage.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="PlanManage.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>PlanManage.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="PlanPerform.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="PlanPerform.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>PlanPerform.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="PlanPnr.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="PlanPnr.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>PlanPnr.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="PlanPublish.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="PlanPublish.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>PlanPublish.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="PlanQuery.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="PlanQuery.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>PlanQuery.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="Request.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Request.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Request.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="RequestExamine.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="RequestExamine.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>RequestExamine.activitydiagram</DependentUpon>
+    </Content>
+    <Content Include="RequestExamine.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="RequestExamine.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>RequestExamine.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="Supperlier.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Supperlier.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Supperlier.usecasediagram</DependentUpon>
+    </Content>
+    <Folder Include="ModelDefinition\" />
+    <Content Include="ModelDefinition\UniCloud.Modeling.CAFM.uml">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+</Project>

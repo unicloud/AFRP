@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>RIAServices.Endpoints</id>
+    <version>4.1.60730.0</version>
+    <title>RIAServices.Endpoints</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <licenseUrl>http://go.microsoft.com/fwlink/?LinkId=223397</licenseUrl>
+    <projectUrl>http://silverlight.net/riaservices/</projectUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>WCF RIA Services Toolkit - SOAP and JSON Endpoints</description>
+    <summary>WCF RIA Services Toolkit - SOAP and JSON Endpoints</summary>
+    <copyright>Microsoft 2011</copyright>
+    <tags>WCF RIA Services RIAServices WCF SOAP JSON</tags>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.ServiceModel.DomainServices.Hosting" targetFramework=".NETFramework4.0" />
+      <frameworkAssembly assemblyName="System.ServiceModel.DomainServices.Server" targetFramework=".NETFramework4.0" />
+    </frameworkAssemblies>
+  </metadata>
+</package>

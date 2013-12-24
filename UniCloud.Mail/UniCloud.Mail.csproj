@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B62B8724-4E02-4A04-AB83-C0C6EC236A75}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UniCloud.Mail</RootNamespace>
+    <AssemblyName>UniCloud.Mail</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.4.3.1\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="LumiSoft.Net">
+      <HintPath>..\packages\LumiSoft.Net.1.0.0\lib\LumiSoft.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseMail\BaseMailMessage.cs" />
+    <Compile Include="BaseMail\MailMsgCode.cs" />
+    <Compile Include="DecodeClass\DecodeAircraft.cs" />
+    <Compile Include="DecodeClass\DecodeAircraftBusiness.cs" />
+    <Compile Include="DecodeClass\DecodeApprovalDoc.cs" />
+    <Compile Include="DecodeClass\DecodeObject.cs" />
+    <Compile Include="DecodeClass\DecodeOperationHistory.cs" />
+    <Compile Include="DecodeClass\DecodeOwnershipHistory.cs" />
+    <Compile Include="DecodeClass\DecodePlan.cs" />
+    <Compile Include="DecodeClass\DecodeRequest.cs" />
+    <Compile Include="DecodeClass\IDecodeObject.cs" />
+    <Compile Include="DecodeClass\DecodePlanHistory.cs" />
+    <Compile Include="DecodeClass\DecodeOperationPlan.cs" />
+    <Compile Include="DecodeClass\DecodeChangePlan.cs" />
+    <Compile Include="EncodeModel.cs" />
+    <Compile Include="BaseMail\BaseMailAccount.cs" />
+    <Compile Include="DecodeModel.cs" />
+    <Compile Include="MailHelper\ObjAttachHelper.cs" />
+    <Compile Include="ManageMail.cs" />
+    <Compile Include="ReceiveMail.cs" />
+    <Compile Include="ReceiverObejct.cs" />
+    <Compile Include="SendClass\ISendMail.cs" />
+    <Compile Include="SendClass\LumiSoftSend.cs" />
+    <Compile Include="SendClass\NetSelfSend.cs" />
+    <Compile Include="SendClass\SendContainer.cs" />
+    <Compile Include="SendMail.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MailHelper\MailAccountHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MailService\UniCloud.Log\UniCloud.Log.csproj">
+      <Project>{a5107fa2-4fa0-4a43-b18c-18f3bc490690}</Project>
+      <Name>UniCloud.Log</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UniCloud.Cryptography\UniCloud.Cryptography.csproj">
+      <Project>{f63c4b93-d765-4d1d-bfac-7d74c6c6dfc4}</Project>
+      <Name>UniCloud.Cryptography</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UniCloud.Fleet.Business.Plan\UniCloud.Fleet.Business.Plan.csproj">
+      <Project>{b1a85cb4-e17d-4c5d-8299-353d0d1034c0}</Project>
+      <Name>UniCloud.Fleet.Business.Plan</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UniCloud.Fleet.Models\UniCloud.Fleet.Models.csproj">
+      <Project>{044cfe80-6190-46b2-b6ac-7ee59099761f}</Project>
+      <Name>UniCloud.Fleet.Models %28UniCloud\BusinessDomain\AppBase\Fleet\UniCloud.Fleet.Models%29</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

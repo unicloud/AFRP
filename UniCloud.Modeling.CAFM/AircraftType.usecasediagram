@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="0d7c2b42-47ba-41cb-a76c-c0954c0d9439" name="AircraftType" linkedPackageId="9bcc22aa-0525-4f13-a508-e22a175aa0a3" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <ownedCommentsInternal>
+    <comment Id="e26ea308-0fb6-421b-87f3-49d9bb2cf3b5">
+      <elementDefinition Id="d7cedfeb-c668-4c31-aba6-89f0400042a8" />
+      <body>目标：
+
+1、分析各不同座级机队的变化趋势，同时查看飞机总数。
+2、查看各年度各座级飞机分布。
+3、查看各年度各机型飞机分布。
+
+
+
+说明：
+</body>
+    </comment>
+  </ownedCommentsInternal>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="b4b11f2d-d06e-4131-8e23-707b5b689139" name="规划人员" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f40cc508-fe71-4d54-b6f4-05e64d397d0b" />
+        <targetEnds>
+          <association Id="31afd366-32b5-4777-9d3d-d8c38ce84dcb" isDerived="false" sourceEndRoleName="规划人员" targetEndRoleName="机型分析" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="11765fe2-b2d4-4e0b-a17c-38be73c713e2" LastKnownName="机型分析" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a187aa4a-a12c-4feb-81f9-5dfc38ee7ed1" name="规划人员" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="8528e699-bcf9-4685-b779-b5814ef6db3a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="50666f73-8f9f-441d-b34d-e18a2de43f21" name="机型分析" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="801af9ec-e2e4-4a88-992d-7b06433d860b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="0fca247a-fe31-4616-a060-032127bc68fa" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="28265e96-b66c-4e34-ab89-ee7939c8ce31" name="规划管理者" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="934e6ad7-1328-4a4a-b846-c7a2266be0a9" />
+        <targetEnds>
+          <association Id="d0cb2e44-c03a-4050-91ef-411917fc0dd9" isDerived="false" sourceEndRoleName="规划管理者" targetEndRoleName="机型分析" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="11765fe2-b2d4-4e0b-a17c-38be73c713e2" LastKnownName="机型分析" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="562342b2-28d2-4339-adf5-8d23853a70e5" name="规划管理者" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="0fa99248-1462-43f0-a267-fd4e30a173d7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="31ee9dbe-1a58-43f7-902d-a757411371b7" name="机型分析" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="cb714f7e-e029-4490-8913-13b0cc2c8958" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="7f6ae8e8-8b3b-49d2-80ea-dbe2a8747040" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="11765fe2-b2d4-4e0b-a17c-38be73c713e2" name="机型分析" isAbstract="false" isLeaf="false">
+        <referencesInternal>
+          <reference Id="6c30315f-3750-4989-9166-47fe9ea0679a" handle="%justhonor\DefaultCollection#9b56e60f-6fab-49b2-af31-4b0a4df8b7cc$24" tag="Work Item Reference">
+            <elementDefinition Id="975111d8-263a-4c06-88ba-1567c917c3a0" />
+          </reference>
+        </referencesInternal>
+        <elementDefinition Id="477ad047-fed4-400d-96f5-25c8a24027a6" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="9bcc22aa-0525-4f13-a508-e22a175aa0a3" name="UniCloud.Modeling.CAFM">
+    <elementDefinition Id="41993ae4-c3d1-4e56-95e3-496d7d3cc915" />
+    <profileInstances>
+      <packageHasProfileInstances Id="c5842c0c-26fa-484d-9790-937b94717101">
+        <profileInstance Id="b3307d8e-fbe9-4c79-a370-ded3777b526f" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="00a02de3-7912-443b-bc25-d4eaae5258c9">
+        <profileInstance Id="30cc7230-cb48-46da-8dbf-302de697812b" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>

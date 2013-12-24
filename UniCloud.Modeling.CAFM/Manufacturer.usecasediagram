@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="bd3720de-8edb-4a15-b5a7-acd851ade561" name="Manufacturer" linkedPackageId="873fa8ed-dfaf-44b7-b588-665039237ac1" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <ownedCommentsInternal>
+    <comment Id="cc49af65-fb33-4851-bbb2-ee671e057577">
+      <elementDefinition Id="899a4ab5-46ca-4b6b-973f-4710ac7b9675" />
+      <body>目标：
+
+1、分析各制造商情况。
+2、查看各制造商提供飞机变化趋势，同时查看飞机总数。
+3、查看各年度各制造商份额。
+4、查看各年度数据。
+
+
+
+说明：
+</body>
+    </comment>
+  </ownedCommentsInternal>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <useCase Id="8b14e2a0-368f-4f0b-9f5a-5d38b9eb8668" name="制造商" isAbstract="false" isLeaf="false">
+        <referencesInternal>
+          <reference Id="8ef375a0-abba-46d5-a578-28551229fb23" handle="%justhonor\DefaultCollection#9b56e60f-6fab-49b2-af31-4b0a4df8b7cc$19" tag="Work Item Reference">
+            <elementDefinition Id="222c0e74-df0a-47d0-bd32-a31f611b18fe" />
+          </reference>
+        </referencesInternal>
+        <elementDefinition Id="a4592ebf-8cbb-4f7f-9c75-2b4db818819e" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="798b868a-a1de-47ca-8eaf-061dea8fc795" name="规划人员" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f40cc508-fe71-4d54-b6f4-05e64d397d0b" />
+        <targetEnds>
+          <association Id="41fd8adf-6f51-422b-b5ed-aa5518c768d7" isDerived="false" sourceEndRoleName="规划人员" targetEndRoleName="制造商" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="8b14e2a0-368f-4f0b-9f5a-5d38b9eb8668" LastKnownName="制造商" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1d87a219-e10a-4747-bd06-bb82afab17d0" name="规划人员" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="b7790ba5-1404-44b8-a09d-9948351322b0" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="818cbe2c-5993-44b7-8779-b5da5b74d723" name="制造商" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="47ea2840-ce25-4fad-9817-78d4bc7b6183" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="61be3a0f-ba79-4b61-bc1e-e680b2a46f24" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="6478fcbf-200b-4a74-b5b5-8de45e91b275" name="规划管理者" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="934e6ad7-1328-4a4a-b846-c7a2266be0a9" />
+        <targetEnds>
+          <association Id="f2897b7d-9aef-4990-9ad4-a1b632c259a4" isDerived="false" sourceEndRoleName="规划管理者" targetEndRoleName="制造商" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="8b14e2a0-368f-4f0b-9f5a-5d38b9eb8668" LastKnownName="制造商" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c2c23f73-afbc-4507-91cb-5c0deac4f4dd" name="规划管理者" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="1a6e977b-59cb-49f5-8a7b-6fd5b9c95429" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="efd32159-2998-4dfd-a4d1-008e427d0e25" name="制造商" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="561915b0-14fa-48fc-a868-954a3e032d4a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="423fbedf-b2a8-493c-987e-54b6e8880655" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="873fa8ed-dfaf-44b7-b588-665039237ac1" name="UniCloud.Modeling.CAFM">
+    <elementDefinition Id="41993ae4-c3d1-4e56-95e3-496d7d3cc915" />
+    <profileInstances>
+      <packageHasProfileInstances Id="36c9ff0b-a827-4738-b219-3dc32749bc5c">
+        <profileInstance Id="614e6d6b-2f79-4d2d-9780-18e5251e70de" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="ea2fd0a5-73e8-4d29-b5a3-15d83b0bc122">
+        <profileInstance Id="53f4806f-9149-458d-b36a-d5c635a941e7" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>

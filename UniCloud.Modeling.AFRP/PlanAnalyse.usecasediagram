@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="9d592122-ad2b-4f43-9435-dbc1a0a6da75" name="PlanAnalyse" linkedPackageId="b02824d8-b0a2-4eac-8d4f-5113e9e424bd" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <appliedStereotypesInternal>
+    <stereotypeInstance Id="cd01e8b2-6f78-45d0-b6bb-15069d42b97e" name="namespace" profile="CSharpProfile">
+      <elementDefinition Id="fee99419-37c7-4492-a33d-4337488ab899" />
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="eda6f4b9-79b1-412a-843e-16b729350b0c">
+          <propertyInstance Id="cbb61f80-68af-45a2-bbeb-42340fee363b" name="BaseName">
+            <elementDefinition Id="f5ef5e8b-7224-4cc9-944e-d588d5abea0b" />
+          </propertyInstance>
+          <elementDefinition Id="91928667-5ba7-4de0-8153-94eefc417b7c" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="fe3c021a-6011-429a-ac9e-4d23a7e4dffb">
+          <propertyInstance Id="6d868f26-03fd-4456-be4c-2cdf79b1c15f" name="ClrAttributes">
+            <elementDefinition Id="836b0ceb-ad47-419e-a6b2-8ab00cf808d9" />
+          </propertyInstance>
+          <elementDefinition Id="b6d4784f-8fe7-4a9a-85df-97d9836ab123" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="54e72c06-0a09-4f55-8d2b-0730ff24f076">
+          <propertyInstance Id="0677c7ce-61ff-4493-95eb-3578c3294cc2" name="Usings">
+            <elementDefinition Id="a7ea15bd-1fb1-4809-a656-cf472be52f67" />
+          </propertyInstance>
+          <elementDefinition Id="a79ac1e5-1566-4019-bc7c-88c4394a13c9" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+    <stereotypeInstance Id="7b20b9d5-8d23-46cf-9c03-d97a90a6cc6f" name="TextTemplateBindings" profile="TextTemplateBindings">
+      <elementDefinition Id="4a82aa2d-6e49-4e2c-8c91-e261cee29c0a" />
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="5bdaa59f-b48e-4654-acaa-971e053275b5">
+          <propertyInstance Id="c630da96-570c-470e-a5be-d7636f12e934" name="Alias" value="ClassTemplate|EnumTemplate|InterfaceTemplate|StructTemplate">
+            <elementDefinition Id="46e58ae0-a242-4714-ae3e-e2206d762585" />
+          </propertyInstance>
+          <elementDefinition Id="0b5cf2dc-c94a-4d01-b6d2-ce8b6c88eb7f" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="9b915f99-a822-43c7-9e7a-bf8bb9a4b091">
+          <propertyInstance Id="4719da0e-88a0-45d6-86f8-3ec571a1f28c" name="TemplateFilePath" value="ClassTemplate=C:\Program Files\Microsoft Visual Studio 10.0\Common7\IDE\Extensions\Microsoft\Visualization and Modeling Feature Pack\2.0\Templates\Text\ClassTemplate.t4|EnumTemplate=C:\Program Files\Microsoft Visual Studio 10.0\Common7\IDE\Extensions\Microsoft\Visualization and Modeling Feature Pack\2.0\Templates\Text\EnumTemplate.t4|InterfaceTemplate=C:\Program Files\Microsoft Visual Studio 10.0\Common7\IDE\Extensions\Microsoft\Visualization and Modeling Feature Pack\2.0\Templates\Text\InterfaceTemplate.t4|StructTemplate=C:\Program Files\Microsoft Visual Studio 10.0\Common7\IDE\Extensions\Microsoft\Visualization and Modeling Feature Pack\2.0\Templates\Text\StructTemplate.t4">
+            <elementDefinition Id="df136b86-f025-4be2-8c77-3700db3c41f6" />
+          </propertyInstance>
+          <elementDefinition Id="83f41b50-4b79-4acd-ba1d-d6a06b4318c3" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="be459d03-93c9-4c1a-a704-248b05fe4300">
+          <propertyInstance Id="40be7cab-ccb5-4d35-b593-8dae36ccead5" name="ProjectPath" value="ClassTemplate=..\UniCloud.Modeling.AFRPLib\UniCloud.Modeling.AFRPLib.csproj|EnumTemplate=..\UniCloud.Modeling.AFRPLib\UniCloud.Modeling.AFRPLib.csproj|InterfaceTemplate=..\UniCloud.Modeling.AFRPLib\UniCloud.Modeling.AFRPLib.csproj|StructTemplate=..\UniCloud.Modeling.AFRPLib\UniCloud.Modeling.AFRPLib.csproj">
+            <elementDefinition Id="b9147c9f-b358-453c-8bbd-84b65f58d606" />
+          </propertyInstance>
+          <elementDefinition Id="c48fadbb-8144-47f8-a9b5-94d8f20a4e67" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="30bee397-fd6d-48f6-b5cc-5d52cfab992d">
+          <propertyInstance Id="8bbeaa76-12e0-41bc-a69d-3a5065ead2c1" name="TargetDirectory" value="ClassTemplate=GeneratedCode\{PackageStructure}|EnumTemplate=GeneratedCode\{PackageStructure}|InterfaceTemplate=GeneratedCode\{PackageStructure}|StructTemplate=GeneratedCode\{PackageStructure}">
+            <elementDefinition Id="8fc7f675-eb40-450f-910d-40ffe6c82df8" />
+          </propertyInstance>
+          <elementDefinition Id="4a112ad9-ddb8-468d-90e9-699230def26e" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="fd5ce6a5-6a83-4f1b-91db-a4cbdf3ff8ab">
+          <propertyInstance Id="aa32c037-473b-48f6-9528-8fb5ab6ecf07" name="TargetName" value="ClassTemplate={Name}|EnumTemplate={Name}|InterfaceTemplate={Name}|StructTemplate={Name}">
+            <elementDefinition Id="1f343d94-4eb7-4b90-9648-17cbe7eb3e8c" />
+          </propertyInstance>
+          <elementDefinition Id="6338dec8-dd9c-4226-adca-f9443fc4d6c3" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="a2e79f62-a7b4-4803-bfc5-e1f71f699e8a">
+          <propertyInstance Id="67030f10-faf4-49df-aa6f-ee6f524fc0c4" name="Overwrite" value="ClassTemplate=True|EnumTemplate=True|InterfaceTemplate=True|StructTemplate=True">
+            <elementDefinition Id="9ca1028a-2335-4ca7-94dc-b37b85a6c852" />
+          </propertyInstance>
+          <elementDefinition Id="93782927-be25-4d12-ab39-c78b61aad122" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="fde3caae-307a-41a4-b697-23cb0f4d09d4">
+          <propertyInstance Id="259586c5-4a98-428d-bb3f-b11180e99703" name="Parameters">
+            <elementDefinition Id="f21f305b-f066-4eb8-ba6e-90eec29098d0" />
+          </propertyInstance>
+          <elementDefinition Id="26f6e06e-b4c2-4a00-890a-4e95f473f81b" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+  </appliedStereotypesInternal>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="8de7a2b1-8513-4a25-9cfb-038e14ecf0a5" name="计划执行分析" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <referencesInternal>
+          <reference Id="7bf93aed-ed87-41e1-bb73-9c99b25acc22" handle="%justhonor\DefaultCollection#9b56e60f-6fab-49b2-af31-4b0a4df8b7cc$61" tag="Work Item Reference">
+            <elementDefinition Id="9e877697-8fc7-41f4-9ecc-e162568f928b" />
+          </reference>
+        </referencesInternal>
+        <elementDefinition Id="478a666f-9014-4291-9b8b-2c2d2b63fbc1" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="42997e07-5984-4a4b-abc9-7392968009d2" name="规划人员" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="30bec987-89c9-4bf1-8bd0-95f6eff22ff5" />
+        <targetEnds>
+          <association Id="8f01c566-1213-4e5c-9cdf-e0fcc303ab32" isDerived="false" sourceEndRoleName="规划人员" targetEndRoleName="计划查询" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="074f9aa8-e966-451a-8f19-18dedc831291" LastKnownName="计划查询" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3bbae8a7-b682-4de5-b644-91b3784db54d" name="规划人员" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="77354869-5dfc-4171-bb6d-feb6a6aa3f69" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="14c1b715-7ad8-4c21-8904-78addcd0c3cc" name="计划查询" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="70677db4-406c-4dfe-bd97-c015017e2ef5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="82bad279-858b-4bc1-b03d-effd1c928094" />
+          </association>
+          <association Id="e74c2b43-8942-421a-b6e2-b79e64f23405" isDerived="false" sourceEndRoleName="规划人员" targetEndRoleName="申请" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="2f8a2066-a8f7-4857-a2ba-708ffc988f46" LastKnownName="申请" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="435903d8-f595-429d-847b-7df5a8efa5f1" name="规划人员" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="031ca307-9526-47a1-a8e6-0156b2a3c2fc" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="05a397a3-bbbd-49fd-9305-cd4df217fb6e" name="申请" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="747ee7de-50f5-42c0-ab41-46300b590f0f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="68957dd7-30e7-42d6-a057-7c8337f936b4" />
+          </association>
+          <association Id="84107c86-3dde-4ae0-89b9-aa9ed239196b" isDerived="false" sourceEndRoleName="规划人员" targetEndRoleName="执行分析" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="74bb05bd-58b8-45f7-9ef4-99b8edb6c9b0" LastKnownName="执行分析" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0910f7ff-a33b-46e7-a600-bd1fdcf9a05c" name="规划人员" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="69d7c792-1b1b-4b32-b769-17bbcfc05b12" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5b2a0134-c68b-41b4-93b0-560460333e80" name="执行分析" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="bc12f4d2-2c0d-4a75-b934-ed76c77bfd65" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="effad498-ef1c-44d2-be1f-a82cbeeb0a5a" />
+          </association>
+          <association Id="a64a5d9b-dd33-4d08-87b5-642b62142059" isDerived="false" sourceEndRoleName="规划人员" targetEndRoleName="批文" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="3a29055b-a103-4969-a9f6-bd6657cf6599" LastKnownName="批文" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1f20c245-4f01-4416-a427-2adf0cd3ba80" name="规划人员" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="02ca2cec-ef9d-44f4-8fe5-fb03078cccf2" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="dcd057d3-a0d3-4179-b026-ef8761a323ae" name="批文" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="5d05563c-4d45-425f-8c57-daec66f51a9b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="8b664917-7977-4e37-b5b2-380ffdb8ebf7" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="066a22e3-5574-48ed-9f75-ddb9873fc945" name="规划管理者" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="1338b91b-4e26-4d12-94d2-d3dddbbf12ce" />
+        <targetEnds>
+          <association Id="3c3e7520-4be4-4f51-91e7-bd7c2107a95f" isDerived="false" sourceEndRoleName="规划管理者" targetEndRoleName="计划查询" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="074f9aa8-e966-451a-8f19-18dedc831291" LastKnownName="计划查询" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f7eddef6-244b-4eca-8b14-a8a792e9915f" name="规划管理者" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="1e9a71e1-4d84-4857-ba31-702d932a324c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="21e05551-773e-48ad-b5fa-5f056b3a5b01" name="计划查询" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="3f1cb23d-2c22-42a3-932c-d00fe766dd36" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="20148514-4366-47c9-8931-a8f5be9feac5" />
+          </association>
+          <association Id="7e3171bc-5cbf-4170-9b15-70b5aefa3ca0" isDerived="false" sourceEndRoleName="规划管理者" targetEndRoleName="执行分析" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="74bb05bd-58b8-45f7-9ef4-99b8edb6c9b0" LastKnownName="执行分析" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="bb45cab3-e1d3-4bb6-98ef-244ef18f4563" name="规划管理者" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="6a4008f6-3865-45b3-87de-01cbac799d6d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4211f2c3-e428-46b0-99d5-b14e55c86927" name="执行分析" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="618e4602-3873-4c60-9ed3-92a5fc56bd21" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="58f34f61-0ed7-4c23-bbc4-449d5b2049ae" />
+          </association>
+          <association Id="7720e57a-3da4-43ca-a51f-28ae2fcc25cd" isDerived="false" sourceEndRoleName="规划管理者" targetEndRoleName="申请" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="2f8a2066-a8f7-4857-a2ba-708ffc988f46" LastKnownName="申请" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="eb2bc722-1a03-430c-8bf8-c19cb25995ea" name="规划管理者" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="1071ce18-b3ea-45c4-8a6a-d463afa32174" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e72d2f90-9331-4658-87b0-35e850830019" name="申请" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="7d492071-b4fc-4c46-a491-abd8cf77f360" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="192702aa-f2ef-4644-9252-2bcf1bcbebd5" />
+          </association>
+          <association Id="903e6425-1b5e-4a79-ad15-c6b54342987f" isDerived="false" sourceEndRoleName="规划管理者" targetEndRoleName="批文" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="3a29055b-a103-4969-a9f6-bd6657cf6599" LastKnownName="批文" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ae55c8e8-8ed7-4c82-9632-e37e6ef8007a" name="规划管理者" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="ce8f795d-f897-4078-8114-3bf6dd82d691" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="19f70479-a220-4921-8184-31e7a810b7c9" name="批文" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c8df3d24-fa40-4b38-85d4-7bf9fe962594" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="44019238-ab9a-405f-a6c1-8e0ef9503492" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="074f9aa8-e966-451a-8f19-18dedc831291" name="计划查询" isAbstract="false" isLeaf="false">
+        <referencesInternal>
+          <reference Id="fb1157bd-86c2-46ee-848e-ad05c132f527" handle="%justhonor\DefaultCollection#9b56e60f-6fab-49b2-af31-4b0a4df8b7cc$54" tag="Work Item Reference">
+            <elementDefinition Id="5f4159f1-a4be-4bed-9b1d-cbf444db4eef" />
+          </reference>
+        </referencesInternal>
+        <elementDefinition Id="ed608ade-ccac-44df-b353-b662c0054417" />
+        <subjects>
+          <subsystemMoniker Id="8de7a2b1-8513-4a25-9cfb-038e14ecf0a5" LastKnownName="计划执行分析" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="74bb05bd-58b8-45f7-9ef4-99b8edb6c9b0" name="执行分析" isAbstract="false" isLeaf="false">
+        <referencesInternal>
+          <reference Id="7233c5d1-6195-48c7-8898-0b32a981c386" handle="%justhonor\DefaultCollection#9b56e60f-6fab-49b2-af31-4b0a4df8b7cc$55" tag="Work Item Reference">
+            <elementDefinition Id="2c9e6ca9-0fd1-4fb0-b84c-076f9ebf8aaf" />
+          </reference>
+        </referencesInternal>
+        <elementDefinition Id="041e14b7-44e8-4976-a231-90bab1dcc7e5" />
+        <subjects>
+          <subsystemMoniker Id="8de7a2b1-8513-4a25-9cfb-038e14ecf0a5" LastKnownName="计划执行分析" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="2f8a2066-a8f7-4857-a2ba-708ffc988f46" name="申请" isAbstract="false" isLeaf="false">
+        <referencesInternal>
+          <reference Id="fb5bd5c5-9768-497e-a0ec-ac7b6ed5aa6a" handle="%justhonor\DefaultCollection#9b56e60f-6fab-49b2-af31-4b0a4df8b7cc$62" tag="Work Item Reference">
+            <elementDefinition Id="7a6f62f8-2fef-431e-b801-e9119394acae" />
+          </reference>
+        </referencesInternal>
+        <elementDefinition Id="50fef8bf-1da1-48b7-bfa6-9ad0317149cf" />
+        <subjects>
+          <subsystemMoniker Id="8de7a2b1-8513-4a25-9cfb-038e14ecf0a5" LastKnownName="计划执行分析" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="3a29055b-a103-4969-a9f6-bd6657cf6599" name="批文" isAbstract="false" isLeaf="false">
+        <referencesInternal>
+          <reference Id="d749d709-a6c2-4202-800c-5a1421773af2" handle="%justhonor\DefaultCollection#9b56e60f-6fab-49b2-af31-4b0a4df8b7cc$63" tag="Work Item Reference">
+            <elementDefinition Id="3f20f568-d7e0-46ad-9894-b71f86fb1f5e" />
+          </reference>
+        </referencesInternal>
+        <elementDefinition Id="ef3b850a-e5b6-4194-9ff9-8e4650118eb0" />
+        <subjects>
+          <subsystemMoniker Id="8de7a2b1-8513-4a25-9cfb-038e14ecf0a5" LastKnownName="计划执行分析" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="b02824d8-b0a2-4eac-8d4f-5113e9e424bd" name="UniCloud.Modeling.AFRP">
+    <elementDefinition Id="9bdd35a4-fbe8-4aca-9c17-238e86c1b9a7" />
+    <profileInstances>
+      <packageHasProfileInstances Id="fe423f70-c519-41d5-90bf-ae9a790a8e25">
+        <profileInstance Id="aaccc225-cdc4-47ec-a3e3-4ae4dc8ff22d" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="0d63df1c-6abd-46ec-9468-76507fbe9895">
+        <profileInstance Id="d996b6c1-e7a9-4556-86c0-fb20e48d274b" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="a74a7f4c-bfbc-4a46-ae03-5dcdf8e7dcb9">
+        <profileInstance Id="eb0f6c96-e065-49bf-8aba-746a1ea180fe" name="CSharpProfile">
+          <elementDefinition Id="b9fca0e6-470e-480c-8c6b-d494e23c6ac5" />
+        </profileInstance>
+        <elementDefinition Id="75d83f27-fe60-4c37-b380-0b79bc7cbe32" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="bcd8652b-8125-48f8-bcdd-035609f4d2de">
+        <profileInstance Id="140b1924-caea-4afa-88b9-29c5b745ae26" name="TextTemplateBindings">
+          <elementDefinition Id="e053fc01-dc47-43df-9316-d2e48bb86319" />
+        </profileInstance>
+        <elementDefinition Id="d9101ad5-2059-43f6-9e84-00919da40cc2" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>

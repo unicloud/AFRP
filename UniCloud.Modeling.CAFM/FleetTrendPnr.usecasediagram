@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="ea32af36-6972-44ca-b48a-aa097a6f9d32" name="FleetTrendPnr" linkedPackageId="d5229799-41ec-450f-8874-0b71138fab6f" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <ownedCommentsInternal>
+    <comment Id="a978da01-461d-4a4f-8809-9b707dc42601">
+      <elementDefinition Id="c465e315-9adb-4d57-ba34-800adbc70bcf" />
+      <body>目标：
+
+1、查看飞机架数、座位数、商载变化趋势。
+2、查看各年度运力在各航空公司的分布。
+
+
+
+说明：
+</body>
+    </comment>
+  </ownedCommentsInternal>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="f85682fa-d843-4bb2-ab13-16540f8557f5" name="规划人员" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f40cc508-fe71-4d54-b6f4-05e64d397d0b" />
+        <targetEnds>
+          <association Id="dc627de4-1640-4b6a-8f0f-088a6578016c" isDerived="false" sourceEndRoleName="规划人员" targetEndRoleName="客机运力" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="ca349b12-8ceb-44ef-b05b-bc8f5f8f00a7" LastKnownName="客机运力" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e7f3b418-c5c7-4bb5-a427-14a0281b21f6" name="规划人员" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="2621205a-a97d-4e18-af0e-87ce7d0616fd" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="58b3b4ec-c346-436f-bdc1-8feafde37b41" name="客机运力" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="1aeec662-29b8-45f7-bdf4-7b11e081a9ac" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="0c33f0b6-e90c-4c5b-9419-3b56abd07058" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="8007dddd-db61-4d5c-b08a-41098278220d" name="规划管理者" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="934e6ad7-1328-4a4a-b846-c7a2266be0a9" />
+        <targetEnds>
+          <association Id="e7def40a-04ce-46b6-8975-d961c9aa5bc0" isDerived="false" sourceEndRoleName="规划管理者" targetEndRoleName="客机运力" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="ca349b12-8ceb-44ef-b05b-bc8f5f8f00a7" LastKnownName="客机运力" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="efeb281b-f5c2-4c6e-8147-4969056dda4a" name="规划管理者" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c0319ff1-2210-4f74-83bf-25bb2174d26e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9239dddb-966d-413d-ba42-5525d7aec9a3" name="客机运力" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="5890b0fc-20a7-4bad-a75c-a9911e13aeb0" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="9295cca2-7bab-474f-b197-bac0721fc612" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="ca349b12-8ceb-44ef-b05b-bc8f5f8f00a7" name="客机运力" isAbstract="false" isLeaf="false">
+        <referencesInternal>
+          <reference Id="61e345ee-336c-4d25-8a9d-6fde68186833" handle="%justhonor\DefaultCollection#9b56e60f-6fab-49b2-af31-4b0a4df8b7cc$21" tag="Work Item Reference">
+            <elementDefinition Id="05492880-54ea-4eee-bb00-2cc0948fc615" />
+          </reference>
+        </referencesInternal>
+        <elementDefinition Id="5c54edb2-dfee-4702-a19a-e0a3d32b24d8" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="d5229799-41ec-450f-8874-0b71138fab6f" name="UniCloud.Modeling.CAFM">
+    <elementDefinition Id="41993ae4-c3d1-4e56-95e3-496d7d3cc915" />
+    <profileInstances>
+      <packageHasProfileInstances Id="199147c0-5bb4-49ad-b94b-d690e92c678d">
+        <profileInstance Id="e41f998b-31ea-4eff-bacb-66508af58129" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="796fecf1-dc6b-4e47-b421-99d311914506">
+        <profileInstance Id="62fb0779-7a68-408a-9ad5-5a344a5fee19" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>

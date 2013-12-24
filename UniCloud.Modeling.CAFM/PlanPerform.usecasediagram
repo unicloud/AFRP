@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="0e0b7858-5734-4d25-a9b2-d29904ebe720" name="PlanPerform" linkedPackageId="c943d970-8450-400e-bd2a-bd1c686431d8" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <ownedCommentsInternal>
+    <comment Id="987b074b-b211-4505-9f03-9340327766b8">
+      <elementDefinition Id="6b54f6bd-ebbe-4c3a-8154-87e3b09ce98e" />
+      <body>目标：
+1、跟踪当前年度计划执行情况。
+2、可以导航到申请、批文，运营历史，商业数据。
+
+说明：
+</body>
+    </comment>
+  </ownedCommentsInternal>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="397000f4-1b0b-42ca-908c-66c08ff46e56" name="规划人员" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f40cc508-fe71-4d54-b6f4-05e64d397d0b" />
+        <targetEnds>
+          <association Id="171c0cff-700f-4d85-825a-5cdbab08c23c" isDerived="false" sourceEndRoleName="规划人员" targetEndRoleName="计划执行" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="fac1b4e5-3149-4916-b0cd-dfa2e27633e5" LastKnownName="计划执行" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ace1684e-6a66-4d12-b93b-a8cefae1fc21" name="规划人员" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="89c4f5f8-a791-468c-8243-6dfa19a3a02c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fdf77c6c-2498-46f3-afb3-0beec688154a" name="计划执行" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="7906238e-6103-41bd-b159-a1fe172c81f1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="235df9c8-f22e-479f-9b26-445ed502e11d" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="4674aff9-eb21-4da7-8d81-092b2d581d0a" name="规划管理者" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="934e6ad7-1328-4a4a-b846-c7a2266be0a9" />
+        <targetEnds>
+          <association Id="ebd20528-5c74-4a61-9390-e24f8ad21e01" isDerived="false" sourceEndRoleName="规划管理者" targetEndRoleName="计划执行" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="fac1b4e5-3149-4916-b0cd-dfa2e27633e5" LastKnownName="计划执行" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5b0241b1-bd97-49a9-8331-e895ade7f20f" name="规划管理者" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d64410f4-c413-44a2-a28a-aa9efcc18905" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cbc42e63-c7c0-4390-9d15-7cd0301d0073" name="计划执行" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b95e029c-6d33-447e-b234-838ca04c4e7d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="50f193f5-cc76-4dd9-b23a-dd01d945a44d" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="fac1b4e5-3149-4916-b0cd-dfa2e27633e5" name="计划执行" isAbstract="false" isLeaf="false">
+        <referencesInternal>
+          <reference Id="8f817527-8bb4-4e2d-9401-a5d10ff43812" handle="%justhonor\DefaultCollection#9b56e60f-6fab-49b2-af31-4b0a4df8b7cc$13" tag="Work Item Reference">
+            <elementDefinition Id="aec5387d-724e-401c-8d5e-0d93113419f1" />
+          </reference>
+        </referencesInternal>
+        <elementDefinition Id="06321081-d998-4d7e-ba42-287c7f99d290" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="c943d970-8450-400e-bd2a-bd1c686431d8" name="UniCloud.Modeling.CAFM">
+    <elementDefinition Id="41993ae4-c3d1-4e56-95e3-496d7d3cc915" />
+    <profileInstances>
+      <packageHasProfileInstances Id="0d2bd8ae-50f3-4f72-85d6-45c3ed7c2ce8">
+        <profileInstance Id="b97cfeca-23e9-4041-a98f-89d55df91636" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="da6c6286-b6fa-4f29-8567-f685e77bb19e">
+        <profileInstance Id="2cbb23f3-e8aa-4736-9874-68f61a4f6eef" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>

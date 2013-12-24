@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="ba78a96c-21d7-48d7-b200-bc5e9c7c4620" name="PlanCargo" linkedPackageId="3a018f24-3190-4477-8499-f65f28009eb8" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <ownedCommentsInternal>
+    <comment Id="b3bb6b2d-3ceb-486b-9aa4-25107a30d33f">
+      <elementDefinition Id="d697e620-d642-41c8-90ff-437097aa755b" />
+      <body>目标：
+1、检查航空公司是否都已申报。
+2、评审确认航空公司申报的货机计划是否可行。
+3、对于可行的航空公司计划打上“符合”标志。
+4、对于已经打上“符合”标志的计划如果有新版本的计划需要提醒。
+
+说明：
+</body>
+    </comment>
+  </ownedCommentsInternal>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="1f45599f-1481-46fb-a2c4-04741833b6c5" name="规划人员" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f40cc508-fe71-4d54-b6f4-05e64d397d0b" />
+        <targetEnds>
+          <association Id="c72c72cf-524f-4b55-8f23-c1379e1ab2d2" isDerived="false" sourceEndRoleName="规划人员" targetEndRoleName="货机计划" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="cc49c750-6863-4204-bd1a-954e091f4cde" LastKnownName="货机计划" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ecfd7ce3-04d9-4b5f-897a-ec4314cfa9a2" name="规划人员" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="1b3beca4-0243-4e78-b347-61a42258bacc" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e82324c5-f09c-42de-ad84-9ea72f56513a" name="货机计划" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ddaf3f8a-6f00-4610-9985-a8e246ba53b9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="8b1909d6-40e8-473a-8773-0e96b193c0df" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="096b4da7-000e-4eb4-9bfb-903e76416b2d" name="规划管理者" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="934e6ad7-1328-4a4a-b846-c7a2266be0a9" />
+        <targetEnds>
+          <association Id="fff9cc96-4385-4db8-9b2c-8b4b5dc510ac" isDerived="false" sourceEndRoleName="规划管理者" targetEndRoleName="货机计划" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="cc49c750-6863-4204-bd1a-954e091f4cde" LastKnownName="货机计划" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4c30f2f0-9b58-43a4-8354-3c280aaccf50" name="规划管理者" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="fbb344cc-2f8b-4efe-ba72-19ff680588a7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="379fdeaf-6fe3-4af8-8e6e-1653afcf5670" name="货机计划" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="f6e0b1c6-f224-45fb-a972-d4926c5bad6a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e2eda695-b00f-4670-9c64-6461e41fe2b3" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="cc49c750-6863-4204-bd1a-954e091f4cde" name="货机计划" isAbstract="false" isLeaf="false">
+        <referencesInternal>
+          <reference Id="0a7e2afc-a997-4ec1-bedd-6d5efe8e618e" handle="%justhonor\DefaultCollection#9b56e60f-6fab-49b2-af31-4b0a4df8b7cc$12" tag="Work Item Reference">
+            <elementDefinition Id="3178d822-32c4-4635-99cf-7a0abd2b18b3" />
+          </reference>
+        </referencesInternal>
+        <elementDefinition Id="51812f09-f872-43fa-8b03-39998b193659" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="3a018f24-3190-4477-8499-f65f28009eb8" name="UniCloud.Modeling.CAFM">
+    <elementDefinition Id="41993ae4-c3d1-4e56-95e3-496d7d3cc915" />
+    <profileInstances>
+      <packageHasProfileInstances Id="a49dba20-50ed-46bc-834d-65605d4d9471">
+        <profileInstance Id="e9d72bbf-99e9-4a6d-9bb1-6d46e1150053" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="07321698-177e-45b8-9db7-6357e24de25d">
+        <profileInstance Id="de093bd9-757a-4f3f-b62f-d5b73da8b8e2" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>

@@ -1,0 +1,355 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="4b455218-29b9-4b59-a224-549d236fadbf" name="DataAnalyse" linkedPackageId="601d2173-1fb0-4dab-bded-023b88d0c0e3" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <appliedStereotypesInternal>
+    <stereotypeInstance Id="febf90a9-40e1-4634-8fc4-1d5c65950a24" name="namespace" profile="CSharpProfile">
+      <elementDefinition Id="fee99419-37c7-4492-a33d-4337488ab899" />
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="bc1e8608-2ba9-45ad-9ec8-48d41ef97194">
+          <propertyInstance Id="3685e848-9c8e-404a-9ab5-4d59a1169d06" name="BaseName">
+            <elementDefinition Id="f5ef5e8b-7224-4cc9-944e-d588d5abea0b" />
+          </propertyInstance>
+          <elementDefinition Id="91928667-5ba7-4de0-8153-94eefc417b7c" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="b8f580b3-7e4f-40c1-99e0-0c6e8beb5928">
+          <propertyInstance Id="cc4b9e23-c837-47b4-bd73-9f1040d424f0" name="ClrAttributes">
+            <elementDefinition Id="836b0ceb-ad47-419e-a6b2-8ab00cf808d9" />
+          </propertyInstance>
+          <elementDefinition Id="b6d4784f-8fe7-4a9a-85df-97d9836ab123" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="c2629202-69a9-4724-b316-02aa4b3e91cd">
+          <propertyInstance Id="fd4b86b7-a0b1-4f56-9f42-b7777f9420a1" name="Usings">
+            <elementDefinition Id="a7ea15bd-1fb1-4809-a656-cf472be52f67" />
+          </propertyInstance>
+          <elementDefinition Id="a79ac1e5-1566-4019-bc7c-88c4394a13c9" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+    <stereotypeInstance Id="a2cb483b-0920-4417-ae04-35a6c6dfe7e4" name="TextTemplateBindings" profile="TextTemplateBindings">
+      <elementDefinition Id="4a82aa2d-6e49-4e2c-8c91-e261cee29c0a" />
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="1395f3f5-632d-4b9f-a013-7f4fd229e83e">
+          <propertyInstance Id="6e20feb9-e546-4e6c-bd23-5a87a03effdf" name="Alias" value="ClassTemplate|EnumTemplate|InterfaceTemplate|StructTemplate">
+            <elementDefinition Id="46e58ae0-a242-4714-ae3e-e2206d762585" />
+          </propertyInstance>
+          <elementDefinition Id="0b5cf2dc-c94a-4d01-b6d2-ce8b6c88eb7f" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="1d599738-c2d1-475f-808c-9ee7c10d65c3">
+          <propertyInstance Id="1c0a1426-36ce-4497-9f5a-7164c5c514ef" name="TemplateFilePath" value="ClassTemplate=C:\Program Files\Microsoft Visual Studio 10.0\Common7\IDE\Extensions\Microsoft\Visualization and Modeling Feature Pack\2.0\Templates\Text\ClassTemplate.t4|EnumTemplate=C:\Program Files\Microsoft Visual Studio 10.0\Common7\IDE\Extensions\Microsoft\Visualization and Modeling Feature Pack\2.0\Templates\Text\EnumTemplate.t4|InterfaceTemplate=C:\Program Files\Microsoft Visual Studio 10.0\Common7\IDE\Extensions\Microsoft\Visualization and Modeling Feature Pack\2.0\Templates\Text\InterfaceTemplate.t4|StructTemplate=C:\Program Files\Microsoft Visual Studio 10.0\Common7\IDE\Extensions\Microsoft\Visualization and Modeling Feature Pack\2.0\Templates\Text\StructTemplate.t4">
+            <elementDefinition Id="df136b86-f025-4be2-8c77-3700db3c41f6" />
+          </propertyInstance>
+          <elementDefinition Id="83f41b50-4b79-4acd-ba1d-d6a06b4318c3" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="02773856-37c3-4119-9d34-f97218fdf17d">
+          <propertyInstance Id="fb1b17e1-7e5b-4186-8e5f-7ebe8945485a" name="ProjectPath" value="ClassTemplate=..\UniCloud.Modeling.AFRPLib\UniCloud.Modeling.AFRPLib.csproj|EnumTemplate=..\UniCloud.Modeling.AFRPLib\UniCloud.Modeling.AFRPLib.csproj|InterfaceTemplate=..\UniCloud.Modeling.AFRPLib\UniCloud.Modeling.AFRPLib.csproj|StructTemplate=..\UniCloud.Modeling.AFRPLib\UniCloud.Modeling.AFRPLib.csproj">
+            <elementDefinition Id="b9147c9f-b358-453c-8bbd-84b65f58d606" />
+          </propertyInstance>
+          <elementDefinition Id="c48fadbb-8144-47f8-a9b5-94d8f20a4e67" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="807b88f6-e98f-4be4-a78c-abceb1a6bb4b">
+          <propertyInstance Id="65e78e2b-2a89-4769-88a4-351e427e582d" name="TargetDirectory" value="ClassTemplate=GeneratedCode\{PackageStructure}|EnumTemplate=GeneratedCode\{PackageStructure}|InterfaceTemplate=GeneratedCode\{PackageStructure}|StructTemplate=GeneratedCode\{PackageStructure}">
+            <elementDefinition Id="8fc7f675-eb40-450f-910d-40ffe6c82df8" />
+          </propertyInstance>
+          <elementDefinition Id="4a112ad9-ddb8-468d-90e9-699230def26e" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="3b47045c-f1ba-4d77-8815-cf1c9d7cce50">
+          <propertyInstance Id="6b2650a9-0192-4237-b82e-bdc35c40e1c9" name="TargetName" value="ClassTemplate={Name}|EnumTemplate={Name}|InterfaceTemplate={Name}|StructTemplate={Name}">
+            <elementDefinition Id="1f343d94-4eb7-4b90-9648-17cbe7eb3e8c" />
+          </propertyInstance>
+          <elementDefinition Id="6338dec8-dd9c-4226-adca-f9443fc4d6c3" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="74934b71-b006-4e1c-bd71-20383eb3be44">
+          <propertyInstance Id="9cf42afc-fa1b-4b3f-9168-b511c841bd44" name="Overwrite" value="ClassTemplate=True|EnumTemplate=True|InterfaceTemplate=True|StructTemplate=True">
+            <elementDefinition Id="9ca1028a-2335-4ca7-94dc-b37b85a6c852" />
+          </propertyInstance>
+          <elementDefinition Id="93782927-be25-4d12-ab39-c78b61aad122" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="15916d74-4254-4eb1-bb0c-5f80bfa02719">
+          <propertyInstance Id="9a93d691-17ed-4e21-99ba-d43d709f42de" name="Parameters">
+            <elementDefinition Id="f21f305b-f066-4eb8-ba6e-90eec29098d0" />
+          </propertyInstance>
+          <elementDefinition Id="26f6e06e-b4c2-4a00-890a-4e95f473f81b" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+  </appliedStereotypesInternal>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="9c5b19f3-fbf5-49db-9979-37b1bdc976f1" name="统计分析" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <referencesInternal>
+          <reference Id="8b21472e-e60e-4b9b-a399-9cc3bc334557" handle="%justhonor\DefaultCollection#9b56e60f-6fab-49b2-af31-4b0a4df8b7cc$53" tag="Work Item Reference">
+            <elementDefinition Id="a9e05cc1-96bb-4e20-9c99-de90501d42f8" />
+          </reference>
+        </referencesInternal>
+        <elementDefinition Id="8eae134b-f47b-45f8-b50f-981e3d3f6de7" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="07e2b368-bd38-4e10-b051-bb697f94bcb2" name="规划人员" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="30bec987-89c9-4bf1-8bd0-95f6eff22ff5" />
+        <targetEnds>
+          <association Id="365b791a-00b0-4dc3-9e61-4bdb631656dd" isDerived="false" sourceEndRoleName="规划人员" targetEndRoleName="客机运力" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="6e0569c1-3e31-41de-82f3-79c699d80143" LastKnownName="客机运力" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cde7736e-ea61-45cd-a1df-93f66807f3b2" name="规划人员" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="cc3e24dd-d5f4-41d2-a6e3-ed95b12094a4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b1fafcf0-d8b3-4d59-881a-1b920a69c04d" name="客机运力" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="e978a15f-64b1-43c1-9c9a-809bce205484" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="8c83340f-5653-430d-beb9-2ed24a6ccd97" />
+          </association>
+          <association Id="c4a51fb4-995c-4108-ae61-3a0685345ade" isDerived="false" sourceEndRoleName="规划人员" targetEndRoleName="货机运力" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="43d0d595-7879-48f9-8f74-ddf9c79bc752" LastKnownName="货机运力" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ef08a3fc-1eee-4bd2-8728-8ea539d96167" name="规划人员" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a3500b20-0fbd-4fa7-8306-6db0e7537496" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="36bc3f40-9023-4b0e-b7c5-930f6be0abc0" name="货机运力" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="a2862022-d9e8-4e35-88d5-03afa8c76e00" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e768ca46-8489-4ffe-8499-38677ea2bd3c" />
+          </association>
+          <association Id="24384601-7a56-4894-bdbd-cc85d9beae59" isDerived="false" sourceEndRoleName="规划人员" targetEndRoleName="机队结构" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="710cfcff-3a4d-450a-ab4a-b555793cbc20" LastKnownName="机队结构" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8ad0f40a-8f8f-4c8e-8058-ef3388b5e945" name="规划人员" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e1243f3c-09ee-4451-8273-c0170dc9b192" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e7f22411-9502-4f9a-aec8-ed4cecb330d3" name="机队结构" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="e2aba25f-c40a-4a4c-a0d6-2c0bd5e7ad73" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="c42e7754-1ec1-4816-954c-07339891615f" />
+          </association>
+          <association Id="4a923833-078d-449a-b037-ad2fee1e997e" isDerived="false" sourceEndRoleName="规划人员" targetEndRoleName="飞机数据" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="36f69aca-0c15-4a0f-a52c-c20d20f46aba" LastKnownName="飞机数据" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9b843250-e717-4dda-a833-1becd22fea81" name="规划人员" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="aab9e2a8-0dba-4f4b-867d-8d367bd3cb1b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b8cc87d3-6689-4410-a280-acb043d43bb4" name="飞机数据" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="52324f59-4cae-495d-884f-52bdfef9ba3c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="5c9737da-0e1e-49c7-855e-c20df0fb49fc" />
+          </association>
+          <association Id="81fe5ed8-96fa-41d0-8c4f-64364bda0e8e" isDerived="false" sourceEndRoleName="规划人员" targetEndRoleName="机龄分析" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="d016a30d-602b-452f-b141-15da3f6d814c" LastKnownName="机龄分析" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6e188aff-4375-4496-9eb6-cb3df1c0a2a5" name="规划人员" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="ad1205be-ca35-48ab-91d1-033b3c601b15" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="41601393-ff5f-4b70-8d7a-ad437ca4c69b" name="机龄分析" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="3e7e3e28-be7e-40d0-ae36-255dba7c72bf" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="09ce07fc-0015-4c63-87f4-8dc060125657" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="8cbe66af-f88a-459f-bcbc-4652eadd764a" name="规划管理者" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="1338b91b-4e26-4d12-94d2-d3dddbbf12ce" />
+        <targetEnds>
+          <association Id="8f660106-4709-4166-b509-568d84d5a7ee" isDerived="false" sourceEndRoleName="规划管理者" targetEndRoleName="客机运力" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="6e0569c1-3e31-41de-82f3-79c699d80143" LastKnownName="客机运力" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5f85c216-4b5b-44b1-997f-82fd71f369f9" name="规划管理者" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d58731db-4426-41f7-880f-4a2c1b1d6408" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="aed86d10-cbc9-4a67-9578-b73ddb2d1670" name="客机运力" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b0e6def2-6ebc-4fef-8138-e1e7c7645b8a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="92da4ef7-443d-41b0-a84a-bffa276aa2a8" />
+          </association>
+          <association Id="73ba63a9-4842-4cfa-b5fe-0f359e030373" isDerived="false" sourceEndRoleName="规划管理者" targetEndRoleName="货机运力" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="43d0d595-7879-48f9-8f74-ddf9c79bc752" LastKnownName="货机运力" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b210ab39-5a77-4411-9c27-fbbccebce3f3" name="规划管理者" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="0b9969a9-fc24-4b69-9747-fa48688ce8e6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e920cf21-8600-4750-9b4b-65ee0aae1c1d" name="货机运力" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="7a39a31f-48ad-4597-a4a8-f929fed6a60c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="4cd3001c-e4b9-43fd-8483-822ca7b0d76a" />
+          </association>
+          <association Id="f925bd65-b2c5-4dec-9a4b-7e0474a2a808" isDerived="false" sourceEndRoleName="规划管理者" targetEndRoleName="机队结构" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="710cfcff-3a4d-450a-ab4a-b555793cbc20" LastKnownName="机队结构" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cbfe88eb-835a-49a0-ab9e-3b1b8220392a" name="规划管理者" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="6921ebca-4079-4d3e-83e7-442d68ff1d79" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fd8f9285-a428-48d1-9e20-e4ce96f508c8" name="机队结构" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="180271b4-ca74-4639-ab72-e749091a8e62" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="385f43db-d06f-4e5a-8c66-8a3425e3ea7f" />
+          </association>
+          <association Id="4dd0b5b1-38dc-4448-b2ab-53b1af114b2f" isDerived="false" sourceEndRoleName="规划管理者" targetEndRoleName="飞机数据" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="36f69aca-0c15-4a0f-a52c-c20d20f46aba" LastKnownName="飞机数据" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6f8b4a5e-cf9a-43d1-a0d5-bf76fcfdb600" name="规划管理者" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="9b7c0549-eff5-491d-baff-6f9b9e504231" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8e63b0cb-cd6f-4659-8cc6-f095fb7519ca" name="飞机数据" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="fe8d3b25-2557-4811-96ed-c8faa6b07a90" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="71e7d8fd-c14c-40e2-8809-d5083c555882" />
+          </association>
+          <association Id="8c184aa6-3a97-46cc-b090-f66e671bedf7" isDerived="false" sourceEndRoleName="规划管理者" targetEndRoleName="机龄分析" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="d016a30d-602b-452f-b141-15da3f6d814c" LastKnownName="机龄分析" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3772d1c8-09fd-455a-b6c6-afe3eb022b06" name="规划管理者" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="7de2ba6c-349f-4bb6-9b3d-f8c7d03c7caf" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="88dbb782-aad5-47d4-bced-0d43b157fbb1" name="机龄分析" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="863b95e7-b7ae-429e-81b2-4585311d7664" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="8d8e424b-70f9-4f40-8ba6-51b3a288a708" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="6e0569c1-3e31-41de-82f3-79c699d80143" name="客机运力" isAbstract="false" isLeaf="false">
+        <referencesInternal>
+          <reference Id="35508f54-1ffb-4301-8a34-afc8ae56bce4" handle="%justhonor\DefaultCollection#9b56e60f-6fab-49b2-af31-4b0a4df8b7cc$56" tag="Work Item Reference">
+            <elementDefinition Id="be0733d2-8d1d-4332-baa0-dc5a82b479d5" />
+          </reference>
+        </referencesInternal>
+        <elementDefinition Id="1b2059e4-c823-4c54-9e72-cec13dd1e75c" />
+        <subjects>
+          <subsystemMoniker Id="9c5b19f3-fbf5-49db-9979-37b1bdc976f1" LastKnownName="统计分析" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="43d0d595-7879-48f9-8f74-ddf9c79bc752" name="货机运力" isAbstract="false" isLeaf="false">
+        <referencesInternal>
+          <reference Id="640932c7-fd5b-4e10-a4e7-c1a23bc1af6a" handle="%justhonor\DefaultCollection#9b56e60f-6fab-49b2-af31-4b0a4df8b7cc$57" tag="Work Item Reference">
+            <elementDefinition Id="7a9a7975-a26e-47f9-9a08-bfb86bbb695f" />
+          </reference>
+        </referencesInternal>
+        <elementDefinition Id="f0ba2cd1-0a4d-4179-9f20-7c8910584c52" />
+        <subjects>
+          <subsystemMoniker Id="9c5b19f3-fbf5-49db-9979-37b1bdc976f1" LastKnownName="统计分析" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="710cfcff-3a4d-450a-ab4a-b555793cbc20" name="机队结构" isAbstract="false" isLeaf="false">
+        <referencesInternal>
+          <reference Id="0f642bda-c8af-403b-9ca8-b2b8a43bf4d2" handle="%justhonor\DefaultCollection#9b56e60f-6fab-49b2-af31-4b0a4df8b7cc$58" tag="Work Item Reference">
+            <elementDefinition Id="a03234d9-0a68-4f84-a26c-9883132e208a" />
+          </reference>
+        </referencesInternal>
+        <elementDefinition Id="dd1f5941-0367-47fe-bd08-c17cb74d3609" />
+        <subjects>
+          <subsystemMoniker Id="9c5b19f3-fbf5-49db-9979-37b1bdc976f1" LastKnownName="统计分析" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="36f69aca-0c15-4a0f-a52c-c20d20f46aba" name="飞机数据" isAbstract="false" isLeaf="false">
+        <referencesInternal>
+          <reference Id="1c939133-ce2d-4038-be13-52ec8b737aee" handle="%justhonor\DefaultCollection#9b56e60f-6fab-49b2-af31-4b0a4df8b7cc$59" tag="Work Item Reference">
+            <elementDefinition Id="8b7bcf72-de7a-4cca-9c6b-ab8515c66295" />
+          </reference>
+        </referencesInternal>
+        <elementDefinition Id="1c0153d9-4ed8-4f92-89f2-391037f707a2" />
+        <subjects>
+          <subsystemMoniker Id="9c5b19f3-fbf5-49db-9979-37b1bdc976f1" LastKnownName="统计分析" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="d016a30d-602b-452f-b141-15da3f6d814c" name="机龄分析" isAbstract="false" isLeaf="false">
+        <referencesInternal>
+          <reference Id="ad7f32e7-c835-4f38-8c23-164a9204237e" handle="%justhonor\DefaultCollection#9b56e60f-6fab-49b2-af31-4b0a4df8b7cc$60" tag="Work Item Reference">
+            <elementDefinition Id="512f7923-bc67-436f-8ff1-18f64744087e" />
+          </reference>
+        </referencesInternal>
+        <elementDefinition Id="58d6b7a0-5e86-4504-a06c-7eac5a0f4bf3" />
+        <subjects>
+          <subsystemMoniker Id="9c5b19f3-fbf5-49db-9979-37b1bdc976f1" LastKnownName="统计分析" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="601d2173-1fb0-4dab-bded-023b88d0c0e3" name="UniCloud.Modeling.AFRP">
+    <elementDefinition Id="9bdd35a4-fbe8-4aca-9c17-238e86c1b9a7" />
+    <profileInstances>
+      <packageHasProfileInstances Id="a5cc8b47-9df5-467a-b5ed-d2b7ccf53187">
+        <profileInstance Id="90705ee9-b043-4ce3-9022-c231147e3622" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="4a616352-74c5-41a0-8c87-6e3258cb90e1">
+        <profileInstance Id="76fc18de-a1ca-416a-8f94-24df09050367" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="d6fbc48b-1606-485a-bc16-06b2308778e7">
+        <profileInstance Id="b7dcd3ed-b8c2-40eb-a2e7-69077673bbb5" name="CSharpProfile">
+          <elementDefinition Id="b9fca0e6-470e-480c-8c6b-d494e23c6ac5" />
+        </profileInstance>
+        <elementDefinition Id="75d83f27-fe60-4c37-b380-0b79bc7cbe32" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="b5f915b0-fc2b-43f4-b286-d7ec38100e73">
+        <profileInstance Id="79401abe-75da-4ef2-8e5c-075d12947e9f" name="TextTemplateBindings">
+          <elementDefinition Id="e053fc01-dc47-43df-9316-d2e48bb86319" />
+        </profileInstance>
+        <elementDefinition Id="d9101ad5-2059-43f6-9e84-00919da40cc2" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>

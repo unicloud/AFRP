@@ -1,0 +1,603 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5A139C8C-7816-4F6E-B9B1-4E6AF26DEB24}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UniCloud.AFRP</RootNamespace>
+    <AssemblyName>UniCloud.AFRP</AssemblyName>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>UniCloud.AFRP.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>UniCloud.AFRP.App</SilverlightAppEntry>
+    <TestPageFileName>UniCloud.AFRPTestPage.html</TestPageFileName>
+    <CreateTestPage>true</CreateTestPage>
+    <ValidateXaml>true</ValidateXaml>
+    <EnableOutOfBrowser>true</EnableOutOfBrowser>
+    <OutOfBrowserSettingsFile>Properties\OutOfBrowserSettings.xml</OutOfBrowserSettingsFile>
+    <UsePlatformExtensions>false</UsePlatformExtensions>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <LinkedServerProject>
+    </LinkedServerProject>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <InBrowserSettingsFile>Properties\InBrowserSettings.xml</InBrowserSettingsFile>
+    <RequireInBrowserElevation>false</RequireInBrowserElevation>
+  </PropertyGroup>
+  <!-- This property group is only here to support building this project using the 
+       MSBuild 3.5 toolset. In order to work correctly with this older toolset, it needs 
+       to set the TargetFrameworkVersion to v3.5 -->
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Expression.Interactions, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>False</Private>
+      <HintPath>..\..\..\..\..\QQ\个人文件夹\787874243\FileRecv\dll\Microsoft.Expression.Interactions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism">
+      <HintPath>..\packages\Prism.4.1.0.0\lib\SL5\Microsoft.Practices.Prism.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.Interactivity">
+      <HintPath>..\packages\Prism.4.1.0.0\lib\SL5\Microsoft.Practices.Prism.Interactivity.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.MefExtensions">
+      <HintPath>..\packages\Prism.MEFExtensions.4.1.0.0\lib\SL5\Microsoft.Practices.Prism.MefExtensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\packages\CommonServiceLocator.1.0\lib\SL30\Microsoft.Practices.ServiceLocation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Windows.Data.DomainServices">
+      <HintPath>..\packages\SilverlightCommonDll.1.0.0\lib\Microsoft.Windows.Data.DomainServices.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="mscorlib" />
+    <Reference Include="Ria.Common">
+      <HintPath>..\packages\SilverlightCommonDll.1.0.0\lib\Ria.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations, Version=5.0.5.0, Culture=neutral, PublicKeyToken=ddd0da4d3e678217, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ServiceModel.DomainServices.Client, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Controls, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Windows.Controls.Data.Input, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Windows.Data, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Windows.Interactivity, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.4.1.0.0\lib\SL5\System.Windows.Interactivity.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Windows.Browser" />
+    <Reference Include="System.Xml.Linq, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls, Version=2013.3.1016.1050, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Telerik.Windows.Controls.1.0.0\lib\Telerik.Windows.Controls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Chart, Version=2013.3.1016.1050, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Telerik.Windows.Controls.Chart.1.0.0\lib\Telerik.Windows.Controls.Chart.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Charting, Version=2013.3.1016.1050, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Telerik.Windows.Controls.Charting.1.0.0\lib\Telerik.Windows.Controls.Charting.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Data, Version=2013.3.1016.1050, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Telerik.Windows.Controls.Data.1.0.0\lib\Telerik.Windows.Controls.Data.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.DataVisualization, Version=2013.3.1016.1050, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Telerik.Windows.Controls.DataVisualization.1.0.0\lib\Telerik.Windows.Controls.DataVisualization.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Docking, Version=2013.3.1016.1050, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Telerik.Windows.Controls.Docking.1.0.0\lib\Telerik.Windows.Controls.Docking.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.DomainServices, Version=2013.3.1016.1050, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Telerik.Windows.Controls.DomainServices.1.0.0\lib\Telerik.Windows.Controls.DomainServices.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Gauge, Version=2013.3.1016.1050, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Telerik.Windows.Controls.Gauge.1.0.0\lib\Telerik.Windows.Controls.Gauge.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.GridView, Version=2013.3.1016.1050, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Telerik.Windows.Controls.GridView.1.0.0\lib\Telerik.Windows.Controls.GridView.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Input, Version=2013.3.1016.1050, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Telerik.Windows.Controls.Input.1.0.0\lib\Telerik.Windows.Controls.Input.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Navigation, Version=2013.3.1016.1050, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Telerik.Windows.Controls.Navigation.1.0.0\lib\Telerik.Windows.Controls.Navigation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Data, Version=2013.3.1016.1050, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Telerik.Windows.Data.1.0.0\lib\Telerik.Windows.Data.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UniCloud.Utility">
+      <HintPath>..\UniCloud.Utility\Bin\Debug\UniCloud.Utility.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AFRPModule.cs" />
+    <Compile Include="CommonClass\ConditionalStyleSelector.cs" />
+    <Compile Include="CommonClass\CustomEnum.cs" />
+    <Compile Include="CommonClass\PlanChangedConveter.cs" />
+    <Compile Include="Converters\ApprovalRequsestConverter.cs" />
+    <Compile Include="Converters\AxisCollection.cs" />
+    <Compile Include="Converters\ColorConverter.cs" />
+    <Compile Include="Converters\FilialeConverter.cs" />
+    <Compile Include="Converters\PlanHistoryConverter.cs" />
+    <Compile Include="Converters\SelectedTimeConverter.cs" />
+    <Compile Include="Converters\StringConverter.cs" />
+    <Compile Include="Converters\SubOperationHistoryConvert.cs" />
+    <Compile Include="Input\AfrpApprovalInput.cs" />
+    <Compile Include="Input\AfrpPlanLayInput.cs" />
+    <Compile Include="Input\AfrpRequestInput.cs" />
+    <Compile Include="Input\AfrpSubAirlinesInput.cs" />
+    <Compile Include="Operation\CommonMethod.cs" />
+    <Compile Include="Operation\ImageAndGirdOperation.cs" />
+    <Compile Include="Operation\SerialColumn.cs" />
+    <Compile Include="Operation\ViewButtonState.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\AfrpAgeDeployViewModel.cs" />
+    <Compile Include="ViewModels\AfrpAircraftOwnershipViewModel.cs" />
+    <Compile Include="ViewModels\AfrpApprovalQueryViewModel.cs" />
+    <Compile Include="ViewModels\AfrpApprovalViewModel.cs" />
+    <Compile Include="ViewModels\AfrpColorSettingViewModel.cs" />
+    <Compile Include="ViewModels\AfrpDeliverViewModel.cs" />
+    <Compile Include="ViewModels\AfrpFilialeSettingViewModel.cs" />
+    <Compile Include="ViewModels\AfrpFleetAgeViewModel.cs" />
+    <Compile Include="ViewModels\AfrpFleetAllotViewModel.cs" />
+    <Compile Include="ViewModels\AfrpFleetQueryViewModel.cs" />
+    <Compile Include="ViewModels\AfrpFleetRegisteredViewModel.cs" />
+    <Compile Include="ViewModels\AfrpFleetStructureViewModel.cs" />
+    <Compile Include="ViewModels\AfrpFleetTrendAllViewModel.cs" />
+    <Compile Include="ViewModels\AfrpFleetTrendCargoViewModel.cs" />
+    <Compile Include="ViewModels\AfrpFleetTrendPnrViewModel.cs" />
+    <Compile Include="ViewModels\AfrpImportTypeViewModel.cs" />
+    <Compile Include="ViewModels\AfrpMailSettingModel.cs" />
+    <Compile Include="ViewModels\AfrpPlanLayViewModel.cs" />
+    <Compile Include="ViewModels\AfrpPlanPerformViewModel.cs" />
+    <Compile Include="ViewModels\AfrpPlanPrepareViewModel.cs" />
+    <Compile Include="ViewModels\AfrpPlanPublishViewModel.cs" />
+    <Compile Include="ViewModels\AfrpPlanQueryViewModel.cs" />
+    <Compile Include="ViewModels\AfrpPlanSendViewModel.cs" />
+    <Compile Include="ViewModels\AfrpRequestQueryViewModel.cs" />
+    <Compile Include="ViewModels\AfrpRequestViewModel.cs" />
+    <Compile Include="ViewModels\AfrpSubsidiarySettingViewModel.cs" />
+    <Compile Include="ViewModels\AfrpSupplierSettingViewModel.cs" />
+    <Compile Include="ViewModels\ConfirmViewModel.cs" />
+    <Compile Include="ViewModels\HomeViewModel.cs" />
+    <Compile Include="Views\AfrpAgeDeployView.xaml.cs">
+      <DependentUpon>AfrpAgeDeployView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AfrpAircraftOwnershipView.xaml.cs">
+      <DependentUpon>AfrpAircraftOwnershipView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AfrpApprovalQueryView.xaml.cs">
+      <DependentUpon>AfrpApprovalQueryView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AfrpApprovalView.xaml.cs">
+      <DependentUpon>AfrpApprovalView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AfrpColorSettingView.xaml.cs">
+      <DependentUpon>AfrpColorSettingView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AfrpDeliverView.xaml.cs">
+      <DependentUpon>AfrpDeliverView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AfrpFilialeSettingView.xaml.cs">
+      <DependentUpon>AfrpFilialeSettingView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AfrpFleetAgeView.xaml.cs">
+      <DependentUpon>AfrpFleetAgeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AfrpFleetAllotView.xaml.cs">
+      <DependentUpon>AfrpFleetAllotView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AfrpFleetQueryView.xaml.cs">
+      <DependentUpon>AfrpFleetQueryView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AfrpFleetRegisteredView.xaml.cs">
+      <DependentUpon>AfrpFleetRegisteredView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AfrpFleetStructureView.xaml.cs">
+      <DependentUpon>AfrpFleetStructureView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AfrpFleetTrendAllView.xaml.cs">
+      <DependentUpon>AfrpFleetTrendAllView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AfrpFleetTrendCargoView.xaml.cs">
+      <DependentUpon>AfrpFleetTrendCargoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AfrpFleetTrendPnrView.xaml.cs">
+      <DependentUpon>AfrpFleetTrendPnrView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AfrpLogView.xaml.cs">
+      <DependentUpon>AfrpLogView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AfrpMailSetting.xaml.cs">
+      <DependentUpon>AfrpMailSetting.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AfrpPlanLayView.xaml.cs">
+      <DependentUpon>AfrpPlanLayView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\AfrpPlanPerformView.xaml.cs">
+      <DependentUpon>AfrpPlanPerformView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AfrpPlanPrepareView.xaml.cs">
+      <DependentUpon>AfrpPlanPrepareView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\AfrpPlanPublishView.xaml.cs">
+      <DependentUpon>AfrpPlanPublishView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AfrpPlanQueryView.xaml.cs">
+      <DependentUpon>AfrpPlanQueryView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AfrpPlanSendView.xaml.cs">
+      <DependentUpon>AfrpPlanSendView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AfrpRequestQueryView.xaml.cs">
+      <DependentUpon>AfrpRequestQueryView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AfrpRequestView.xaml.cs">
+      <DependentUpon>AfrpRequestView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AfrpImportTypeView.xaml.cs">
+      <DependentUpon>AfrpImportTypeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AfrpSendAlertView.xaml.cs">
+      <DependentUpon>AfrpSendAlertView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AfrpSubsidiarySettingView.xaml.cs">
+      <DependentUpon>AfrpSubsidiarySettingView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AfrpSupplierSettingView.xaml.cs">
+      <DependentUpon>AfrpSupplierSettingView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ConfirmView.xaml.cs">
+      <DependentUpon>ConfirmView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HomeView.xaml.cs">
+      <DependentUpon>HomeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PlanDeliverEditDialog.xaml.cs">
+      <DependentUpon>PlanDeliverEditDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PlanDetailEditDialog.xaml.cs">
+      <DependentUpon>PlanDetailEditDialog.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Properties\AppManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MessageOperationLibrary\MessageOperationLibrary.csproj">
+      <Project>{2d3528d8-8c3a-493e-9246-37509eba5653}</Project>
+      <Name>MessageOperationLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UniCloud.Fleet.Services\UniCloud.Fleet.Services.csproj">
+      <Project>{1C6894F0-5538-4EE0-82F0-588168BD9EAD}</Project>
+      <Name>UniCloud.Fleet.Services</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\UniCloud.Infrastructure\UniCloud.Infrastructure.csproj">
+      <Project>{A89F6364-DC49-4B9A-97C8-6C74EB180B18}</Project>
+      <Name>UniCloud.Infrastructure</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\UniCloud.Security.Services\UniCloud.Security.Services.csproj">
+      <Project>{e736450c-ee66-4031-b1bd-83582f6a8770}</Project>
+      <Name>UniCloud.Security.Services</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Views\AfrpAgeDeployView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\AfrpAircraftOwnershipView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AfrpApprovalQueryView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AfrpApprovalView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AfrpColorSettingView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AfrpDeliverView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AfrpFilialeSettingView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\AfrpFleetAgeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AfrpFleetAllotView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AfrpFleetQueryView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AfrpFleetRegisteredView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\AfrpFleetStructureView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AfrpFleetTrendAllView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\AfrpFleetTrendCargoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AfrpFleetTrendPnrView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AfrpLogView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AfrpMailSetting.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\AfrpPlanLayView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AfrpPlanPerformView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AfrpPlanPrepareView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AfrpPlanPublishView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AfrpPlanQueryView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AfrpPlanSendView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AfrpRequestQueryView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AfrpRequestView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AfrpImportTypeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\AfrpSendAlertView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AfrpSubsidiarySettingView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\AfrpSupplierSettingView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ConfirmView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\HomeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PlanDeliverEditDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PlanDetailEditDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Apply.png" />
+    <Resource Include="Images\Mail.png" />
+    <Resource Include="Images\PaperClip.png" />
+    <Resource Include="Images\Question.png" />
+    <Resource Include="Images\Rotate.png" />
+    <Resource Include="Images\Save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Copy.png" />
+    <Resource Include="Images\Cross.png" />
+    <Resource Include="Images\Exclamation.png" />
+    <Resource Include="Images\Home.png" />
+    <Resource Include="Images\Key.png" />
+    <Resource Include="Images\Lock.png" />
+    <Resource Include="Images\MagicWand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\New.png" />
+    <Resource Include="Images\Pen.png" />
+    <Resource Include="Images\Power.png" />
+    <Resource Include="Images\Quill.png" />
+    <Resource Include="Images\Remove.png" />
+    <Resource Include="Images\Search.png" />
+    <Resource Include="Images\Synchronize.png" />
+    <Resource Include="Images\Unlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\InBrowserSettings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\OutOfBrowserSettings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Check.png" />
+    <Resource Include="Images\Down.png" />
+    <Resource Include="Images\Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Auction.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Bin.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

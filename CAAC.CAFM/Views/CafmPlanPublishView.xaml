@@ -1,0 +1,127 @@
+﻿<UserControl x:Class="CAAC.CAFM.Views.CafmPlanPublishView"
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+		xmlns:vm="clr-namespace:CAAC.CAFM.ViewModels" xmlns:views="clr-namespace:CAAC.CAFM.Views"
+		xmlns:converter="clr-namespace:CAAC.CAFM.Converters"
+	    xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
+		xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+		d:DataContext="{d:DesignInstance vm:HomeViewModel}" mc:Ignorable="d" d:DesignHeight="600" d:DesignWidth="800">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/CAAC.Infrastructure;component/Resources/CafmStyle.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <telerik:RadBusyIndicator IsBusy="{Binding IsBusy}"
+                              BusyContent="">
+        <Border BorderThickness="0" Margin="22,12" CornerRadius="5" Background="White">
+
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="5" ShadowDepth="4" Opacity="0.3" />
+            </Border.Effect>
+            <Grid Margin="5">
+                <telerik:RadDocking Grid.Row="0"
+									BorderThickness="0"
+									Padding="0"
+									HasDocumentHost="False"
+                                    Margin="5">
+               
+                        <telerik:RadSplitContainer >
+                            <telerik:RadPaneGroup>
+                            <telerik:RadPane FontSize="{StaticResource TextFontSize}" IsPinned="True" CanFloat="False"
+                                    CanDockInDocumentHost="False" CanUserClose="False" CanUserPin="False"
+                                    ContextMenuTemplate="{x:Null}">
+                                <telerik:RadGridView Name="planPublish" Margin="0" d:LayoutOverrides="Width" Grid.Column="2" ItemsSource="{Binding Path=ViewPlan}" AutoGenerateColumns="False" 
+						 IsBusy="{Binding IsBusyPlan}"  CanUserFreezeColumns="False"  RowIndicatorVisibility="Collapsed"
+							 CanUserResizeColumns="False" ShowColumnFooters="True" ShowGroupFooters="False"
+					ShowGroupPanel="True" IsFilteringAllowed="True">
+                                    <telerik:RadContextMenu.ContextMenu>
+                                        <telerik:RadContextMenu StaysOpen="{Binding IsContextMenuOpen}">
+                                            <i:Interaction.Triggers>
+                                                <i:EventTrigger EventName="Opened">
+                                                    <ei:CallMethodAction TargetObject="{Binding}"
+                                                        MethodName="ContextMenuOpened" />
+                                                </i:EventTrigger>
+                                            </i:Interaction.Triggers>
+                                            <telerik:RadMenuItem x:Name="PlanPublishExport" Header="导出数据"
+                                                    Command="{Binding ExportGridViewCommand}"
+                                                    CommandParameter="{Binding ElementName=PlanPublishExport}" />
+                                        </telerik:RadContextMenu>
+                                    </telerik:RadContextMenu.ContextMenu>
+                                    <!--<telerik:RadGridView.GroupDescriptors>
+					<telerik:GroupDescriptor Member="PlanIsFinished" SortDirection="Ascending" DisplayContent="审阅情况" >
+					</telerik:GroupDescriptor>
+					<telerik:GroupDescriptor Member="PlanIsPublished" SortDirection="Ascending" DisplayContent="发布情况" >
+					</telerik:GroupDescriptor>
+					</telerik:RadGridView.GroupDescriptors>-->
+                                        <telerik:RadGridView.Columns>
+                                        <vm:SerialColumn Header="序号" CellStyle="{StaticResource style}" />
+                                        <!--<telerik:GridViewToggleRowDetailsColumn />-->
+                                            <telerik:GridViewDataColumn Header="航空公司" IsReadOnly="True" DataMemberBinding="{Binding Airlines.ShortName}">
+                                                <telerik:GridViewDataColumn.AggregateFunctions>
+                                                    <telerik:CountFunction Caption="{StaticResource CountFunction}"></telerik:CountFunction>
+                                                </telerik:GridViewDataColumn.AggregateFunctions>
+                                            </telerik:GridViewDataColumn>
+                                            <telerik:GridViewDataColumn Header="申报年份" IsReadOnly="True" DataMemberBinding="{Binding Annual.Year}" />
+                                            <telerik:GridViewDataColumn Header="发布情况" IsReadOnly="True" DataMemberBinding="{Binding PlanIsPublished}" />
+                                            <telerik:GridViewDataColumn Header="审阅情况" IsReadOnly="True" DataMemberBinding="{Binding PlanIsFinished}" />
+                                            <telerik:GridViewDataColumn Header="计划文号" IsReadOnly="True" DataMemberBinding="{Binding DocNumber}" IsFilterable="False" />
+                                            <telerik:GridViewColumn Header="计划文档"  IsReadOnly="True">
+                                                <telerik:GridViewColumn.CellTemplate>
+                                                    <DataTemplate>
+                                                        <HyperlinkButton Content="{Binding AttachDocFileName}" VerticalAlignment="Center"
+											Command="{Binding DataContext.ViewAttachmentCommand, RelativeSource={RelativeSource AncestorLevel=1, AncestorType=UserControl}}"
+											CommandParameter="{Binding}" />
+                                                    </DataTemplate>
+                                                </telerik:GridViewColumn.CellTemplate>
+                                            </telerik:GridViewColumn>
+                                            <telerik:GridViewDataColumn Header="版本"  IsReadOnly="True" DataMemberBinding="{Binding VersionNumber}" />
+
+                                            <telerik:GridViewDataColumn Header="提交日期" IsReadOnly="True" DataMemberBinding="{Binding SubmitDate}"
+								DataFormatString="{StaticResource DateStringFormat}" />
+                                        <telerik:GridViewDataColumn Header="评审备注" IsReadOnly="True"
+                                                            DataMemberBinding="{Binding Path=ManageNote}" />
+                                    </telerik:RadGridView.Columns>
+                                        <!--<telerik:RadGridView.RowDetailsTemplate>
+					<DataTemplate>
+						<telerik:RadGridView ShowGroupPanel="False" AutoExpandGroups="True" IsReadOnly="True"  CanUserFreezeColumns="False"  RowIndicatorVisibility="Collapsed"
+							 CanUserResizeColumns="False"  IsFilteringAllowed="False" ItemsSource="{Binding Path=PlanHistories}"  AutoGenerateColumns="False">
+							<telerik:RadGridView.GroupDescriptors>
+								<telerik:GroupDescriptor Member="Annual.Year" SortDirection="Ascending" DisplayContent="计划完成年份" >
+									<telerik:GroupDescriptor.AggregateFunctions>
+										<telerik:CountFunction Caption="总计(项):"></telerik:CountFunction>
+									</telerik:GroupDescriptor.AggregateFunctions>
+								</telerik:GroupDescriptor>
+							</telerik:RadGridView.GroupDescriptors>
+							<telerik:RadGridView.Columns>
+								<telerik:GridViewDataColumn Header="执行年份" DataMemberBinding="{Binding Path=Annual.Year}"/>
+								<telerik:GridViewDataColumn Header="执行月份" DataMemberBinding="{Binding Path=PerformMonth}"/>
+								<telerik:GridViewDataColumn Header="活动类别" DataMemberBinding="{Binding Path=ActionCategory.ActionType}"/>
+								<telerik:GridViewDataColumn Header="活动名称" DataMemberBinding="{Binding Path=ActionCategory.ActionName}"/>
+								<telerik:GridViewDataColumn Header="机型"  DataMemberBinding="{Binding Path=AircraftType.Name}"/>
+								<telerik:GridViewDataColumn Header="净增座位"  DataMemberBinding="{Binding Path=SeatingCapacity}"/>
+								<telerik:GridViewDataColumn Header="净增商载（吨）"  DataMemberBinding="{Binding Path=CarryingCapacity}"></telerik:GridViewDataColumn>
+								<telerik:GridViewDataColumn Header="备注" IsReadOnly="True" IsSortable="False" IsFilterable="False" DataMemberBinding="{Binding Path=Note}"/>
+							</telerik:RadGridView.Columns>
+						</telerik:RadGridView>
+					</DataTemplate>
+				</telerik:RadGridView.RowDetailsTemplate>-->
+                                    </telerik:RadGridView>
+                            </telerik:RadPane>
+                            </telerik:RadPaneGroup>
+
+                        </telerik:RadSplitContainer>
+                
+                </telerik:RadDocking>
+            </Grid>
+
+        </Border>
+    </telerik:RadBusyIndicator>
+</UserControl>

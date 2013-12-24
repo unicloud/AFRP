@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="aac0a2c4-0ebd-4192-b86e-0247aec94c15" name="FleetQuery" linkedPackageId="724e6004-ad76-4376-8205-c888f5dca543" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <ownedCommentsInternal>
+    <comment Id="5cad320b-a51b-4e1a-b5c4-43b04824400e">
+      <elementDefinition Id="c31b328a-2ff6-4ec9-b82c-b7a6e32cb569" />
+      <body>目标：
+
+1、查看所有飞机。
+2、查看各飞机的相关历史数据。
+
+
+
+说明：
+</body>
+    </comment>
+  </ownedCommentsInternal>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="71171e71-9ac7-4206-9f01-bfb2725ec4c1" name="规划人员" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f40cc508-fe71-4d54-b6f4-05e64d397d0b" />
+        <targetEnds>
+          <association Id="4571c755-c702-49d5-abb0-5884e84600ef" isDerived="false" sourceEndRoleName="规划人员" targetEndRoleName="飞机数据" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="7c242ca0-1e92-4dc2-bc5d-76aaee80d96c" LastKnownName="飞机数据" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b687e2e4-9901-4fc4-8815-4c2c2cb55741" name="规划人员" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="00e05877-9b99-4174-a6c5-69a1e54b39bc" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9e98fde0-3ee9-49ae-834f-829181418175" name="飞机数据" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="8c5840f0-0b86-4b52-91c5-e8ae47bc10ee" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="bc2e0879-2f0b-4def-94f7-fe7f65a21a0b" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="969843ec-2b14-4104-8a83-634e52d8d228" name="规划管理者" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="934e6ad7-1328-4a4a-b846-c7a2266be0a9" />
+        <targetEnds>
+          <association Id="7559ea6a-1eaa-4913-831a-fa35bfba25e8" isDerived="false" sourceEndRoleName="规划管理者" targetEndRoleName="飞机数据" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="7c242ca0-1e92-4dc2-bc5d-76aaee80d96c" LastKnownName="飞机数据" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="008d7594-b132-40f8-96b4-8e2256ca643f" name="规划管理者" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="bc9ba4d1-e524-42fe-8144-0e46de117922" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8213de93-d0f9-44be-b835-fe43af9a50d1" name="飞机数据" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="54e18c0f-9483-4cff-85e2-2da9e669d40a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="85ba8952-b277-4201-9205-8c74f0dd9ecd" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="7c242ca0-1e92-4dc2-bc5d-76aaee80d96c" name="飞机数据" isAbstract="false" isLeaf="false">
+        <referencesInternal>
+          <reference Id="7c5d31a4-c4ae-4ed5-8af9-7e9d39fbb07b" handle="%justhonor\DefaultCollection#9b56e60f-6fab-49b2-af31-4b0a4df8b7cc$23" tag="Work Item Reference">
+            <elementDefinition Id="cb35f7a7-53d8-4625-b5b7-badadeb02abe" />
+          </reference>
+        </referencesInternal>
+        <elementDefinition Id="d89f85d5-8406-41a8-99c8-d52b66eb964b" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="724e6004-ad76-4376-8205-c888f5dca543" name="UniCloud.Modeling.CAFM">
+    <elementDefinition Id="41993ae4-c3d1-4e56-95e3-496d7d3cc915" />
+    <profileInstances>
+      <packageHasProfileInstances Id="546e5cb2-3430-4a3b-aadd-46395f582f9e">
+        <profileInstance Id="12403597-1d9e-4af7-8d3b-cea08bdc3a1f" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="c3fb3183-6a51-49c1-a272-68162457f33d">
+        <profileInstance Id="426c94e8-7250-4c31-927e-b4dd993e3cd4" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>
